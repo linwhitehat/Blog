@@ -638,7 +638,7 @@
 <p>至此，一个初具形态的博客便生成了。</p>
 <h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><ol>
 <li>本文中新建仓库建立博客的方式，在本地建立仓库后，又再新建一个hexo文件，且将hexo配置托管到GitHub之后，GitHub项目便被hexo文件夹下的<code>.deploy_git</code>覆盖，之后修改博客维护项目只需要在hexo文件夹下的git bash进行hexo处理即可。</li>
-<li>本文博客搭建的目录结构如下，相关博客搭建及优化教程中涉及的路径参照此目录树：</li>
+<li>本文博客搭建的目录结构如下，相关博客搭建及<a href="https://linwhitehat.github.io/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">优化教程</a>中涉及的路径参照此目录树：</li>
 </ol>
 <figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 博客根目录</span><br><span class="line">|-- hexo</span><br><span class="line">|   |-- _config.yml</span><br><span class="line">|   |-- node_modules</span><br><span class="line">|   |-- public</span><br><span class="line">|   |-- scaffolds</span><br><span class="line">|   |-- source</span><br><span class="line">|   `-- themes</span><br><span class="line"></span><br><span class="line"># 主题根目录</span><br><span class="line">|-- themes</span><br><span class="line">    `-- next</span><br><span class="line">    |-- LICENSE.md</span><br><span class="line">    |-- README.md</span><br><span class="line">    |-- _config.yml</span><br><span class="line">    |-- docs</span><br><span class="line">    |-- languages</span><br><span class="line">    |-- layout</span><br><span class="line">    |-- scripts</span><br><span class="line">    `-- source</span><br></pre></td></tr></table></figure>
 <ol start="3">
