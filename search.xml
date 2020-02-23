@@ -409,7 +409,7 @@
 ">[22]</span></a></sup>。避免渲染的方式有很多，网上教程会介绍在html页面起始加上<code>layout: false</code>，但我更推荐另一种方法即<code>skip_render</code>参数设置，这种方法合适各种不需要博客默认解析的配置文件，具体操作是在博客根目录的配置文件<code>../hexo/_config.yml</code>找到<code>skip_render</code>，做出以下修改，<code>DIY_folder</code>即自定义独立页面所在文件夹，<code>**</code>表示该文件夹下所有文件：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">[README.md,DIY_folder/**]</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="自定义个人主页"><a href="#自定义个人主页" class="headerlink" title="自定义个人主页"></a>自定义个人主页</h3><p>在正常 Hexo 博客搭建后，使用 Github Page 部署，默认的博客首页即<code>name.github.io</code>对应的页面即博客首页，而如果想域名指向自定义的个人首页，由首页访问博客链接跳转。就像古代的家庭，进门会有个门面，转而才见黄金屋。这样博客整体会让人感觉更完整，在此也推荐默认主题便带有这种美感的网站框架<a href="https://gohugo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hugo</a>，基于此的博客可参考友链中的<code>reuixiy</code>和<code>荷戟独彷徨</code>，本部分教程参考<sup id="fnref:24"><a href="#fn:24" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[自定义Hexo博客首页](http://sugarac.com/2017/01/01/customize-Hexo-blog-homepage/)
+<h3 id="自定义个人主页"><a href="#自定义个人主页" class="headerlink" title="自定义个人主页"></a>自定义个人主页</h3><p>在正常 Hexo 博客搭建后，使用 Github Page 部署，默认的博客首页即<code>name.github.io</code>对应的页面即博客首页，效果见<a href="https://linwhitehat.github.io/">个人首页</a>。而如果想域名指向自定义的个人首页，由首页访问博客链接跳转。就像古代的家庭，进门会有个门面，转而才见黄金屋。这样博客整体会让人感觉更完整，在此也推荐默认主题便带有这种美感的网站框架<a href="https://gohugo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hugo</a>，基于此的博客可参考友链中的<code>reuixiy</code>和<code>荷戟独彷徨</code>，本部分教程参考<sup id="fnref:24"><a href="#fn:24" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[自定义Hexo博客首页](http://sugarac.com/2017/01/01/customize-Hexo-blog-homepage/)
 ">[24]</span></a></sup><sup id="fnref:25"><a href="#fn:25" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Hexo自定义页面做首页](https://www.jianshu.com/p/80e0e1058bda)">[25]</span></a></sup>并根据实际情况修改。</p>
 <p>言归正传，使用 Hexo 搭建博客后，要修改博客域名执行的首页，主要包含两部分：</p>
 <ol>
@@ -643,14 +643,14 @@
 <p><img src="/Blog/images/blog-6.png" alt="博客首页"><i class="img-caption">☆ 博客首页</i></p>
 <p>说明已经成功一半了😀当然，还需要修改博客的配置才能变成你的博客。</p>
 <p>若是出现</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2178672-cfd55a22902a9d2c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="访问出错"><i class="img-caption">☆ 访问出错</i></p>
+<p><img src="/Blog/images/blog-7.png" alt="访问出错"><i class="img-caption">☆ 访问出错</i></p>
 <p>则需要 <a href="#Rename">检查一下你的仓库名是否正确</a></p>
 <h3 id="修改博客配置"><a href="#修改博客配置" class="headerlink" title="修改博客配置"></a>修改博客配置</h3><p>来到你的仓库，找到<code>_config.yml</code>文件,这是网站的全局配置文件。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2178672-c23d4a5d67c88084.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="博客配置文件"><i class="img-caption">☆ 博客配置文件</i></p>
+<p><img src="/Blog/images/blog-8.png" alt="博客配置文件"><i class="img-caption">☆ 博客配置文件</i></p>
 <p>点击修改</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2178672-b37268df7a7852ca.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改配置文件"><i class="img-caption">☆ 修改配置文件</i></p>
+<p><img src="/Blog/images/blog-9.png" alt="修改配置文件"><i class="img-caption">☆ 修改配置文件</i></p>
 <p>然后编辑<code>_config.yml</code>的内容</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2178672-0c8750f5a18dbe03.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置文件内容修改"><i class="img-caption">☆ 配置文件内容修改</i></p>
+<p><img src="/Blog/images/blog-10.png" alt="配置文件内容修改"><i class="img-caption">☆ 配置文件内容修改</i></p>
 <p>接下来我们来详细说说以下配置文件的内容：</p>
 <h3 id="基础设置说明"><a href="#基础设置说明" class="headerlink" title="基础设置说明"></a>基础设置说明</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site settings</span></span><br><span class="line">title: Your Blog    				    <span class="comment">#你博客的标题</span></span><br><span class="line">SEOTitle: 你的博客 | Your Blog    	    <span class="comment">#显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line">header-img: img/post-bg-rwd.jpg  	    <span class="comment">#显示在首页的背景图片</span></span><br><span class="line">email: You@gmail.com	</span><br><span class="line">description: <span class="string">"You Blog"</span>  			    <span class="comment">#网站介绍</span></span><br><span class="line">keyword: <span class="string">"L1n, L1n Blog"</span> <span class="comment">#关键词</span></span><br><span class="line">url: <span class="string">"https://linwhitehat.github.io"</span>  <span class="comment"># 这个就是填写你的博客地址</span></span><br><span class="line">baseurl: <span class="string">""</span>                           <span class="comment"># 这个我们不用填写</span></span><br></pre></td></tr></table></figure>
 
