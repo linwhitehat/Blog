@@ -3,22 +3,22 @@
     "short_name": "林深时见璐",
     "icons": [
         {
-            "src": "/icons/rabbit512.png",
+            "src": "/Blog/icons/rabbit512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "/icons/rabbit144.png",
+            "src": "/Blog/icons/rabbit144.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/icons/rabbit32.png",
+            "src": "/Blog/icons/rabbit32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/icons/rabbit16.png",
+            "src": "/Blog/icons/rabbit16.png",
             "sizes": "16x16",
             "type": "image/png"
         }
@@ -27,5 +27,5 @@
     "background_color": "#fff",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "start_url": "/?utm_source=homescreen"
+    "start_url": "/Blog/?utm_source=homescreen"
 }

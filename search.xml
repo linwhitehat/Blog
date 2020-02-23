@@ -18,9 +18,88 @@
 ">[2]</span></a></sup><sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[HTML <audio> 标签](https://www.w3school.com.cn/tags/tag_audio.asp)">[4]</span></a></sup>。示例如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.mp3"</span> /&gt;</span></span><br><span class="line">Your browser does not support this audio format.</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>建议在标签之间写入文本，意在旧浏览器访问设置此标签的网站时能够显示文本内容。<br>此标签包含的属性如下，更多属性说明如在 Firefox 浏览器中的所有属性说明可参照<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[<audio>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio)
-">[3]</span></a></sup>：<br>|属性|值|说明|<br>|—|:—:|–|<br>|autoplay|布尔值|音频资源加载后自动播放，默认值为<code>false</code>|<br>|controls|controls|在页面中显示控制播放窗口|<br>|loop|布尔值|音频资源循环播放|<br>|preload|<code>none</code>/<code>metadata</code>/<code>auto</code>|当所在页面加载时便进行资源加载|<br>|muted|muted|音频设置静音|<br>|src|url|音频资源的链接地址，可以使用<code>&lt;source&gt;</code>标签设置|</p>
+">[3]</span></a></sup>：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th align="center">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>autoplay</td>
+<td align="center">布尔值</td>
+<td>音频资源加载后自动播放，默认值为<code>false</code></td>
+</tr>
+<tr>
+<td>controls</td>
+<td align="center">controls</td>
+<td>在页面中显示控制播放窗口</td>
+</tr>
+<tr>
+<td>loop</td>
+<td align="center">布尔值</td>
+<td>音频资源循环播放</td>
+</tr>
+<tr>
+<td>preload</td>
+<td align="center"><code>none</code>/<code>metadata</code>/<code>auto</code></td>
+<td>当所在页面加载时便进行资源加载</td>
+</tr>
+<tr>
+<td>muted</td>
+<td align="center">muted</td>
+<td>音频设置静音</td>
+</tr>
+<tr>
+<td>src</td>
+<td align="center">url</td>
+<td>音频资源的链接地址，可以使用<code>&lt;source&gt;</code>标签设置</td>
+</tr>
+</tbody></table>
 <p>浏览器支持情况如下，更多浏览器支持情况参照浏览器兼容性<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[<audio>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio)
-">[3]</span></a></sup>：<br>|支持情况|IE|Edge|Firefox|Chrome|Safari|Opera|<br>|—|:—:|:—:|:—:|:—:|:—:|—|<br>|audio标签|9+|12+|3.5+|3+|3.1+|10.5+|<br>|buffered属性|unknown|yes|4+|unknown|unknown|unknown|<br>|preload属性|9+|12+|4+|64+在属性<code>metadata</code>中默认配置|3.1+|51+在属性<code>metadata</code>中默认配置|</p>
+">[3]</span></a></sup>：</p>
+<table>
+<thead>
+<tr>
+<th>支持情况</th>
+<th align="center">IE</th>
+<th align="center">Edge</th>
+<th align="center">Firefox</th>
+<th align="center">Chrome</th>
+<th align="center">Safari</th>
+<th>Opera</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>audio标签</td>
+<td align="center">9+</td>
+<td align="center">12+</td>
+<td align="center">3.5+</td>
+<td align="center">3+</td>
+<td align="center">3.1+</td>
+<td>10.5+</td>
+</tr>
+<tr>
+<td>buffered属性</td>
+<td align="center">unknown</td>
+<td align="center">yes</td>
+<td align="center">4+</td>
+<td align="center">unknown</td>
+<td align="center">unknown</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td>preload属性</td>
+<td align="center">9+</td>
+<td align="center">12+</td>
+<td align="center">4+</td>
+<td align="center">64+在属性<code>metadata</code>中默认配置</td>
+<td align="center">3.1+</td>
+<td>51+在属性<code>metadata</code>中默认配置</td>
+</tr>
+</tbody></table>
 <p><strong>注意：</strong><br>不同浏览器对支持播放的音频格式存在差异，如果要满足多种浏览器的音频格式支持，可以使用多个<code>&lt;source&gt;</code>标签加载多种音频格式的资源。</p>
 <h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>本文博文将对前端中 HTML 的语法进行整理，整理进程以实际使用为参照，对新加入的语法及语言应用也会适当更新在博文中。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.w3school.com.cn/html/html_audio.asp" target="_blank" rel="noopener external nofollow noreferrer">W3school HTML 音频</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/ithomer/article/details/48622023" target="_blank" rel="noopener external nofollow noreferrer">HTML5 标签audio添加网页背景音乐代码</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio" target="_blank" rel="noopener external nofollow noreferrer"><audio></a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.w3school.com.cn/tags/tag_audio.asp" target="_blank" rel="noopener external nofollow noreferrer">HTML <audio> 标签</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
@@ -40,8 +119,36 @@
 
 <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><p>Git 和其它版本控制系统（包括 Subversion 和近似工具）的主要差别在于 Git 对待数据的方法。 概念上来区分，其它大部分系统以文件变更列表的方式存储信息。 这类系统（CVS、Subversion、Perforce、Bazaar 等等）将它们保存的信息看作是一组基本文件和每个文件随时间逐步累积的差异。Git 不按照前述方式对待或保存数据。 反之，Git 更像是把数据看作是对小型文件系统的一组快照。 每次你提交更新，或在 Git 中保存项目状态时，它主要对当时的全部文件制作一个快照并保存这个快照的索引。 为了高效，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。 Git 对待数据更像是一个 <strong>快照流</strong>。<br><img src="/Blog/images/git-1.png" alt="Git 数据存储处理方式"><i class="img-caption">☆ Git 数据存储处理方式</i></p>
 <h3 id="本地处理"><a href="#本地处理" class="headerlink" title="本地处理"></a>本地处理</h3><p>Git 中的绝大多数操作都只需要访问本地文件和资源，一般不需要来自网络上其它计算机的信息。如果要浏览项目的历史，Git 不需外连到服务器去获取历史，然后再显示出来——它只需直接从本地数据库中读取便能立即看到项目历史。 如果想查看当前版本与一个月前的版本之间引入的修改，Git 会查找到一个月前的文件做一次本地的差异计算，而不是由远程服务器处理或从远程服务器拉回旧版本文件再来本地处理。</p>
-<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>Git 有三种状态，所有文件文件可能处于其中之一，包括：已提交（committed）、已修改（modified）和已暂存（staged）。<br>|committed|modified|staged|<br>|———|:——:|——|<br>|已提交表示数据已经安全的保存在本地数据库中|已修改表示修改了文件，但还没保存到数据库中|已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中|</p>
-<p>由此引入 Git 项目的三个工作区域的概念：Git 仓库、工作目录以及暂存区域。<br><img src="/Blog/images/git-2.png" alt="工作目录、暂存区域以及 Git 仓库"><i class="img-caption">☆ 工作目录、暂存区域以及 Git 仓库</i><br>|Git 仓库目录|工作目录|暂存区域|<br>|———–|:—–:|——-|<br>|是 Git 用来保存项目的元数据和对象数据库的地方。 这是 Git 中最重要的部分，从其它计算机克隆仓库时，拷贝的就是这里的数据。|是对项目的某个版本独立提取出来的内容。 这些从 Git 仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。|是一个文件，保存了下次将提交的文件列表信息，一般在 Git 仓库目录中。 有时候也被称作“索引”，不过一般说法还是叫暂存区域。|</p>
+<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>Git 有三种状态，所有文件文件可能处于其中之一，包括：已提交（committed）、已修改（modified）和已暂存（staged）。</p>
+<table>
+<thead>
+<tr>
+<th>committed</th>
+<th align="center">modified</th>
+<th>staged</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>已提交表示数据已经安全的保存在本地数据库中</td>
+<td align="center">已修改表示修改了文件，但还没保存到数据库中</td>
+<td>已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中</td>
+</tr>
+</tbody></table>
+<p>由此引入 Git 项目的三个工作区域的概念：Git 仓库、工作目录以及暂存区域。<br><img src="/Blog/images/git-2.png" alt="工作目录、暂存区域以及 Git 仓库"><i class="img-caption">☆ 工作目录、暂存区域以及 Git 仓库</i></p>
+<table>
+<thead>
+<tr>
+<th>Git 仓库目录</th>
+<th align="center">工作目录</th>
+<th>暂存区域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是 Git 用来保存项目的元数据和对象数据库的地方。 这是 Git 中最重要的部分，从其它计算机克隆仓库时，拷贝的就是这里的数据。</td>
+<td align="center">是对项目的某个版本独立提取出来的内容。 这些从 Git 仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。</td>
+<td>是一个文件，保存了下次将提交的文件列表信息，一般在 Git 仓库目录中。 有时候也被称作“索引”，不过一般说法还是叫暂存区域。</td>
+</tr>
+</tbody></table>
 <h3 id="Git工作流程"><a href="#Git工作流程" class="headerlink" title="Git工作流程"></a>Git工作流程</h3><p>依据状态而言，主要是三个步骤：</p>
 <ol>
 <li>在工作目录中修改文件；</li>
