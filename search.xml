@@ -438,7 +438,7 @@
 <h3 id="插入Emoji表情"><a href="#插入Emoji表情" class="headerlink" title="插入Emoji表情"></a>插入Emoji表情</h3><p>插入 Emoji 表情主要是在 GitHub 和博客中可能会用到，这里介绍三种方式如下，来源参照<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[在博客中插入emoji表情](https://blog.csdn.net/u014636245/article/details/82945997)
 ">[4]</span></a></sup>。</p>
 <ol>
-<li>图片格式<br>使用 HTML 的图片标签<code>&lt;img&gt;</code>插入图像，此方法需要知道 Emoji 表情的链接地址，使用效果如下：<img src="http://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/octocat.png" height="40" width="40" align="middle">
+<li>图片格式<br>使用 HTML 的图片标签<code>&lt;img&gt;</code>插入图像，此方法需要知道 Emoji 表情的链接地址，使用效果如下：<img src="https://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/octocat.png" height="40" width="40" align="middle">
 推荐 Emoji 源：</li>
 </ol>
 <ul>
