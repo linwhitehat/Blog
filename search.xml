@@ -323,6 +323,207 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown·博客写作</title>
+    <url>/Blog/2020/02/17/Markdown%E5%86%99%E4%BD%9C.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>博客撰写使用的是<code>Markdown</code>，一般博客搭建教程会推荐Hexo写作<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Hexo写作](https://hexo.io/zh-cn/docs/writing.html)
+">[1]</span></a></sup>给初学者进行博客撰写，但其实<code>Markdown</code>具有很多丰富的语法，同时支持Html语法，运用得当，将可以写出排版优美，内容丰富的文章，此篇博客默认读者了解Markdown的基本语法，但是也会提及，参照来自《Learning-Markdown》<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Learning-Markdown](http://xianbai.me/learn-md/index.html)
+">[2]</span></a></sup>。</p>
+<a id="more"></a>
+
+<h2 id="关于Markdown"><a href="#关于Markdown" class="headerlink" title="关于Markdown"></a>关于Markdown</h2><p>Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许“使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。更多可参照<a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener external nofollow noreferrer">维基百科</a>。</p>
+<h3 id="选择-Markdown"><a href="#选择-Markdown" class="headerlink" title="选择 Markdown"></a>选择 Markdown</h3><p>主要原因在于 Markdown 很适合用于编写文档、记录笔记、攥写文章，当然其他因素包括：</p>
+<ul>
+<li>它基于纯文本，方便修改和共享；</li>
+<li>几乎可以在所有的文本编辑器中编写；</li>
+<li>有众多编程语言的实现，以及应用的相关扩展；</li>
+<li>在 GitHub 等网站中有很好的应用；</li>
+<li>很容易转换为 HTML 文档或其他格式。</li>
+</ul>
+<h3 id="兼容-HTML"><a href="#兼容-HTML" class="headerlink" title="兼容 HTML"></a>兼容 HTML</h3><p>Markdown 完全兼容 HTML 语法，可以直接在 Markdown 文档中插入 HTML 内容。</p>
+<h2 id="基础语法详解"><a href="#基础语法详解" class="headerlink" title="基础语法详解"></a>基础语法详解</h2><p>本文列述的语法是基于 John Gruber 定义的<a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener external nofollow noreferrer">Markdown Syntax</a>，当然 Markdown 还有其他不同的编译解释语法，可以后续关注。在 Hexo 博客中解析语法不完全遵循此处的语法，但是本文列述的语法是基本语法，算是通用的，如果本地使用 MarkdownPad 编辑器，那么本文语法完全适用。</p>
+<h3 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h3><ol>
+<li>段落的前后必须是空行<br>空行指的是行内什么都没有，或者只有空白符（空格或制表符），相邻两行文本，如果中间没有空行 会显示在一行中（换行符被转换为空格）。</li>
+<li>段落内换行（<code>&lt;br&gt;</code>）<br>可以在前一行的末尾加入至少两个空格，然后换行写其它的文字。</li>
+<li>Markdown 中的多数区块都需要在两个空行之间。</li>
+</ol>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>标题样式有两种：</p>
+<ol>
+<li>Setext 形式</li>
+</ol>
+<p>这种形式只支持<code>H1</code>和<code>H2</code>的标题样式，即使用<code>=</code>和<code>-</code>分别表示标题1和标题2，符号数量没有限制，原则以文本看起来舒服为主，使用如下:</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">H1</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">H2</span><br><span class="line">----</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>atx 形式</li>
+</ol>
+<p>这种方式更为常用，即使用<code>#</code>的数量对标题进行表示，数量的多少即代表标题的样式，如<code>#</code>表示标题1，<code>##</code>表示标题2，使用方式有两种种，可任选使用：<br>1）使用对称的 <code>#</code> 括住标题文本，如<code>## Title ##</code>；<br>2）只在标题文本左侧使用<code>#</code>，如<code>## Tile</code>。</p>
+<p><strong>注意</strong><br>标题符号左侧不能出现空格，但空格可以在标题文本中使用。</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要在文章中显示引用内容，可以在开头使用<code>&gt;</code>，则之后的文本都将被标记为引用，引用的方式如下：</p>
+<ol>
+<li>单行引用</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>多行引用</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;多行引用</span><br><span class="line">&gt;可以在每行前加 <span class="code">`&gt;`</span></span><br><span class="line"></span><br><span class="line">&gt;如果仅在第一行使用 <span class="code">`&gt;`</span></span><br><span class="line">后面相邻的行即使省略 <span class="code">`&gt;`</span>，也会变成引用内容</span><br><span class="line"></span><br><span class="line">&gt;如果引用内容需要换行，  </span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>嵌套引用</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;也可以在引用中</span><br><span class="line">&gt;&gt;使用嵌套的引用</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表分为三种，分别是无序列表，有序列表和嵌套的列表。无序和有序的区别即列表显示内容前的符号是否是数字，嵌套列表即多种列表嵌套使用。列表具体使用如下:</p>
+<ol>
+<li>无序列表</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">* </span>可以使用 <span class="code">`*`</span> 作为标记，文本需要间隔一个空格后输入；</span><br><span class="line"><span class="bullet">+ </span>也可以使用 <span class="code">`+`</span>；</span><br><span class="line"><span class="bullet">- </span>或者 <span class="code">`-`</span>。</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>有序列表</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1. </span>有序列表以数字和 . 开始，同时 . 与文本内容之间同样需要一个空格；</span><br><span class="line"><span class="bullet">3. </span>数字的序列并不会影响生成的列表序列；</span><br><span class="line"><span class="bullet">4. </span>但仍然推荐按照自然顺序（1.2.3...）编写。</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>嵌套列表<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1. </span>第一层</span><br><span class="line"><span class="bullet">  + </span>1-1</span><br><span class="line"><span class="bullet">  + </span>1-2</span><br><span class="line"><span class="bullet">2. </span>无序列表和有序列表可以随意相互嵌套</span><br><span class="line"><span class="bullet">  1. </span>2-1</span><br><span class="line"><span class="bullet">  2. </span>2-2</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>在技术博客中，代码往往缺少不了，因为代码示例是最直接的展示，代码的表示主要有两种：</p>
+<ol>
+<li>代码块<br>使用缩进表示代码区域，代码块前后需要有至少一个空行，且每行代码前需要有至少一个 Tab 或四个空格；</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span> // Tab开头</span><br><span class="line"><span class="code">    &lt;title&gt;Markdown&lt;/title&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span> // 四个空格开头</span><br></pre></td></tr></table></figure>
+<p>代码区域也可以使用连续三个`即 ``` 来表示起止位置，即代码块的起始和结束位置。<br>2. 行内代码</p>
+<p>在文本之间插入代码，当只需要展示少量变量或代码可以使用这种方式。通过单个 ` 在代码内容前后表示起止，插入行内代码（ 该符号即英文输入法下数字 1 键左侧的那个按键）。</p>
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>在一行中使用三个或更多的<code>*</code>、<code>-</code>或<code>_</code>表示分隔线，字符间可以存在空格但是不能存在其他字符，使用如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">***</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>在攥写文档中对文本加上超链接，当阅读到相应内容想直接访问时可以点击文件即跳转访问。超链接的表示有三种方式：</p>
+<ol>
+<li><p>行内式<br>这是最常见的一种使用超链接的方式，使用格式为<code>[link text](URL)</code>，其中 URL 可以是网络链接也可以是本地链接。</p>
+</li>
+<li><p>参考式<br>参考式链接的写法相当于行内式拆分成两部分，并通过一个 <em>识别符</em> 来连接两部分。参考式能尽量保持文章结构的简单，也方便统一管理 URL。这种方式表示如下:<br>1）定义链接,<code>[link text][识别符]</code>，识别符可以是字母、数字、空白或标点符号，识别符不区分大小写；<br>2）定义链接内容，<code>[识别符]: URL &quot;title&quot;</code>，URL可以使用 <code>&lt;&gt;</code> 包括起来，title 可以使用 “”、’’、() 包括；<br>3）省略识别符也可以表示，定义链接及内容为<code>[link text][]</code>，<code>[link text]: URL &quot;title&quot;</code>。</p>
+</li>
+<li><p>自动链接<br>使用<code>&lt;&gt;</code>包括的URL或邮箱地址会被自动转换为超链接。</p>
+</li>
+</ol>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>在文档中插入图片的方式与插入超链接的方式基本一致，语法的差异在于插入图片需要在最前面加一个感叹号<code>!</code>，插入图片方式如下：</p>
+<ol>
+<li>行内式<br>插入图片格式为<code>![pic text](URL &quot;title&quot;)</code>，方括号中的部分是图片的替代文本，括号中的 ‘title’ 部分和超链接一样，是可选的。</li>
+<li>参考式<br>参考式插入图片格式为<code>![pic text][识别符]</code>，<code>[识别符]: URL &quot;title&quot;</code>。</li>
+<li>指定图片显示大小<br>在 Markdown 中对图片大小及位置进行设置需要使用 HTML 语法，使用<code>&lt;img /&gt;</code>标签属性设定图片大小，示例如下：<br><code>&lt;img src=&quot;URL&quot; alt=&quot;Alt&quot; title=&quot;Tiltle&quot; width=&quot;50&quot; height=&quot;50&quot; /&gt;</code></li>
+</ol>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>通过不同文本样式对特殊的文本内容进行强调，这里讲述斜体和加粗的使用。</p>
+<ol>
+<li>斜体，使用<code>*</code>成对表示，将需要斜体展示的文本放置在成对的<code>*</code>之间；</li>
+<li>加粗，使用<code>**</code>成对表示，将需要加粗展示的文本放置在成对的<code>**</code>之间。</li>
+</ol>
+<p>上述的符号也可以使用<code>_</code>替换<code>*</code>。</p>
+<h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><p>在 Markdown 中存在一些特殊字符，如前述的插入代码、斜体等，要正常显示字符且使其不表达特殊作用则需要对其进行转义。反斜线（<code>\</code>）用于插入在 Markdown 语法中有特殊作用的字符。</p>
+<h2 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h2><h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>删除线一般很少用，当旧文档的内容存在失效时，为了显示新旧的差异，可以在失效内容上显示删除线，表示该内容已经不适用。<br>删除线使用即加上波浪线，表示为<code>~~失效内容~~</code>，效果为：<del>失效内容</del>。</p>
+<h3 id="代码块和语法高亮"><a href="#代码块和语法高亮" class="headerlink" title="代码块和语法高亮"></a>代码块和语法高亮</h3><p>根据前述介绍的插入代码块方法可以插入代码，但是要使文档代码更美观，使不同语言的代码能够显示对应语法高亮。此时需要使用 ``` 作为代码块区域标识，在起始的 ``` 之后空一格写上代码块对应的程序语言名称，如代码为 Javascript 代码起始位置则写为：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```</span> javascript</span><br><span class="line">code</span><br></pre></td></tr></table></figure>
+
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>表格可以用于展示多种比较的内容项，而表格的展示主要包括表头和单元格，使用<code>|</code>进行单元格分隔，使用<code>-</code>分隔表头和其他行，三行两列的表格表示如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">name | age</span><br><span class="line">---- | ---</span><br><span class="line">LearnShare | 12</span><br><span class="line">Mike |  32</span><br></pre></td></tr></table></figure>
+<p>要使表格内容对齐，可以在第二行的分界处使用下述标记内容进行对齐：</p>
+<ul>
+<li><code>:---</code> 代表左对齐</li>
+<li><code>:--:</code> 代表居中对齐</li>
+<li><code>---:</code> 代表右对齐</li>
+</ul>
+<p><strong>注意</strong><br>在Hexo博客中加入表格时需要注意先空行，否则在解析时会出现错误，表格无法显示，同时也可以使用 HTML 语法进行表格添加，表格美化可参照<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Hexo下表格的美化和优化](https://hexo.imydl.tech/archives/6742.html)
+">[3]</span></a></sup>。</p>
+<h3 id="ToDo列表"><a href="#ToDo列表" class="headerlink" title="ToDo列表"></a>ToDo列表</h3><p>ToDo列表也是 Task List，展示待做的事情。使用如下:</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">- </span>[ ] Eat</span><br><span class="line"><span class="bullet">- </span>[x] Code</span><br><span class="line"><span class="bullet">  - </span>[x] HTML</span><br><span class="line"><span class="bullet">  - </span>[x] CSS</span><br><span class="line"><span class="bullet">  - </span>[x] JavaScript</span><br><span class="line"><span class="bullet">- </span>[ ] Sleep</span><br></pre></td></tr></table></figure>
+
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>给攥写的文章加上目录内容，在文中需要显示文章目录结构的位置，独立一行写上<code>[TOC]</code>。</p>
+<h3 id="插入Emoji表情"><a href="#插入Emoji表情" class="headerlink" title="插入Emoji表情"></a>插入Emoji表情</h3><p>插入 Emoji 表情主要是在 GitHub 和博客中可能会用到，这里介绍三种方式如下，来源参照<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[在博客中插入emoji表情](https://blog.csdn.net/u014636245/article/details/82945997)
+">[4]</span></a></sup>。</p>
+<ol>
+<li>图片格式<br>使用 HTML 的图片标签<code>&lt;img&gt;</code>插入图像，此方法需要知道 Emoji 表情的链接地址，使用效果如下：<img src="http://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/octocat.png" height="40" width="40" align="middle">
+推荐 Emoji 源：</li>
+</ol>
+<ul>
+<li>GitHub / GitHub_Icon：<a href="https://blog.codecarrot.net/markdown-emoji-markup/" target="_blank" rel="noopener external nofollow noreferrer">github markdown emoji markup</a></li>
+<li>iemoji：<a href="https://www.iemoji.com/" target="_blank" rel="noopener external nofollow noreferrer">iEmoji</a></li>
+<li>webpagefx：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener external nofollow noreferrer">WebFX EMOJI CHEAT SHEET</a></li>
+</ul>
+<ol start="2">
+<li><p>源码粘贴<br>这种方式较为推荐，因为 Markdown 兼容 HTML 语法，因此 HTML 支持复制粘贴 Emoji 表情也可以直接在 Markdown 中使用。这里推荐<a href="https://emojipedia.org/" target="_blank" rel="noopener external nofollow noreferrer">emojipedia</a>和<a href="https://www.emojicopy.com/" target="_blank" rel="noopener external nofollow noreferrer">emojicopy</a>，可以搜索所需的表情然后点击<code>copy</code>即可直接粘贴到文中相应位置。</p>
+</li>
+<li><p>Unicode编码<br>Emoji表情在 Unicode 标准编码中已经集成，直接使用 Unicode 编码也能表示 Emoji 表情。在<a href="http://unicode.org/emoji/charts/full-emoji-list.html" target="_blank" rel="noopener external nofollow noreferrer">Emoji Charts</a>可查找每个 Emoji 表情的 Unicode 编码。</p>
+</li>
+</ol>
+<h2 id="博客写作"><a href="#博客写作" class="headerlink" title="博客写作"></a>博客写作</h2><p>在了解上述 Markdown 语法之后，基本能完成博客的撰写，这里介绍一些博客撰写的注意地方。博客的维护中重要的一项即博客文章，而文章有时候不一定能一次性写完，但是又不希望未写完就发布到博客中，也不希望一直存放在博客文件目录外，此时便可以使用<code>草稿 draft</code>进行存放未完成的文章。博客写作并不是简单写完一篇文章发布就结束，一篇优质博文需要细心和耐心，对于需要注意的地方本文会进行记录分享。参照来源<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Hexo 博客 github.io MD](https://baiqiantao.github.io/%E5%85%B6%E4%BB%96/%E5%B7%A5%E5%85%B7/RraEBz/#%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9-asset)
+">[6]</span></a></sup>。</p>
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>创建文章有两种方式，一种是在<code>git bash</code>下生成即<code>hexo new [layout] &lt;title&gt;</code>，一种是手动新建即在文章目录文件夹中手动建立。</p>
+<h3 id="布局（layout）"><a href="#布局（layout）" class="headerlink" title="布局（layout）"></a>布局（layout）</h3><p>在 Hexo 中有三种默认布局即<code>post</code>、<code>page</code>和<code>draft</code>，若不希望文章被 Hexo 布局渲染，可以在文章的 Front-Matter 中设置<code>layout: false</code>。</p>
+<h3 id="草稿（draft）"><a href="#草稿（draft）" class="headerlink" title="草稿（draft）"></a>草稿（draft）</h3><p>草稿创建后一般存放在<code>../hexo/source/_drafts</code>目录下，草稿默认不会发布到博客中显示。</p>
+<h3 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front Matter"></a>Front Matter</h3><p>Front-Matter 即文章中最上面的设置区，以<code>---</code>作为分隔，更多可参照<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Front Matter](https://jekyllrb.com/docs/front-matter/)">[7]</span></a></sup>，默认的参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th align="center">描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td align="center">布局</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td align="center">标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td align="center">建立日期</td>
+<td>文件创建时间</td>
+</tr>
+<tr>
+<td>updated</td>
+<td align="center">更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td align="center">开启文章评论</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td align="center">标签</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td align="center">分类</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="模板（scaffolds）"><a href="#模板（scaffolds）" class="headerlink" title="模板（scaffolds）"></a>模板（scaffolds）</h3><p>此处为 Hexo 对文章建立时采用的模板，可以在新建文章时选择模板，如<code>hexo new scaffold_1 &quot;file&quot;</code>则会根据自定义的模板<code>../scaffolds/scaffold_1.md</code>对新建的文章按照相同的样式进行初始化。</p>
+<h3 id="分类及标签"><a href="#分类及标签" class="headerlink" title="分类及标签"></a>分类及标签</h3><p>在 Front-Matter 中对文章的参数<code>分类-categories</code>和<code>标签-tags</code>进行设置，具体可参照前述<code>Front Matter</code>一节。这里要说明的是，对标签和分类进行设置有两种方式：</p>
+<ol>
+<li>类似无序表格的方式即使用<code>-</code>进行表示，如:</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>tag_1</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>使用中括号表示多个标签或分类，如：</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">tags: [tag<span class="emphasis">_1, tag_</span>2]</span><br></pre></td></tr></table></figure>
+
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>这篇博文基本介绍了 Markdown 和博客撰写的基本内容，看完这些内容能够实现自己博客的博文撰写，同时能规范写作语法并使内容排版整洁美观，后续进阶语法可以继续阅读相关阅读推荐篇章。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Hexo写作</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://xianbai.me/learn-md/index.html" target="_blank" rel="noopener external nofollow noreferrer">Learning-Markdown</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://hexo.imydl.tech/archives/6742.html" target="_blank" rel="noopener external nofollow noreferrer">Hexo下表格的美化和优化</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/u014636245/article/details/82945997" target="_blank" rel="noopener external nofollow noreferrer">在博客中插入emoji表情</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://einverne.github.io/markdown-style-guide/zh.html#code-blocks" target="_blank" rel="noopener external nofollow noreferrer">Markdown 书写风格指南</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://baiqiantao.github.io/%E5%85%B6%E4%BB%96/%E5%B7%A5%E5%85%B7/RraEBz/#%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9-asset" target="_blank" rel="noopener external nofollow noreferrer">Hexo 博客 github.io MD</a><a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://jekyllrb.com/docs/front-matter/" target="_blank" rel="noopener external nofollow noreferrer">Front Matter</a><a href="#fnref:7" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>技术分享</category>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>写作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人信息隐私保护的法律及技术双重角度思考</title>
     <url>/Blog/2020/02/12/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E7%9A%84%E6%B3%95%E5%BE%8B%E5%8F%8A%E6%8A%80%E6%9C%AF%E5%8F%8C%E9%87%8D%E8%A7%92%E5%BA%A6%E6%80%9D%E8%80%83.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在新型网络环境下，中国在个人信息隐私保护方面愈发重视，本文从法律和技术两方面介绍了相关情况，并通过案例简析及借鉴国外相关法律，提出在现有法律基础上健全个人信息隐私保护范围、判定依据、明确权利内涵等建议，并建议结合区块链和云计算取证等新兴技术为个人信息隐私保护提供技术支持。</p>
@@ -537,14 +738,12 @@
 <li>图片标题说明，当前的配置情况下，即使使用下面展示的markdown语法中的图片说明也无法正常显示在博客中，其中<code>Optional title</code>是图片的title属性，若使用Next主题中的<code>fancybox</code>插件则自动会显示，其他的配置则需要更改Hexo渲染组件。<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">../img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
 修改渲染配置步骤如下：<br>1）在<code>../hexo/node_modules/marked/lib/marked.js</code>中进行下述修改，其中<code>-</code>表示删除<code>+</code>表示增加：<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">Renderer.prototype.image = function(href, title, text) &#123;</span><br><span class="line"><span class="deletion">- href = cleanUrl(this.options.sanitize, this.options.baseUrl, href);</span></span><br><span class="line"><span class="deletion">- if (href === null) &#123;</span></span><br><span class="line"><span class="deletion">-   return text;</span></span><br><span class="line"><span class="deletion">-&#125;</span></span><br><span class="line"><span class="addition">+ if (this.options.baseUrl &amp;&amp; !originIndependentUrl.test(href)) &#123;</span></span><br><span class="line"><span class="addition">+   href = resolveUrl(this.options.baseUrl, href);</span></span><br><span class="line"><span class="addition">+ &#125;</span></span><br><span class="line"><span class="addition">+ var out = '&lt;img src="' + href + '" alt="' + text + '"';</span></span><br><span class="line">  if (title) &#123;</span><br><span class="line"><span class="deletion">-   out += ' title="' + title + '"';</span></span><br><span class="line"><span class="addition">+   out += '&gt;' + '&lt;i class="img-caption"&gt;' + '◎ ' + title + '&lt;/i';</span></span><br><span class="line">  &#125;</span><br><span class="line">  out += this.options.xhtml ? '/&gt;' : '&gt;';</span><br><span class="line">  return out;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 2）增加自定义CSS样式，在<code>../source/_data/styles.styl</code>中增加以下内容：<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.img-caption</span> &#123;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0</span> .<span class="number">7em</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">90%</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#555</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: STKaiti, serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>图片居中<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[图片居中设置](https://blog.singee.me/2017/12/07/mist-img-center/)
-">[4]</span></a></sup></li>
-</ol>
-<p>在<code>../next/source/css/_schemes/Mist/_posts-expanded.styl</code>中找到<code>.posts-expand</code>中的下列内容：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>将其修改为：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<li>图片居中<br>在<code>../next/source/css/_schemes/Mist/_posts-expanded.styl</code>中找到<code>.posts-expand</code>中的下列内容<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[图片居中设置](https://blog.singee.me/2017/12/07/mist-img-center/)
+">[4]</span></a></sup>：<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+将其修改为：<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 <h3 id="博文脚注"><a href="#博文脚注" class="headerlink" title="博文脚注"></a>博文脚注</h3><p>脚注也可以叫注脚，Hexo自带的默认markdown编辑器渲染效果不支持脚注的显示，因此安装插件进行渲染支持，我使用的是<a href="https://github.com/kchen0x/hexo-reference" target="_blank" rel="noopener external nofollow noreferrer" title="https://github.com/kchen0x/hexo-reference">hexo-reference</a>，整体效果更可观，安装如下<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[插入脚注](https://guanqr.com/study/blog/hexo-theme-next-customization/)
 ">[5]</span></a></sup><sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[注脚选择](https://benzblog.site/2019-07-12-HexoTricks/)
 ">[6]</span></a></sup>：</p>
@@ -805,64 +1004,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LaTeX-安装教程</title>
-    <url>/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作为一名研究僧，写论文，写文档，写日志，写报告，写书……还是比较平常的一件事，而office系列对于排版要求严格又惜时如金的人而言还是次选，所以开始入坑LaTeX，经过慎重的调研之后，选择了texlive+texstudio的形式开始入坑，当然还有很多其他选择，如果写完这篇还记得会在参考链接下附上<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[TeX Live & TeXstudio 安装手记](https://www.cnblogs.com/joyeecheung/p/3596255.html)
-">[1]</span></a></sup><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[第一篇tex文档编写](http://www.ctex.org/OnlineDocuments)
-">[2]</span></a></sup>。</p>
-<a id="more"></a>
-
-<h2 id="调研选择"><a href="#调研选择" class="headerlink" title="调研选择"></a>调研选择</h2><p>其实这部分只是自己做一点记录，急需安装教程的请跳过，请看第2节。</p>
-<p>经过多番Google、csdn以及知乎的查阅，大概了解了latex的编译环境和编辑环境，主流的有ctex、texlive、texstudio+winedt等等，我的选择变化大致如下：</p>
-<ol>
-<li><p>在上过的一门算法课中老师推荐了跨平台下的latex集成工具，ctex被建议在windows下使用，所以最初我的选择是ctex，附上清华镜像，<a href="https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/" target="_blank" rel="noopener external nofollow noreferrer" title="ctex清华镜像">Ctex-mirror</a>，官方网站<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener external nofollow noreferrer">CTeX</a>，加上ctex对中文的支持很好，且集成工具完整，当下载3G的安装包时，我又调研了不少教程，但是在某csdn的教程中看的评论有人评价ctex已不维护很久，同时ctex安装后会对系统环境变量进行覆盖，想想这个风险还是挺大的，毕竟安装需要配置换件变量的应用还挺多的，这篇<a href="https://liam.page/texlive/" target="_blank" rel="noopener external nofollow noreferrer">博文</a>有说明，接着看到在不少教程中推荐texlive（可谓官方），这是由 TUG (TeX User Group) 维护和发布的tex系统，接着有了第2个选择；</p>
-</li>
-<li><p>开始调研texlive，看看官网<a href="https://tug.org/texlive/" target="_blank" rel="noopener external nofollow noreferrer" title="texlive">TexLive</a>，维护还是比较好的，有2019最新版本，有多国镜像，有完整教学文档，感觉比ctex完善很多，果断放弃ctex，尽管这个时候安装文件也下载得差不多了，同时看到texstudio是tex编辑的不错的集成环境，官方的介绍是这样的：</p>
-</li>
-</ol>
-<p><em>TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.</em></p>
-<p>安装提供zip压缩包直接解压使用，很适合我这种不喜欢安装包的人，因为便于迁移，抉择已定，开始下载和安装。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
-<p>先提供需要安装的文件（texlive和texstudio）的<a href="https://pan.baidu.com/s/1mRKV0VeNfjxhY6qGvSQdLw" target="_blank" rel="noopener external nofollow noreferrer" title="网盘链接">网盘链接</a>，提取码：uhbe </p>
-</blockquote>
-<p>官方提供了下载方式：</p>
-<ol>
-<li>texlive，<a href="https://mirror.bjtu.edu.cn/ctan/systems/texlive/Images/texlive2019.iso" target="_blank" rel="noopener external nofollow noreferrer">官方镜像</a>，如果访问不了，可以访问国内镜像，如<a href="http://mirrors.ustc.edu.cn/CTAN/systems/texlive/" target="_blank" rel="noopener external nofollow noreferrer">中科大镜像</a>；</li>
-<li>texstudio，我选择的是zip压缩文件形式，<a href="https://github.com/texstudio-org/texstudio/releases/download/2.12.16/texstudio-2.12.16-win-portable-qt5.zip" target="_blank" rel="noopener external nofollow noreferrer">下载</a>；</li>
-</ol>
-<p>当然也可以直接下载我网盘分享的镜像和安装包，可以使用官方提供的md5值进行比对验证文件没有被篡改。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="TexLive-安装"><a href="#TexLive-安装" class="headerlink" title="TexLive 安装"></a>TexLive 安装</h3><p>下载好iso文件之后，由于我是win10系统，可以直接加载iso镜像文件，因此双击打开即可，如果是win7及以前的版本需要先解压iso文件，双击打开install-tl-advanced.bat文件，会出现以下界面：</p>
-<p><img src="/Blog/images/post-texlive-install-1.jpg" alt="安装启动界面"><i class="img-caption">☆ 安装启动界面</i></p>
-<p>点击<em>修改</em>更换需要安装的文件路径，路径建议不要带有中文和特殊字符；<br>点击<em>Advanced</em>修改安装选项，但默认是所有都选上，所以可以不用修改（因为涉及调用的宏包以及scheme选择，如果不了解还是默认，避免后续麻烦）；<br>点击<em>安装</em>，然后就是漫长的安装过程，安装期间可以做自己的事情，安装完成后显示如下：</p>
-<p><img src="/Blog/images/post-texlive-install-2.jpg" alt="安装完成界面"><i class="img-caption">☆ 安装完成界面</i></p>
-<p>做一下安装是否成功的检查：</p>
-<ol>
-<li>在开始菜单中搜索<em>TeX Live command-line</em>，执行以下命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xelatex -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>如果正常会显示如下信息，即正常的texlive版本号：</p>
-<p><img src="/Blog/images/post-texlive-test-1.jpg" alt="测试正常界面"><i class="img-caption">☆ 测试正常界面</i></p>
-<p>如果显示错误如下，应该是系统环境变量的问题，进入系统环境变量（系统属性-&gt;高级系统设置-&gt;环境变量），将<em>Path</em>环境变量新增texlive进去，即将安装好的texlive文件目录下的bin文件夹所在的路径作为环境变量。</p>
-<p><img src="/Blog/images/post-texlive-test-2.jpg" alt="测试错误界面"><i class="img-caption">☆ 测试错误界面</i></p>
-<h3 id="TexStudio-安装"><a href="#TexStudio-安装" class="headerlink" title="TexStudio 安装"></a>TexStudio 安装</h3><p>下载好zip压缩文件之后，直接解压就可以使用，十分方便！</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>主要是texstudio需要进行配置，更适合国内人士使用。</p>
-<h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>打开texstudio之后，在主界面中显示的是英文，点击菜单栏的<em>Options</em>，点击<em>Configure TeXstudio</em>，在<em>General</em>选项下将<em>Language</em>选择为<em>zh_CN</em>，点击确定；</p>
-<h3 id="编译环境设置"><a href="#编译环境设置" class="headerlink" title="编译环境设置"></a>编译环境设置</h3><p>在语言设置一样的窗口，此时显示语言是中文，点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”XeLaTeX”，支持中文LaTeX文档；<br>将</em>构建</em>-&gt;<em>默认文献工具<em>设置为”Biber”；<br>在</em>命令</em>-&gt;<em>XeLaTeX</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；</p>
-<p>点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”Latexmk”实现一次性编译；<br>将</em>命令</em>-&gt;<em>Latexmk<em>的 -pdf 参数修改为 -xelatex 以支持中文；<br>在</em>命令</em>-&gt;<em>Latexmk</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；<br>点击确定</p>
-<p>点击菜单栏<em>帮助</em>-&gt;<em>检查Latex安装信息</em>，若正确输出系统报告，说明texlive正常工作。</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>第一篇tex文档参照这篇博客，<a href="https://blog.csdn.net/yeler082/article/details/80665186" target="_blank" rel="noopener external nofollow noreferrer">Texlive+TeXstudio 入门安装使用</a>，照着输入，然后点击两个绿色箭头重叠的按钮，可以看到实时生成的文档。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/joyeecheung/p/3596255.html" target="_blank" rel="noopener external nofollow noreferrer">TeX Live &amp; TeXstudio 安装手记</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.ctex.org/OnlineDocuments" target="_blank" rel="noopener external nofollow noreferrer">第一篇tex文档编写</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
-      <categories>
-        <category>Handbook</category>
-        <category>Latex</category>
-      </categories>
-      <tags>
-        <tag>Latex安装</tag>
-        <tag>Windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>搭建个人博客(Hexo+Next+Github）</title>
     <url>/Blog/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客<a href="https://linwhitehat.github.io/">林深时见璐</a>搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。</p>
@@ -949,6 +1090,64 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX-安装教程</title>
+    <url>/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作为一名研究僧，写论文，写文档，写日志，写报告，写书……还是比较平常的一件事，而office系列对于排版要求严格又惜时如金的人而言还是次选，所以开始入坑LaTeX，经过慎重的调研之后，选择了texlive+texstudio的形式开始入坑，当然还有很多其他选择，如果写完这篇还记得会在参考链接下附上<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[TeX Live & TeXstudio 安装手记](https://www.cnblogs.com/joyeecheung/p/3596255.html)
+">[1]</span></a></sup><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[第一篇tex文档编写](http://www.ctex.org/OnlineDocuments)
+">[2]</span></a></sup>。</p>
+<a id="more"></a>
+
+<h2 id="调研选择"><a href="#调研选择" class="headerlink" title="调研选择"></a>调研选择</h2><p>其实这部分只是自己做一点记录，急需安装教程的请跳过，请看第2节。</p>
+<p>经过多番Google、csdn以及知乎的查阅，大概了解了latex的编译环境和编辑环境，主流的有ctex、texlive、texstudio+winedt等等，我的选择变化大致如下：</p>
+<ol>
+<li><p>在上过的一门算法课中老师推荐了跨平台下的latex集成工具，ctex被建议在windows下使用，所以最初我的选择是ctex，附上清华镜像，<a href="https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/" target="_blank" rel="noopener external nofollow noreferrer" title="ctex清华镜像">Ctex-mirror</a>，官方网站<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener external nofollow noreferrer">CTeX</a>，加上ctex对中文的支持很好，且集成工具完整，当下载3G的安装包时，我又调研了不少教程，但是在某csdn的教程中看的评论有人评价ctex已不维护很久，同时ctex安装后会对系统环境变量进行覆盖，想想这个风险还是挺大的，毕竟安装需要配置换件变量的应用还挺多的，这篇<a href="https://liam.page/texlive/" target="_blank" rel="noopener external nofollow noreferrer">博文</a>有说明，接着看到在不少教程中推荐texlive（可谓官方），这是由 TUG (TeX User Group) 维护和发布的tex系统，接着有了第2个选择；</p>
+</li>
+<li><p>开始调研texlive，看看官网<a href="https://tug.org/texlive/" target="_blank" rel="noopener external nofollow noreferrer" title="texlive">TexLive</a>，维护还是比较好的，有2019最新版本，有多国镜像，有完整教学文档，感觉比ctex完善很多，果断放弃ctex，尽管这个时候安装文件也下载得差不多了，同时看到texstudio是tex编辑的不错的集成环境，官方的介绍是这样的：</p>
+</li>
+</ol>
+<p><em>TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.</em></p>
+<p>安装提供zip压缩包直接解压使用，很适合我这种不喜欢安装包的人，因为便于迁移，抉择已定，开始下载和安装。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
+<p>先提供需要安装的文件（texlive和texstudio）的<a href="https://pan.baidu.com/s/1mRKV0VeNfjxhY6qGvSQdLw" target="_blank" rel="noopener external nofollow noreferrer" title="网盘链接">网盘链接</a>，提取码：uhbe </p>
+</blockquote>
+<p>官方提供了下载方式：</p>
+<ol>
+<li>texlive，<a href="https://mirror.bjtu.edu.cn/ctan/systems/texlive/Images/texlive2019.iso" target="_blank" rel="noopener external nofollow noreferrer">官方镜像</a>，如果访问不了，可以访问国内镜像，如<a href="http://mirrors.ustc.edu.cn/CTAN/systems/texlive/" target="_blank" rel="noopener external nofollow noreferrer">中科大镜像</a>；</li>
+<li>texstudio，我选择的是zip压缩文件形式，<a href="https://github.com/texstudio-org/texstudio/releases/download/2.12.16/texstudio-2.12.16-win-portable-qt5.zip" target="_blank" rel="noopener external nofollow noreferrer">下载</a>；</li>
+</ol>
+<p>当然也可以直接下载我网盘分享的镜像和安装包，可以使用官方提供的md5值进行比对验证文件没有被篡改。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="TexLive-安装"><a href="#TexLive-安装" class="headerlink" title="TexLive 安装"></a>TexLive 安装</h3><p>下载好iso文件之后，由于我是win10系统，可以直接加载iso镜像文件，因此双击打开即可，如果是win7及以前的版本需要先解压iso文件，双击打开install-tl-advanced.bat文件，会出现以下界面：</p>
+<p><img src="/Blog/images/post-texlive-install-1.jpg" alt="安装启动界面"><i class="img-caption">☆ 安装启动界面</i></p>
+<p>点击<em>修改</em>更换需要安装的文件路径，路径建议不要带有中文和特殊字符；<br>点击<em>Advanced</em>修改安装选项，但默认是所有都选上，所以可以不用修改（因为涉及调用的宏包以及scheme选择，如果不了解还是默认，避免后续麻烦）；<br>点击<em>安装</em>，然后就是漫长的安装过程，安装期间可以做自己的事情，安装完成后显示如下：</p>
+<p><img src="/Blog/images/post-texlive-install-2.jpg" alt="安装完成界面"><i class="img-caption">☆ 安装完成界面</i></p>
+<p>做一下安装是否成功的检查：</p>
+<ol>
+<li>在开始菜单中搜索<em>TeX Live command-line</em>，执行以下命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xelatex -v</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如果正常会显示如下信息，即正常的texlive版本号：</p>
+<p><img src="/Blog/images/post-texlive-test-1.jpg" alt="测试正常界面"><i class="img-caption">☆ 测试正常界面</i></p>
+<p>如果显示错误如下，应该是系统环境变量的问题，进入系统环境变量（系统属性-&gt;高级系统设置-&gt;环境变量），将<em>Path</em>环境变量新增texlive进去，即将安装好的texlive文件目录下的bin文件夹所在的路径作为环境变量。</p>
+<p><img src="/Blog/images/post-texlive-test-2.jpg" alt="测试错误界面"><i class="img-caption">☆ 测试错误界面</i></p>
+<h3 id="TexStudio-安装"><a href="#TexStudio-安装" class="headerlink" title="TexStudio 安装"></a>TexStudio 安装</h3><p>下载好zip压缩文件之后，直接解压就可以使用，十分方便！</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>主要是texstudio需要进行配置，更适合国内人士使用。</p>
+<h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>打开texstudio之后，在主界面中显示的是英文，点击菜单栏的<em>Options</em>，点击<em>Configure TeXstudio</em>，在<em>General</em>选项下将<em>Language</em>选择为<em>zh_CN</em>，点击确定；</p>
+<h3 id="编译环境设置"><a href="#编译环境设置" class="headerlink" title="编译环境设置"></a>编译环境设置</h3><p>在语言设置一样的窗口，此时显示语言是中文，点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”XeLaTeX”，支持中文LaTeX文档；<br>将</em>构建</em>-&gt;<em>默认文献工具<em>设置为”Biber”；<br>在</em>命令</em>-&gt;<em>XeLaTeX</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；</p>
+<p>点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”Latexmk”实现一次性编译；<br>将</em>命令</em>-&gt;<em>Latexmk<em>的 -pdf 参数修改为 -xelatex 以支持中文；<br>在</em>命令</em>-&gt;<em>Latexmk</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；<br>点击确定</p>
+<p>点击菜单栏<em>帮助</em>-&gt;<em>检查Latex安装信息</em>，若正确输出系统报告，说明texlive正常工作。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>第一篇tex文档参照这篇博客，<a href="https://blog.csdn.net/yeler082/article/details/80665186" target="_blank" rel="noopener external nofollow noreferrer">Texlive+TeXstudio 入门安装使用</a>，照着输入，然后点击两个绿色箭头重叠的按钮，可以看到实时生成的文档。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/joyeecheung/p/3596255.html" target="_blank" rel="noopener external nofollow noreferrer">TeX Live &amp; TeXstudio 安装手记</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.ctex.org/OnlineDocuments" target="_blank" rel="noopener external nofollow noreferrer">第一篇tex文档编写</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>Handbook</category>
+        <category>Latex</category>
+      </categories>
+      <tags>
+        <tag>Latex安装</tag>
+        <tag>Windows10</tag>
       </tags>
   </entry>
 </search>
