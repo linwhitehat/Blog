@@ -8,13 +8,13 @@
 
 <h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="网页背景音乐"><a href="#网页背景音乐" class="headerlink" title="网页背景音乐"></a>网页背景音乐</h3><p>传统的在 HTML 页面中存在多种方法能进行插入音频，除了浏览器中插入浏览器插件外，在 HTML 中可以使用<code>embed</code>和<code>object</code>标签<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[W3school HTML 音频](https://www.w3school.com.cn/html/html_audio.asp)
 ">[1]</span></a></sup>。</p>
-<h4 id="元素"><a href="#元素" class="headerlink" title="元素"></a><embed>元素</h4><p>此标签元素可定义外部资源的容器，是 HTML5 标签。使用此标签，可以对外部资源进行引用并定义资源嵌入网页的容器，引入 MP3 资源如下:</p>
+<h4 id="lt-embed-gt-元素"><a href="#lt-embed-gt-元素" class="headerlink" title="&lt;embed&gt;元素"></a><code>&lt;embed&gt;</code>元素</h4><p>此标签元素可定义外部资源的容器，是 HTML5 标签。使用此标签，可以对外部资源进行引用并定义资源嵌入网页的容器，引入 MP3 资源如下:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">embed</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">src</span>=<span class="string">"song.mp3"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>具体使用效果可参考我的一篇博客中的教程说明，可参阅<a href="https://linwhitehat.github.io/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">博客主题优化-添加音乐</a>。</p>
-<h4 id="元素-1"><a href="#元素-1" class="headerlink" title="元素"></a><object>元素</h4><p>此标签元素与<code>embed</code>元素功能基本相同，引入 MP3 资源如下：</p>
+<h4 id="lt-object-gt-元素"><a href="#lt-object-gt-元素" class="headerlink" title="&lt;object&gt;元素"></a><code>&lt;object&gt;</code>元素</h4><p>此标签元素与<code>embed</code>元素功能基本相同，引入 MP3 资源如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">object</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">data</span>=<span class="string">"song.mp3"</span>&gt;</span><span class="tag">&lt;/<span class="name">object</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a><audio>标签</h4><p>本文推荐在 HTML 中使用此元素标签，此元素是一个 HTML5 元素，在所有浏览器中均有效<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[HTML5 标签audio添加网页背景音乐代码](https://blog.csdn.net/ithomer/article/details/48622023)
+<h4 id="lt-audio-gt-标签"><a href="#lt-audio-gt-标签" class="headerlink" title="&lt;audio&gt;标签"></a><code>&lt;audio&gt;</code>标签</h4><p>本文推荐在 HTML 中使用此元素标签，此元素是一个 HTML5 元素，在所有浏览器中均有效<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[HTML5 标签audio添加网页背景音乐代码](https://blog.csdn.net/ithomer/article/details/48622023)
 ">[2]</span></a></sup><sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[HTML <audio> 标签](https://www.w3school.com.cn/tags/tag_audio.asp)">[4]</span></a></sup>。示例如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.mp3"</span> /&gt;</span></span><br><span class="line">Your browser does not support this audio format.</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>建议在标签之间写入文本，意在旧浏览器访问设置此标签的网站时能够显示文本内容。<br>此标签包含的属性如下，更多属性说明如在 Firefox 浏览器中的所有属性说明可参照<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[audio](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio)
@@ -170,16 +170,10 @@
 
 <h4 id="获取-Git-仓库"><a href="#获取-Git-仓库" class="headerlink" title="获取 Git 仓库"></a>获取 Git 仓库</h4><p>一般是对 GitHub 或 Gitlab 仓库进行获取，对于刚创建的仓库，一般内容是空的或只存在<code>README</code>文件，若是空仓库，GitHub 或 Gitlab 会提示用户需要执行的操作对仓库进行初始化。此处叙述两种场景：</p>
 <ol>
-<li>在本地已存在的m目录中初始化仓库</li>
+<li>在本地已存在的m目录中初始化仓库<br>在本地目录中打开<code>git bash</code>，输入<code>git init</code>，该命令将创建一个名为 <code>.git</code> 的子目录，这个子目录含有初始化的 Git 仓库中所有的必须文件，这些文件是 Git 仓库的核心。当本地目录已经存在项目内容，可以之间输入以下命令进行追踪：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'initial project version'</span></span><br></pre></td></tr></table></figure></li>
+<li>克隆现有的远程仓库<br>使用下述命令进行仓库克隆到本地：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> [url]</span><br><span class="line">git <span class="built_in">clone</span> [url] localname <span class="comment">#自定义克隆到本地的仓库名localname</span></span><br></pre></td></tr></table></figure>
+克隆支持多种传输协议，包括<code>https://</code>、<code>git://</code>和SSH传输协议如<code>user@server:path/to/repo.git</code>，常见是使用<code>https://</code>。</li>
 </ol>
-<p>在本地目录中打开<code>git bash</code>，输入<code>git init</code>，该命令将创建一个名为 <code>.git</code> 的子目录，这个子目录含有初始化的 Git 仓库中所有的必须文件，这些文件是 Git 仓库的核心。当本地目录已经存在项目内容，可以之间输入以下命令进行追踪：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'initial project version'</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>克隆现有的远程仓库</li>
-</ol>
-<p>使用下述命令进行仓库克隆到本地：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> [url]</span><br><span class="line">git <span class="built_in">clone</span> [url] localname <span class="comment">#自定义克隆到本地的仓库名localname</span></span><br></pre></td></tr></table></figure>
-<p>克隆支持多种传输协议，包括<code>https://</code>、<code>git://</code>和SSH传输协议如<code>user@server:path/to/repo.git</code>，常见是使用<code>https://</code>。</p>
 <h4 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h4><p>一般提交仓库是添加内容、删除内容、添加说明、查看状态以及推送与拉取数据，其他更多详细内容可参照<sup id="fnref:11"><a href="#fn:11" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[git教程](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
 ">[11]</span></a></sup>。</p>
 <ol>
@@ -209,12 +203,8 @@
 <h3 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h3><p>若当前不存在SSH密钥则需要生成。生成新 SSH 密钥以用于身份验证，然后将其添加到 ssh-agent。步骤如下:</p>
 <ol>
 <li>打开<code>git bash</code>；</li>
-<li>输入以下内容创建以所提供的电子邮件地址为标签的新 SSH 密钥：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
-<p>之后终端会显示：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; Generating public/private rsa key pair.</span><br></pre></td></tr></table></figure>
-<ol start="3">
+<li>输入以下内容创建以所提供的电子邮件地址为标签的新 SSH 密钥：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+之后终端会显示：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; Generating public/private rsa key pair.</span><br></pre></td></tr></table></figure></li>
 <li>提示“Enter a file in which to save the key（输入要保存密钥的文件）”时如下所示，按 Enter 键。 这将接受默认文件位置。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; Enter a file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]</span><br></pre></td></tr></table></figure></li>
 <li>在提示时输入安全密码，若不输入则密码为空，但是不影响生成密钥。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; Enter passphrase (empty <span class="keyword">for</span> no passphrase): [Type a passphrase]</span><br><span class="line">&gt; Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
 
@@ -226,46 +216,29 @@
 </ol>
 <ul>
 <li>如果使用随 GitHub Desktop 一起安装的 Git Shell，则 ssh-agent 应该正在运行；</li>
-<li>如果使用的是其他终端提示符，例如 Git for Windows，可以根据“<a href="https://help.github.com/cn/github/authenticating-to-github/working-with-ssh-key-passphrases" target="_blank" rel="noopener external nofollow noreferrer">使用 SSH 密钥密码</a>”中的“自动启动 ssh-agent”说明进行操作，或者手动启动：</li>
+<li>如果使用的是其他终端提示符，例如 Git for Windows，可以根据“<a href="https://help.github.com/cn/github/authenticating-to-github/working-with-ssh-key-passphrases" target="_blank" rel="noopener external nofollow noreferrer">使用 SSH 密钥密码</a>”中的“自动启动 ssh-agent”说明进行操作，或者手动启动：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在后台启动 ssh-agent</span></span><br><span class="line"><span class="built_in">eval</span> $(ssh-agent -s)</span><br><span class="line">&gt; Agent pid 59566</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在后台启动 ssh-agent</span></span><br><span class="line"><span class="built_in">eval</span> $(ssh-agent -s)</span><br><span class="line">&gt; Agent pid 59566</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li>将 SSH 私钥添加到 ssh-agent。 如果创建了不同名称的密钥，或者要添加不同名称的现有密钥，请将命令中的 id_rsa 替换为对应私钥文件的名称：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<li>将 SSH 私钥添加到 ssh-agent。 如果创建了不同名称的密钥，或者要添加不同名称的现有密钥，请将命令中的 id_rsa 替换为对应私钥文件的名称：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 <h3 id="添加-SSH密钥到GitHub账号"><a href="#添加-SSH密钥到GitHub账号" class="headerlink" title="添加 SSH密钥到GitHub账号"></a>添加 SSH密钥到GitHub账号</h3><p>在新增 SSH 密钥到 GitHub 帐户后，便能使用 SSH 重新配置任何本地仓库。步骤如下：</p>
 <ol>
-<li>复制 SSH密钥</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>进入GitHub账号的Setting；</p>
-</li>
-<li><p>在用户设置侧边栏中，单击 SSH and GPG keys（SSH 和 GPG 密钥）；</p>
-</li>
-<li><p>单击 New SSH key（新 SSH 密钥）或 Add SSH key（添加 SSH 密钥）；</p>
-</li>
-<li><p>在 “Title”（标题）字段中，为新密钥添加描述性标签；</p>
-</li>
-<li><p>将密钥粘贴到 “Key”（密钥）字段，点击 Add SSH Key（添加SSH密钥）。</p>
-</li>
+<li>复制 SSH密钥<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></li>
+<li>进入GitHub账号的Setting；</li>
+<li>在用户设置侧边栏中，单击 SSH and GPG keys（SSH 和 GPG 密钥）；</li>
+<li>单击 New SSH key（新 SSH 密钥）或 Add SSH key（添加 SSH 密钥）；</li>
+<li>在 “Title”（标题）字段中，为新密钥添加描述性标签；</li>
+<li>将密钥粘贴到 “Key”（密钥）字段，点击 Add SSH Key（添加SSH密钥）。</li>
 </ol>
 <h3 id="本地SSH测试"><a href="#本地SSH测试" class="headerlink" title="本地SSH测试"></a>本地SSH测试</h3><p>测试连接时，需要使用密码（即之前创建的 SSH 密钥密码）验证此操作。测试步骤如下:</p>
 <ol>
 <li>打开<code>git bash</code>；</li>
-<li>输入以下内容：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>终端返回以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; The authenticity of host <span class="string">'github.com (IP ADDRESS)'</span> can<span class="string">'t be established.</span></span><br><span class="line"><span class="string">&gt; RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span></span><br><span class="line"><span class="string">&gt; Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
-<p>或以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; The authenticity of host <span class="string">'github.com (IP ADDRESS)'</span> can<span class="string">'t be established.</span></span><br><span class="line"><span class="string">&gt; RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span></span><br><span class="line"><span class="string">&gt; Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>验证看到的消息中的指纹匹配步骤 2 中的消息之一，然后输入 <code>yes</code>，测试成功则会看到下述内容：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; Hi username! You<span class="string">'ve successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="string">&gt; provide shell access.</span></span><br></pre></td></tr></table></figure>
-<ol start="4">
+<li>输入以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+终端返回以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; The authenticity of host <span class="string">'github.com (IP ADDRESS)'</span> can<span class="string">'t be established.</span></span><br><span class="line"><span class="string">&gt; RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span></span><br><span class="line"><span class="string">&gt; Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
+或以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; The authenticity of host <span class="string">'github.com (IP ADDRESS)'</span> can<span class="string">'t be established.</span></span><br><span class="line"><span class="string">&gt; RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span></span><br><span class="line"><span class="string">&gt; Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure></li>
+<li>验证看到的消息中的指纹匹配步骤 2 中的消息之一，然后输入 <code>yes</code>，测试成功则会看到下述内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; Hi username! You<span class="string">'ve successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="string">&gt; provide shell access.</span></span><br></pre></td></tr></table></figure></li>
 <li>验证生成的消息包含用户名；</li>
 <li>若出现权限被拒绝等错误，请参照此处<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[错误：权限被拒绝（公钥）](https://help.github.com/cn/github/authenticating-to-github/error-permission-denied-publickey)
 ">[7]</span></a></sup>。</li>
@@ -289,24 +262,16 @@
 <h3 id="多个-SSH-KEY-管理"><a href="#多个-SSH-KEY-管理" class="headerlink" title="多个 SSH KEY 管理"></a>多个 SSH KEY 管理</h3><p>当同时使用 Github 和 Gitlab 时，一般是私人和办公的情况，此时使用的邮箱账号是不同的，而要使用 Git 进行项目管理就需要配置 SSH KEY，为了避免第二次生成 SSH KEY 时将原先的 SSH KEY 覆盖，在此记录一下解决方法。</p>
 <h4 id="已存在-Github-再配置-Gitlab"><a href="#已存在-Github-再配置-Gitlab" class="headerlink" title="已存在 Github 再配置 Gitlab"></a>已存在 Github 再配置 Gitlab</h4><p>一般个人会先拥有 Github，我也是先使用了 Github，因此经过了一次配置 SSH KEY，此时在<code>git bash</code>查看本地<code>~/.ssh</code>，如果存在<code>id_rsa</code>则说明已经存在公钥，则按照下述步骤进行配置：</p>
 <ol>
-<li>第二个 SSH KEY生成（我是 Gitlab）</li>
+<li>第二个 SSH KEY生成（我是 Gitlab）<br>打开<code>git bash</code>，执行以下命令，其中<code>email</code>填写自己的邮箱地址：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
+出现以下信息时，将公钥名称做修改如下：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Yourname/.ssh/id_rsa): /c/Users/Yourname/.ssh/id_rsa_gitlab</span><br></pre></td></tr></table></figure>
+其中<code>Yourname</code>即Windows下用户名，输入的内容即将默认信息中的<code>id_rsa</code>进行命名修改，之后可以默认回车，也可以根据自身情况设置。<br>配置完成之后，查看<code>~/.ssh</code>可以看到多出两个文件，且命名包括<code>id_rsa_gitlab</code>即完成公钥生成。</li>
+<li>由于是在微软下使用的<code>msysgit</code>，在<code>git bash</code>中输入以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> $(ssh-agent -s)</span><br></pre></td></tr></table></figure>
+如果使用的是 Github 官方的bash工具，则输入<code>ssh-agent -s</code>。<br>上述操作用于打开ssh-agent，否则会在添加私钥信息时报错<code>Could not open a connection to your authentication agent</code>。</li>
+<li>添加私钥<br>在<code>git bash</code>中输入以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br><span class="line">ssh-add ~/.ssh/id_rsa_gitlab</span><br></pre></td></tr></table></figure>
+其中<code>id_rsa</code>是我用于 Github 的密钥文件，若提示文件或目录不存在，则使用绝对地址。</li>
+<li>配置<code>config</code><br>在<code>~/.ssh</code>下创建<code>config</code>文件，添加下述内容：<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="addition">+ # gitlab</span></span><br><span class="line"><span class="addition">+   Host git.iboxpay.com      //这里填公司的git网址</span></span><br><span class="line"><span class="addition">+   HostName git.iboxpay.com  //这里填公司的git网址</span></span><br><span class="line"><span class="addition">+   PreferredAuthentications publickey</span></span><br><span class="line"><span class="addition">+   IdentityFile ~/.ssh/id_rsa_gitlab</span></span><br><span class="line"><span class="addition">+   User zhangjun</span></span><br><span class="line">    </span><br><span class="line"><span class="addition">+ # github</span></span><br><span class="line"><span class="addition">+   Host github.com</span></span><br><span class="line"><span class="addition">+   HostName github.com</span></span><br><span class="line"><span class="addition">+   PreferredAuthentications publickey</span></span><br><span class="line"><span class="addition">+   IdentityFile ~/.ssh/id_rsa_github</span></span><br><span class="line"><span class="addition">+   User ZJsnowman</span></span><br></pre></td></tr></table></figure></li>
+<li>在 Gitlab 添加公钥<br>配置完密钥管理，在 Gitlab 的设置中添加之前生成的 SSH KEY即可。</li>
 </ol>
-<p>打开<code>git bash</code>，执行以下命令，其中<code>email</code>填写自己的邮箱地址：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
-<p>出现以下信息时，将公钥名称做修改如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Yourname/.ssh/id_rsa): /c/Users/Yourname/.ssh/id_rsa_gitlab</span><br></pre></td></tr></table></figure>
-<p>其中<code>Yourname</code>即Windows下用户名，输入的内容即将默认信息中的<code>id_rsa</code>进行命名修改，之后可以默认回车，也可以根据自身情况设置。<br>配置完成之后，查看<code>~/.ssh</code>可以看到多出两个文件，且命名包括<code>id_rsa_gitlab</code>即完成公钥生成。<br>2. 由于是在微软下使用的<code>msysgit</code>，在<code>git bash</code>中输入以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> $(ssh-agent -s)</span><br></pre></td></tr></table></figure>
-<p>如果使用的是 Github 官方的bash工具，则输入<code>ssh-agent -s</code>。<br>上述操作用于打开ssh-agent，否则会在添加私钥信息时报错<code>Could not open a connection to your authentication agent</code>。<br>3. 添加私钥</p>
-<p>在<code>git bash</code>中输入以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br><span class="line">ssh-add ~/.ssh/id_rsa_gitlab</span><br></pre></td></tr></table></figure>
-<p>其中<code>id_rsa</code>是我用于 Github 的密钥文件，若提示文件或目录不存在，则使用绝对地址。<br>4. 配置<code>config</code></p>
-<p>在<code>~/.ssh</code>下创建<code>config</code>文件，添加下述内容：</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="addition">+ # gitlab</span></span><br><span class="line"><span class="addition">+   Host git.iboxpay.com      //这里填公司的git网址</span></span><br><span class="line"><span class="addition">+   HostName git.iboxpay.com  //这里填公司的git网址</span></span><br><span class="line"><span class="addition">+   PreferredAuthentications publickey</span></span><br><span class="line"><span class="addition">+   IdentityFile ~/.ssh/id_rsa_gitlab</span></span><br><span class="line"><span class="addition">+   User zhangjun</span></span><br><span class="line">    </span><br><span class="line"><span class="addition">+ # github</span></span><br><span class="line"><span class="addition">+   Host github.com</span></span><br><span class="line"><span class="addition">+   HostName github.com</span></span><br><span class="line"><span class="addition">+   PreferredAuthentications publickey</span></span><br><span class="line"><span class="addition">+   IdentityFile ~/.ssh/id_rsa_github</span></span><br><span class="line"><span class="addition">+   User ZJsnowman</span></span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>在 Gitlab 添加公钥</li>
-</ol>
-<p>配置完密钥管理，在 Gitlab 的设置中添加之前生成的 SSH KEY即可。</p>
 <h4 id="配置完Gitlab后Github不能正常管理项目"><a href="#配置完Gitlab后Github不能正常管理项目" class="headerlink" title="配置完Gitlab后Github不能正常管理项目"></a>配置完Gitlab后Github不能正常管理项目</h4><p>当配置了双 SSH KEY后，对原先的Github项目进行版本管理，发现在<code>push</code>的时候无法使用原先的认证信息进行远程连接，而在设置了 Gitlab 的用户信息之后（即配置<code>git username / git email</code>）发现GitHub项目管理显示项目需要用户认证，此时我存在的情况是我将全局的用户信息配置进行重置，并单独为Gitlab项目建立局部的用户信息，可能将原先的配置用户信息删除，因此重新配置全局用户信息即可正常对GitHub项目管理控制，同时可修改<code>config</code>内容如下：</p>
 <figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="addition">+ # github</span></span><br><span class="line"><span class="addition">+ # Host github.com</span></span><br><span class="line"><span class="addition">+ # HostName github.com</span></span><br><span class="line"><span class="addition">+ # PreferredAuthentications publickey</span></span><br><span class="line"><span class="addition">+ # IdentityFile ~/.ssh/id_rsa_github</span></span><br><span class="line"><span class="addition">+ # User ZJsnowman</span></span><br><span class="line"><span class="addition">+ Host *</span></span><br><span class="line"><span class="addition">+ PreferredAuthentications publickey,password</span></span><br><span class="line"><span class="addition">+ IdentityFile ~/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure>
 
@@ -348,61 +313,40 @@
 </ol>
 <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>标题样式有两种：</p>
 <ol>
-<li>Setext 形式</li>
+<li>Setext 形式<br>这种形式只支持<code>H1</code>和<code>H2</code>的标题样式，即使用<code>=</code>和<code>-</code>分别表示标题1和标题2，符号数量没有限制，原则以文本看起来舒服为主，使用如下:<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">H1</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">H2</span><br><span class="line">----</span><br></pre></td></tr></table></figure></li>
+<li>atx 形式<br>这种方式更为常用，即使用<code>#</code>的数量对标题进行表示，数量的多少即代表标题的样式，如<code>#</code>表示标题1，<code>##</code>表示标题2，使用方式有两种种，可任选使用：<br>1）使用对称的 <code>#</code> 括住标题文本，如<code>## Title ##</code>；<br>2）只在标题文本左侧使用<code>#</code>，如<code>## Tile</code>。</li>
 </ol>
-<p>这种形式只支持<code>H1</code>和<code>H2</code>的标题样式，即使用<code>=</code>和<code>-</code>分别表示标题1和标题2，符号数量没有限制，原则以文本看起来舒服为主，使用如下:</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">H1</span><br><span class="line">====</span><br><span class="line"></span><br><span class="line">H2</span><br><span class="line">----</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>atx 形式</li>
-</ol>
-<p>这种方式更为常用，即使用<code>#</code>的数量对标题进行表示，数量的多少即代表标题的样式，如<code>#</code>表示标题1，<code>##</code>表示标题2，使用方式有两种种，可任选使用：<br>1）使用对称的 <code>#</code> 括住标题文本，如<code>## Title ##</code>；<br>2）只在标题文本左侧使用<code>#</code>，如<code>## Tile</code>。</p>
 <p><strong>注意</strong><br>标题符号左侧不能出现空格，但空格可以在标题文本中使用。</p>
 <h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要在文章中显示引用内容，可以在开头使用<code>&gt;</code>，则之后的文本都将被标记为引用，引用的方式如下：</p>
 <ol>
-<li>单行引用</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>多行引用</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;多行引用</span><br><span class="line">&gt;可以在每行前加 <span class="code">`&gt;`</span></span><br><span class="line"></span><br><span class="line">&gt;如果仅在第一行使用 <span class="code">`&gt;`</span></span><br><span class="line">后面相邻的行即使省略 <span class="code">`&gt;`</span>，也会变成引用内容</span><br><span class="line"></span><br><span class="line">&gt;如果引用内容需要换行，  </span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>嵌套引用</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;也可以在引用中</span><br><span class="line">&gt;&gt;使用嵌套的引用</span><br></pre></td></tr></table></figure>
+<li>单行引用<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用内容</span></span><br></pre></td></tr></table></figure></li>
+<li>多行引用<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;多行引用</span><br><span class="line">&gt;可以在每行前加 <span class="code">`&gt;`</span></span><br><span class="line"></span><br><span class="line">&gt;如果仅在第一行使用 <span class="code">`&gt;`</span></span><br><span class="line">后面相邻的行即使省略 <span class="code">`&gt;`</span>，也会变成引用内容</span><br><span class="line"></span><br><span class="line">&gt;如果引用内容需要换行，  </span><br><span class="line">&gt;可以在行尾添加两个空格</span><br><span class="line">&gt;</span><br><span class="line">&gt;或者在引用内容中加一个空行</span><br></pre></td></tr></table></figure></li>
+<li>嵌套引用<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;也可以在引用中</span><br><span class="line">&gt;&gt;使用嵌套的引用</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表分为三种，分别是无序列表，有序列表和嵌套的列表。无序和有序的区别即列表显示内容前的符号是否是数字，嵌套列表即多种列表嵌套使用。列表具体使用如下:</p>
 <ol>
-<li>无序列表</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">* </span>可以使用 <span class="code">`*`</span> 作为标记，文本需要间隔一个空格后输入；</span><br><span class="line"><span class="bullet">+ </span>也可以使用 <span class="code">`+`</span>；</span><br><span class="line"><span class="bullet">- </span>或者 <span class="code">`-`</span>。</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>有序列表</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1. </span>有序列表以数字和 . 开始，同时 . 与文本内容之间同样需要一个空格；</span><br><span class="line"><span class="bullet">3. </span>数字的序列并不会影响生成的列表序列；</span><br><span class="line"><span class="bullet">4. </span>但仍然推荐按照自然顺序（1.2.3...）编写。</span><br></pre></td></tr></table></figure>
-<ol start="3">
+<li>无序列表<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">* </span>可以使用 <span class="code">`*`</span> 作为标记，文本需要间隔一个空格后输入；</span><br><span class="line"><span class="bullet">+ </span>也可以使用 <span class="code">`+`</span>；</span><br><span class="line"><span class="bullet">- </span>或者 <span class="code">`-`</span>。</span><br></pre></td></tr></table></figure></li>
+<li>有序列表<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1. </span>有序列表以数字和 . 开始，同时 . 与文本内容之间同样需要一个空格；</span><br><span class="line"><span class="bullet">3. </span>数字的序列并不会影响生成的列表序列；</span><br><span class="line"><span class="bullet">4. </span>但仍然推荐按照自然顺序（1.2.3...）编写。</span><br></pre></td></tr></table></figure></li>
 <li>嵌套列表<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1. </span>第一层</span><br><span class="line"><span class="bullet">  + </span>1-1</span><br><span class="line"><span class="bullet">  + </span>1-2</span><br><span class="line"><span class="bullet">2. </span>无序列表和有序列表可以随意相互嵌套</span><br><span class="line"><span class="bullet">  1. </span>2-1</span><br><span class="line"><span class="bullet">  2. </span>2-2</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>在技术博客中，代码往往缺少不了，因为代码示例是最直接的展示，代码的表示主要有两种：</p>
 <ol>
-<li>代码块<br>使用缩进表示代码区域，代码块前后需要有至少一个空行，且每行代码前需要有至少一个 Tab 或四个空格；</li>
+<li>代码块<br>使用缩进表示代码区域，代码块前后需要有至少一个空行，且每行代码前需要有至少一个 Tab 或四个空格；<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span> // Tab开头</span><br><span class="line"><span class="code">    &lt;title&gt;Markdown&lt;/title&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span> // 四个空格开头</span><br></pre></td></tr></table></figure>
+代码区域也可以使用连续三个`即 ``` 来表示起止位置，即代码块的起始和结束位置。</li>
+<li>行内代码<br>在文本之间插入代码，当只需要展示少量变量或代码可以使用这种方式。通过单个 ` 在代码内容前后表示起止，插入行内代码（ 该符号即英文输入法下数字 1 键左侧的那个按键）。</li>
 </ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span> // Tab开头</span><br><span class="line"><span class="code">    &lt;title&gt;Markdown&lt;/title&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span> // 四个空格开头</span><br></pre></td></tr></table></figure>
-<p>代码区域也可以使用连续三个`即 ``` 来表示起止位置，即代码块的起始和结束位置。<br>2. 行内代码</p>
-<p>在文本之间插入代码，当只需要展示少量变量或代码可以使用这种方式。通过单个 ` 在代码内容前后表示起止，插入行内代码（ 该符号即英文输入法下数字 1 键左侧的那个按键）。</p>
 <h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>在一行中使用三个或更多的<code>*</code>、<code>-</code>或<code>_</code>表示分隔线，字符间可以存在空格但是不能存在其他字符，使用如下：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">***</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>在攥写文档中对文本加上超链接，当阅读到相应内容想直接访问时可以点击文件即跳转访问。超链接的表示有三种方式：</p>
 <ol>
-<li><p>行内式<br>这是最常见的一种使用超链接的方式，使用格式为<code>[link text](URL)</code>，其中 URL 可以是网络链接也可以是本地链接。</p>
-</li>
-<li><p>参考式<br>参考式链接的写法相当于行内式拆分成两部分，并通过一个 <em>识别符</em> 来连接两部分。参考式能尽量保持文章结构的简单，也方便统一管理 URL。这种方式表示如下:<br>1）定义链接,<code>[link text][识别符]</code>，识别符可以是字母、数字、空白或标点符号，识别符不区分大小写；<br>2）定义链接内容，<code>[识别符]: URL &quot;title&quot;</code>，URL可以使用 <code>&lt;&gt;</code> 包括起来，title 可以使用 “”、’’、() 包括；<br>3）省略识别符也可以表示，定义链接及内容为<code>[link text][]</code>，<code>[link text]: URL &quot;title&quot;</code>。</p>
-</li>
-<li><p>自动链接<br>使用<code>&lt;&gt;</code>包括的URL或邮箱地址会被自动转换为超链接。</p>
-</li>
+<li>行内式<br>这是最常见的一种使用超链接的方式，使用格式为<code>[link text](URL)</code>，其中 URL 可以是网络链接也可以是本地链接。</li>
+<li>参考式<br>参考式链接的写法相当于行内式拆分成两部分，并通过一个 <em>识别符</em> 来连接两部分。参考式能尽量保持文章结构的简单，也方便统一管理 URL。这种方式表示如下:<br>1）定义链接,<code>[link text][识别符]</code>，识别符可以是字母、数字、空白或标点符号，识别符不区分大小写；<br>2）定义链接内容，<code>[识别符]: URL &quot;title&quot;</code>，URL可以使用 <code>&lt;&gt;</code> 包括起来，title 可以使用 “”、’’、() 包括；<br>3）省略识别符也可以表示，定义链接及内容为<code>[link text][]</code>，<code>[link text]: URL &quot;title&quot;</code>。</li>
+<li>自动链接<br>使用<code>&lt;&gt;</code>包括的URL或邮箱地址会被自动转换为超链接。</li>
 </ol>
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>在文档中插入图片的方式与插入超链接的方式基本一致，语法的差异在于插入图片需要在最前面加一个感叹号<code>!</code>，插入图片方式如下：</p>
 <ol>
@@ -447,10 +391,8 @@
 <li>webpagefx：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener external nofollow noreferrer">WebFX EMOJI CHEAT SHEET</a></li>
 </ul>
 <ol start="2">
-<li><p>源码粘贴<br>这种方式较为推荐，因为 Markdown 兼容 HTML 语法，因此 HTML 支持复制粘贴 Emoji 表情也可以直接在 Markdown 中使用。这里推荐<a href="https://emojipedia.org/" target="_blank" rel="noopener external nofollow noreferrer">emojipedia</a>和<a href="https://www.emojicopy.com/" target="_blank" rel="noopener external nofollow noreferrer">emojicopy</a>，可以搜索所需的表情然后点击<code>copy</code>即可直接粘贴到文中相应位置。</p>
-</li>
-<li><p>Unicode编码<br>Emoji表情在 Unicode 标准编码中已经集成，直接使用 Unicode 编码也能表示 Emoji 表情。在<a href="http://unicode.org/emoji/charts/full-emoji-list.html" target="_blank" rel="noopener external nofollow noreferrer">Emoji Charts</a>可查找每个 Emoji 表情的 Unicode 编码。</p>
-</li>
+<li>源码粘贴<br>这种方式较为推荐，因为 Markdown 兼容 HTML 语法，因此 HTML 支持复制粘贴 Emoji 表情也可以直接在 Markdown 中使用。这里推荐<a href="https://emojipedia.org/" target="_blank" rel="noopener external nofollow noreferrer">emojipedia</a>和<a href="https://www.emojicopy.com/" target="_blank" rel="noopener external nofollow noreferrer">emojicopy</a>，可以搜索所需的表情然后点击<code>copy</code>即可直接粘贴到文中相应位置。</li>
+<li>Unicode编码<br>Emoji表情在 Unicode 标准编码中已经集成，直接使用 Unicode 编码也能表示 Emoji 表情。在<a href="http://unicode.org/emoji/charts/full-emoji-list.html" target="_blank" rel="noopener external nofollow noreferrer">Emoji Charts</a>可查找每个 Emoji 表情的 Unicode 编码。</li>
 </ol>
 <h2 id="博客写作"><a href="#博客写作" class="headerlink" title="博客写作"></a>博客写作</h2><p>在了解上述 Markdown 语法之后，基本能完成博客的撰写，这里介绍一些博客撰写的注意地方。博客的维护中重要的一项即博客文章，而文章有时候不一定能一次性写完，但是又不希望未写完就发布到博客中，也不希望一直存放在博客文件目录外，此时便可以使用<code>草稿 draft</code>进行存放未完成的文章。博客写作并不是简单写完一篇文章发布就结束，一篇优质博文需要细心和耐心，对于需要注意的地方本文会进行记录分享。参照来源<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Hexo 博客 github.io MD](https://baiqiantao.github.io/%E5%85%B6%E4%BB%96/%E5%B7%A5%E5%85%B7/RraEBz/#%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9-asset)
 ">[6]</span></a></sup>。</p>
@@ -505,14 +447,11 @@
 <h3 id="模板（scaffolds）"><a href="#模板（scaffolds）" class="headerlink" title="模板（scaffolds）"></a>模板（scaffolds）</h3><p>此处为 Hexo 对文章建立时采用的模板，可以在新建文章时选择模板，如<code>hexo new scaffold_1 &quot;file&quot;</code>则会根据自定义的模板<code>../scaffolds/scaffold_1.md</code>对新建的文章按照相同的样式进行初始化。</p>
 <h3 id="分类及标签"><a href="#分类及标签" class="headerlink" title="分类及标签"></a>分类及标签</h3><p>在 Front-Matter 中对文章的参数<code>分类-categories</code>和<code>标签-tags</code>进行设置，具体可参照前述<code>Front Matter</code>一节。这里要说明的是，对标签和分类进行设置有两种方式：</p>
 <ol>
-<li>类似无序表格的方式即使用<code>-</code>进行表示，如:</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>tag_1</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>使用中括号表示多个标签或分类，如：</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">tags: [tag<span class="emphasis">_1, tag_</span>2]</span><br></pre></td></tr></table></figure>
+<li>类似无序表格的方式即使用<code>-</code>进行表示，如:<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>tag_1</span><br></pre></td></tr></table></figure></li>
+<li>使用中括号表示多个标签或分类，如：<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">tags: [tag<span class="emphasis">_1, tag_</span>2]</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 <h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>这篇博文基本介绍了 Markdown 和博客撰写的基本内容，看完这些内容能够实现自己博客的博文撰写，同时能规范写作语法并使内容排版整洁美观，后续进阶语法可以继续阅读相关阅读推荐篇章。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Hexo写作</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://xianbai.me/learn-md/index.html" target="_blank" rel="noopener external nofollow noreferrer">Learning-Markdown</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://hexo.imydl.tech/archives/6742.html" target="_blank" rel="noopener external nofollow noreferrer">Hexo下表格的美化和优化</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/u014636245/article/details/82945997" target="_blank" rel="noopener external nofollow noreferrer">在博客中插入emoji表情</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://einverne.github.io/markdown-style-guide/zh.html#code-blocks" target="_blank" rel="noopener external nofollow noreferrer">Markdown 书写风格指南</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://baiqiantao.github.io/%E5%85%B6%E4%BB%96/%E5%B7%A5%E5%85%B7/RraEBz/#%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9-asset" target="_blank" rel="noopener external nofollow noreferrer">Hexo 博客 github.io MD</a><a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://jekyllrb.com/docs/front-matter/" target="_blank" rel="noopener external nofollow noreferrer">Front Matter</a><a href="#fnref:7" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
       <categories>
