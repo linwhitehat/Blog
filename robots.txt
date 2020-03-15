@@ -14,5 +14,6 @@ Disallow: /vendors/
 Disallow: /fonts/
 Disallow: /fancybox/
 
-Sitemap: https://linwhitehat.github.io/sitemap.xml
-Sitemap: https://linwhitehat.github.io/baidusitemap.xml
+Sitemap: https://linwhitehat.github.io/Blog/sitemap.xml
+Sitemap: https://linwhitehat.github.io/Blog/sitemap-update-2020-03.xml
+Sitemap: https://linwhitehat.github.io/Blog/baidusitemap.xml
