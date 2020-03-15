@@ -763,6 +763,9 @@
 <figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">- permalink: :title.html</span></span><br><span class="line"><span class="addition">+ permalink: :year/:month/:day/:title.html</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="博客菜单栏页面存在“安全问题”"><a href="#博客菜单栏页面存在“安全问题”" class="headerlink" title="博客菜单栏页面存在“安全问题”"></a>博客菜单栏页面存在“安全问题”</h3><p>Q：当访问博客菜单栏某页面，chrome浏览器显示“访问存在安全问题： provisional headers are shown”，如我的<code>About</code>页面，但是证书、https都是正常的，在使用 Github Page 部署时也强制全站https部署，这个安全问题为何会出现？<br>A：问题存在于使用外链资源，一般是图片、音视频等，可以将资源放到自身博客目录下引用，便不存在chrome的安全警告了。而这个问题引起安全警告的本质是引用外链产生的跨域请求被拦截导致的。<sup id="fnref:26"><a href="#fn:26" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[provisional headers are shown 知多少](https://juejin.im/post/5c00980751882518805add83)">[26]</span></a></sup></p>
+<h3 id="博客页脚样式修改"><a href="#博客页脚样式修改" class="headerlink" title="博客页脚样式修改"></a>博客页脚样式修改</h3><p>在<code>../next/source/css/_schemes/Mist</code>目录下找到配置文件<code>_layout.styl</code>，定位到<code>Footer</code>，修改<code>.footer-inner</code>如下:</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">.footer-inner &#123;</span><br><span class="line"><span class="deletion">- text-align: left;</span></span><br><span class="line"><span class="addition">+ text-align: center;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="主题自定义设计思路"><a href="#主题自定义设计思路" class="headerlink" title="主题自定义设计思路"></a>主题自定义设计思路</h2><p>Next主题本身有不少默认配置，但是如果对前端设计有更多想法可以实现主题自定义即“魔改”，要实现主题自定义可以对任意内容做修改，而写这篇博文是想总结自定义的思路，因为Next的版本更替会有配置修改变化，同时要实现自定义就需要对博客的配置全貌了解。在<code>../hexo/source/_data/</code>目录下可以自建自定义样式文件，在<code>../next/_config.yml</code>主题配置文件中<code>custom_file_path</code>即对应自定义配置文件信息，而调试的过程可以在浏览器的开发者模式下进行调试<sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[学会使用浏览器F12定位样式](https://bestzuo.cn/posts/blog-establish.html#%E5%AD%A6%E4%BC%9A%E4%BD%BF%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8F12%E5%AE%9A%E4%BD%8D%E6%A0%B7%E5%BC%8F)
 ">[15]</span></a></sup>。</p>
 <h3 id="自定义站点LOGO"><a href="#自定义站点LOGO" class="headerlink" title="自定义站点LOGO"></a>自定义站点LOGO</h3><p>默认的Hexo博客使用的是Hexo的Logo，在chrome浏览器访问博客时，标签页的图标即默认Logo，而Hexo博客本身支持使用自定义的图标，修改站点Logo步骤如下：</p>
@@ -837,7 +840,7 @@
 <li>将 GitHub 原先的博客仓库<code>name.github.io</code>清空，将自定义首页的<code>html</code>文件及修饰文件都上传到当前仓库<code>name.github.io</code>中；</li>
 <li>在博客根目录打开<code>git bash</code>，执行<a href="#Update">博客更新部署</a>。</li>
 </ol>
-<p><strong>注意：</strong><br>迁移博客内容到新地址之后，使用相对地址引用博客图片及资源需要修改为正确路径，否则将不会正常显示。</p>
+<p><strong>注意：</strong><br>迁移博客内容到新地址之后，使用相对地址引用博客图片及资源需要修改为正确路径，例如我原先路径为<code>linwhitehat.github.com/</code>修改后显示为<code>linwhitehat.github.com/Blog</code>，在本地即<code>/</code>对应修改后路径应为<code>/Blog/</code>，否则将不会正常显示。</p>
 <h3 id="配置修改后更新部署"><a href="#配置修改后更新部署" class="headerlink" title="配置修改后更新部署"></a><span id="Update">配置修改后更新部署</span></h3><p>输入以下命令完成每次更新：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment"># 涉及配置文件修改</span></span><br><span class="line">hexo g</span><br><span class="line">gulp</span><br><span class="line">gulp build</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
@@ -955,95 +958,6 @@
       </tags>
   </entry>
   <entry>
-    <title>搭建个人博客(Hexo+Next+Github）</title>
-    <url>/Blog/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客<a href="https://linwhitehat.github.io/">林深时见璐</a>搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。</p>
-<a id="more"></a>
-
-<h2 id="最初的诞生"><a href="#最初的诞生" class="headerlink" title="最初的诞生"></a>最初的诞生</h2><p>我采用的搭建博客的方式是使用 <a href="https://pages.github.com/" target="_blank" rel="noopener external nofollow noreferrer">GitHub Pages</a> + <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a> 的方式，这个应该是我摸索之后认为的对新手最友好也最优质的方式，只需要投入时间学习和运营，就能拥有美观的个人博客。以下的1 - 3小点是博客的雏形构建<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[博客雏形安装](https://www.jianshu.com/p/956c44c87fb1)">[1]</span></a></sup>。</p>
-<h3 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h3><p>要使用 GitHub Pages，首先你要注册一个<a href="https://github.com/" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>账号。</p>
-<p><img src="/Blog/images/blog-1.png" alt="GitHub注册页"><i class="img-caption">☆ GitHub注册页</i></p>
-<h3 id="安装必备软件"><a href="#安装必备软件" class="headerlink" title="安装必备软件"></a>安装必备软件</h3><p>1) 安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener external nofollow noreferrer">Git</a>客户端</p>
-<p>2) 安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener external nofollow noreferrer">Node.js</a></p>
-<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><ol>
-<li>新建博客</li>
-</ol>
-<p>配置GitHub，步骤如下:</p>
-<p>1) 登录GitHub后新建项目（new repository），项目名由两部分组成即GitHub账号名和固定后缀<code>.github.io</code>，比如我的项目就是<code>linwhitehat.github.io</code>，填写完点击创建项目（create repository）。</p>
-<p>2) 配置GitHub SSH密钥，本地打开git bash，输入<code>ssh-keygen -t rsa -C &quot;your&#39;s emaill address&quot;</code>，其中your’s email address换成GitHub账号的邮箱地址，第一次点击回车键（Enter）会显示存储位置，第二次点击回车键会显示输入密钥，按照要求输入密钥两次(输入过程是看不到密钥的)，之后在第一次显示的存储位置打开文件id_rsa.pub，复制文件内所有内容，在GitHub中点击头像可看的setting选项，在setting选项中可看到SSH and GPG keys选项，点击new SSH，然后输入title（方便密钥管理的名字），将刚才复制的内容粘贴到key中。</p>
-<p>3）创建本地仓库，在本地选择不包含中文的文件路径，新建一个文件夹，进入文件夹并点击右键选择git bash，输入以下命令进行设置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git config --global user.name <span class="string">"Your's name"</span></span><br><span class="line">git config --global user.email <span class="string">"Your's email address"</span></span><br></pre></td></tr></table></figure>
-<p>其中<code>Your&#39;s name</code>和<code>Your&#39;s email address</code>替换为GitHub账户名和对应邮箱地址。</p>
-<p>4) 安装Hexo，按照之前方式进入git bash终端，输入<code>node</code>检测Node.js是否安装成功，若出现<code>&gt;</code>则表示正常，退出node模式，输入以下命令安装Hexo：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo version</span><br></pre></td></tr></table></figure>
-<p>看到输出版本号等信息表示安装Hexo成功，在当前新建的文件夹下新建一个hexo文件夹，在hexo文件夹中进入git bash，输入以下命令配置hexo，完成之后，在浏览器输入<code>http://localhost:4000</code>，正常则可看到初始化的博客，到此便完成本地博客的建立。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>5）配置Hexo到GitHub，在hexo文件夹下存在一个配置文件<code>_config.yml</code>，打开后可看到文件最后部分为：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="attr">type:</span></span><br></pre></td></tr></table></figure>
-<p>将其修改为以下内容，其中<code>yourname</code>为GitHub账号名：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span>  </span><br><span class="line"> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"> <span class="attr">repository:</span> <span class="string">http://github.com/yourname/yourname.github.io.git</span></span><br><span class="line"> <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<p>保存后，在当前文件夹打开git bash并输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>若出现错误显示<code>ERROR Deployer not found: git</code>，则输入以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>若弹出填写GitHub账号用户名和密码则正常填写，完成之后在浏览器输入<code>https://yourname.github.io</code>，yourname替换为GitHub账户名，即可通过互联网访问博客。</p>
-<p>6）如果不想自己新建，可以使用现有的他人博客项目进行改建，见<a href="#Section2">第2小节</a>。</p>
-<ol start="2">
-<li><span id="Section2">使用已有的博客模板</span></li>
-</ol>
-<p>1) 注册完成后搜索 <code>linwhitehat.github.io</code> 进入<a href="https://github.com/linwhitehat/linwhitehat.github.io" target="_blank" rel="noopener external nofollow noreferrer">我的仓库</a></p>
-<p><img src="/Blog/images/blog-2.png" alt="GitHub项目"><i class="img-caption">☆ GitHub项目</i></p>
-<p>点击右上角的 <strong>Fork</strong> 将我的仓库拉倒你的账号下</p>
-<p>稍等一下，点击刷新，你会看到<strong>Fork</strong>了成功的页面</p>
-<p><img src="/Blog/images/blog-3.png" alt="Fork项目"><i class="img-caption">☆ Fork项目</i></p>
-<p>2) 修改仓库名</p>
-<p>点击<strong>settings</strong>进入设置</p>
-<p><img src="/Blog/images/blog-4.png" alt="项目设置修改"><i class="img-caption">☆ 项目设置修改</i></p>
-<p id = "Rename"></p>
-修改仓库名为 `你的Github账号名.github.io`，然后 Rename
-
-<p><img src="/Blog/images/blog-5.png" alt="修改项目名"><i class="img-caption">☆ 修改项目名</i></p>
-<p>这时你在在浏览器中输入 <code>你的Github账号名.github.io</code> 例如:<code>linwhitehat.github.io</code></p>
-<p>你将会看到如下界面</p>
-<p><img src="/Blog/images/blog-6.png" alt="博客首页"><i class="img-caption">☆ 博客首页</i></p>
-<p>说明已经成功一半了😀当然，还需要修改博客的配置才能变成你的博客。</p>
-<p>若是出现</p>
-<p><img src="/Blog/images/blog-7.png" alt="访问出错"><i class="img-caption">☆ 访问出错</i></p>
-<p>则需要 <a href="#Rename">检查一下你的仓库名是否正确</a></p>
-<h3 id="修改博客配置"><a href="#修改博客配置" class="headerlink" title="修改博客配置"></a>修改博客配置</h3><p>来到你的仓库，找到<code>_config.yml</code>文件,这是网站的全局配置文件。</p>
-<p><img src="/Blog/images/blog-8.png" alt="博客配置文件"><i class="img-caption">☆ 博客配置文件</i></p>
-<p>点击修改</p>
-<p><img src="/Blog/images/blog-9.png" alt="修改配置文件"><i class="img-caption">☆ 修改配置文件</i></p>
-<p>然后编辑<code>_config.yml</code>的内容</p>
-<p><img src="/Blog/images/blog-10.png" alt="配置文件内容修改"><i class="img-caption">☆ 配置文件内容修改</i></p>
-<p>接下来我们来详细说说以下配置文件的内容：</p>
-<h3 id="基础设置说明"><a href="#基础设置说明" class="headerlink" title="基础设置说明"></a>基础设置说明</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site settings</span></span><br><span class="line">title: Your Blog    				    <span class="comment">#你博客的标题</span></span><br><span class="line">SEOTitle: 你的博客 | Your Blog    	    <span class="comment">#显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line">header-img: img/post-bg-rwd.jpg  	    <span class="comment">#显示在首页的背景图片</span></span><br><span class="line">email: You@gmail.com	</span><br><span class="line">description: <span class="string">"You Blog"</span>  			    <span class="comment">#网站介绍</span></span><br><span class="line">keyword: <span class="string">"L1n, L1n Blog"</span> <span class="comment">#关键词</span></span><br><span class="line">url: <span class="string">"https://linwhitehat.github.io"</span>  <span class="comment"># 这个就是填写你的博客地址</span></span><br><span class="line">baseurl: <span class="string">""</span>                           <span class="comment"># 这个我们不用填写</span></span><br></pre></td></tr></table></figure>
-
-<p>至此，一个初具形态的博客便生成了。</p>
-<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><ol>
-<li>本文中新建仓库建立博客的方式，在本地建立仓库后，又再新建一个hexo文件，且将hexo配置托管到GitHub之后，GitHub项目便被hexo文件夹下的<code>.deploy_git</code>覆盖，之后修改博客维护项目只需要在hexo文件夹下的git bash进行hexo处理即可。</li>
-<li>本文博客搭建的目录结构如下，相关博客搭建及<a href="https://linwhitehat.github.io/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">优化教程</a>中涉及的路径参照此目录树：</li>
-</ol>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 博客根目录</span><br><span class="line">|-- hexo</span><br><span class="line">|   |-- _config.yml</span><br><span class="line">|   |-- node_modules</span><br><span class="line">|   |-- public</span><br><span class="line">|   |-- scaffolds</span><br><span class="line">|   |-- source</span><br><span class="line">|   `-- themes</span><br><span class="line"></span><br><span class="line"># 主题根目录</span><br><span class="line">|-- themes</span><br><span class="line">    `-- next</span><br><span class="line">    |-- LICENSE.md</span><br><span class="line">    |-- README.md</span><br><span class="line">    |-- _config.yml</span><br><span class="line">    |-- docs</span><br><span class="line">    |-- languages</span><br><span class="line">    |-- layout</span><br><span class="line">    |-- scripts</span><br><span class="line">    `-- source</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Hexo卸载方式，在git bash执行以下命令：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-cli -g</span><br><span class="line">npm uninstall hexo -g</span><br></pre></td></tr></table></figure>
-<p>博客相应的文件目录需要手动删除。</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>博客搭建基本完成，但是博客中有很多地方可以自定义设计，这也是自建博客的初衷，熟悉Hexo和Next.Mist的配置后，会逐步优化博客样式。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jianshu.com/p/956c44c87fb1" target="_blank" rel="noopener external nofollow noreferrer">博客雏形安装</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
-      <categories>
-        <category>技术分享</category>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LaTeX-安装教程</title>
     <url>/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作为一名研究僧，写论文，写文档，写日志，写报告，写书……还是比较平常的一件事，而office系列对于排版要求严格又惜时如金的人而言还是次选，所以开始入坑LaTeX，经过慎重的调研之后，选择了texlive+texstudio的形式开始入坑，当然还有很多其他选择，如果写完这篇还记得会在参考链接下附上<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[TeX Live & TeXstudio 安装手记](https://www.cnblogs.com/joyeecheung/p/3596255.html)
@@ -1099,6 +1013,95 @@
       <tags>
         <tag>Latex安装</tag>
         <tag>Windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建个人博客(Hexo+Next+Github）</title>
+    <url>/Blog/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客<a href="https://linwhitehat.github.io/">林深时见璐</a>搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。</p>
+<a id="more"></a>
+
+<h2 id="最初的诞生"><a href="#最初的诞生" class="headerlink" title="最初的诞生"></a>最初的诞生</h2><p>我采用的搭建博客的方式是使用 <a href="https://pages.github.com/" target="_blank" rel="noopener external nofollow noreferrer">GitHub Pages</a> + <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a> 的方式，这个应该是我摸索之后认为的对新手最友好也最优质的方式，只需要投入时间学习和运营，就能拥有美观的个人博客。以下的1 - 3小点是博客的雏形构建<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[博客雏形安装](https://www.jianshu.com/p/956c44c87fb1)">[1]</span></a></sup>。</p>
+<h3 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h3><p>要使用 GitHub Pages，首先你要注册一个<a href="https://github.com/" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>账号。</p>
+<p><img src="/Blog/images/blog-1.png" alt="GitHub注册页"><i class="img-caption">☆ GitHub注册页</i></p>
+<h3 id="安装必备软件"><a href="#安装必备软件" class="headerlink" title="安装必备软件"></a>安装必备软件</h3><p>1) 安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener external nofollow noreferrer">Git</a>客户端</p>
+<p>2) 安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener external nofollow noreferrer">Node.js</a></p>
+<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><ol>
+<li>新建博客</li>
+</ol>
+<p>配置GitHub，步骤如下:</p>
+<p>1) 登录GitHub后新建项目（new repository），项目名由两部分组成即GitHub账号名和固定后缀<code>.github.io</code>，比如我的项目就是<code>linwhitehat.github.io</code>，填写完点击创建项目（create repository）。</p>
+<p>2) 配置GitHub SSH密钥，本地打开git bash，输入<code>ssh-keygen -t rsa -C &quot;your&#39;s emaill address&quot;</code>，其中your’s email address换成GitHub账号的邮箱地址，第一次点击回车键（Enter）会显示存储位置，第二次点击回车键会显示输入密钥，按照要求输入密钥两次(输入过程是看不到密钥的)，之后在第一次显示的存储位置打开文件id_rsa.pub，复制文件内所有内容，在GitHub中点击头像可看的setting选项，在setting选项中可看到SSH and GPG keys选项，点击new SSH，然后输入title（方便密钥管理的名字），将刚才复制的内容粘贴到key中。</p>
+<p>3）创建本地仓库，在本地选择不包含中文的文件路径，新建一个文件夹，进入文件夹并点击右键选择git bash，输入以下命令进行设置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git config --global user.name <span class="string">"Your's name"</span></span><br><span class="line">git config --global user.email <span class="string">"Your's email address"</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>Your&#39;s name</code>和<code>Your&#39;s email address</code>替换为GitHub账户名和对应邮箱地址。</p>
+<p>4) 安装Hexo，按照之前方式进入git bash终端，输入<code>node</code>检测Node.js是否安装成功，若出现<code>&gt;</code>则表示正常，退出node模式，输入以下命令安装Hexo：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+<p>看到输出版本号等信息表示安装Hexo成功，在当前新建的文件夹下新建一个hexo文件夹，在hexo文件夹中进入git bash，输入以下命令配置hexo，完成之后，在浏览器输入<code>http://localhost:4000</code>，正常则可看到初始化的博客，到此便完成本地博客的建立。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>5）配置Hexo到GitHub，在hexo文件夹下存在一个配置文件<code>_config.yml</code>，打开后可看到文件最后部分为：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="attr">type:</span></span><br></pre></td></tr></table></figure>
+<p>将其修改为以下内容，其中<code>yourname</code>为GitHub账号名：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span>  </span><br><span class="line"> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"> <span class="attr">repository:</span> <span class="string">http://github.com/yourname/yourname.github.io.git</span></span><br><span class="line"> <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>保存后，在当前文件夹打开git bash并输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>若出现错误显示<code>ERROR Deployer not found: git</code>，则输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>若弹出填写GitHub账号用户名和密码则正常填写，完成之后在浏览器输入<code>https://yourname.github.io</code>，yourname替换为GitHub账户名，即可通过互联网访问博客。</p>
+<p>6）如果不想自己新建，可以使用现有的他人博客项目进行改建，见<a href="#Section2">第2小节</a>。</p>
+<ol start="2">
+<li><span id="Section2">使用已有的博客模板</span></li>
+</ol>
+<p>1) 注册完成后搜索 <code>linwhitehat.github.io</code> 进入<a href="https://github.com/linwhitehat/linwhitehat.github.io" target="_blank" rel="noopener external nofollow noreferrer">我的仓库</a></p>
+<p><img src="/Blog/images/blog-2.png" alt="GitHub项目"><i class="img-caption">☆ GitHub项目</i></p>
+<p>点击右上角的 <strong>Fork</strong> 将我的仓库拉倒你的账号下</p>
+<p>稍等一下，点击刷新，你会看到<strong>Fork</strong>了成功的页面</p>
+<p><img src="/Blog/images/blog-3.png" alt="Fork项目"><i class="img-caption">☆ Fork项目</i></p>
+<p>2) 修改仓库名</p>
+<p>点击<strong>settings</strong>进入设置</p>
+<p><img src="/Blog/images/blog-4.png" alt="项目设置修改"><i class="img-caption">☆ 项目设置修改</i></p>
+<p id = "Rename"></p>
+
+<p>修改仓库名为 <code>你的Github账号名.github.io</code>，然后 Rename</p>
+<p><img src="/Blog/images/blog-5.png" alt="修改项目名"><i class="img-caption">☆ 修改项目名</i></p>
+<p>这时你在在浏览器中输入 <code>你的Github账号名.github.io</code> 例如:<code>linwhitehat.github.io</code></p>
+<p>你将会看到如下界面</p>
+<p><img src="/Blog/images/blog-6.png" alt="博客首页"><i class="img-caption">☆ 博客首页</i></p>
+<p>说明已经成功一半了😀当然，还需要修改博客的配置才能变成你的博客。</p>
+<p>若是出现</p>
+<p><img src="/Blog/images/blog-7.png" alt="访问出错"><i class="img-caption">☆ 访问出错</i></p>
+<p>则需要 <a href="#Rename">检查一下你的仓库名是否正确</a></p>
+<h3 id="修改博客配置"><a href="#修改博客配置" class="headerlink" title="修改博客配置"></a>修改博客配置</h3><p>来到你的仓库，找到<code>_config.yml</code>文件,这是网站的全局配置文件。</p>
+<p><img src="/Blog/images/blog-8.png" alt="博客配置文件"><i class="img-caption">☆ 博客配置文件</i></p>
+<p>点击修改</p>
+<p><img src="/Blog/images/blog-9.png" alt="修改配置文件"><i class="img-caption">☆ 修改配置文件</i></p>
+<p>然后编辑<code>_config.yml</code>的内容</p>
+<p><img src="/Blog/images/blog-10.png" alt="配置文件内容修改"><i class="img-caption">☆ 配置文件内容修改</i></p>
+<p>接下来我们来详细说说以下配置文件的内容：</p>
+<h3 id="基础设置说明"><a href="#基础设置说明" class="headerlink" title="基础设置说明"></a>基础设置说明</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site settings</span></span><br><span class="line">title: Your Blog    				    <span class="comment">#你博客的标题</span></span><br><span class="line">SEOTitle: 你的博客 | Your Blog    	    <span class="comment">#显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line">header-img: img/post-bg-rwd.jpg  	    <span class="comment">#显示在首页的背景图片</span></span><br><span class="line">email: You@gmail.com	</span><br><span class="line">description: <span class="string">"You Blog"</span>  			    <span class="comment">#网站介绍</span></span><br><span class="line">keyword: <span class="string">"L1n, L1n Blog"</span> <span class="comment">#关键词</span></span><br><span class="line">url: <span class="string">"https://linwhitehat.github.io"</span>  <span class="comment"># 这个就是填写你的博客地址</span></span><br><span class="line">baseurl: <span class="string">""</span>                           <span class="comment"># 这个我们不用填写</span></span><br></pre></td></tr></table></figure>
+
+<p>至此，一个初具形态的博客便生成了。</p>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><ol>
+<li>本文中新建仓库建立博客的方式，在本地建立仓库后，又再新建一个hexo文件，且将hexo配置托管到GitHub之后，GitHub项目便被hexo文件夹下的<code>.deploy_git</code>覆盖，之后修改博客维护项目只需要在hexo文件夹下的git bash进行hexo处理即可。</li>
+<li>本文博客搭建的目录结构如下，相关博客搭建及<a href="https://linwhitehat.github.io/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">优化教程</a>中涉及的路径参照此目录树：</li>
+</ol>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 博客根目录</span><br><span class="line">|-- hexo</span><br><span class="line">|   |-- _config.yml</span><br><span class="line">|   |-- node_modules</span><br><span class="line">|   |-- public</span><br><span class="line">|   |-- scaffolds</span><br><span class="line">|   |-- source</span><br><span class="line">|   `-- themes</span><br><span class="line"></span><br><span class="line"># 主题根目录</span><br><span class="line">|-- themes</span><br><span class="line">    `-- next</span><br><span class="line">    |-- LICENSE.md</span><br><span class="line">    |-- README.md</span><br><span class="line">    |-- _config.yml</span><br><span class="line">    |-- docs</span><br><span class="line">    |-- languages</span><br><span class="line">    |-- layout</span><br><span class="line">    |-- scripts</span><br><span class="line">    `-- source</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Hexo卸载方式，在git bash执行以下命令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-cli -g</span><br><span class="line">npm uninstall hexo -g</span><br></pre></td></tr></table></figure>
+<p>博客相应的文件目录需要手动删除。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>博客搭建基本完成，但是博客中有很多地方可以自定义设计，这也是自建博客的初衷，熟悉Hexo和Next.Mist的配置后，会逐步优化博客样式。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jianshu.com/p/956c44c87fb1" target="_blank" rel="noopener external nofollow noreferrer">博客雏形安装</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>技术分享</category>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
 </search>
