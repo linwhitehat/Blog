@@ -1,19 +1,514 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta name="generator" content="Hexo 4.2.0"><meta name="google-site-verification" content="J2PiOsBBrzxvzRLGLk8sWK9FBqz9raU5Vh4BF4GoWzY"><link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png"><link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/rabbit_favicon32.ico"><link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/rabbit_favicon16.ico"><link rel="mask-icon" href="/Blog/images/logo.svg" color="#222"><link rel="stylesheet" href="/Blog/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/Blog/lib/font-awesome/css/font-awesome.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:new URL("https://linwhitehat.github.io/Blog").hostname,root:"/Blog/",scheme:"Mist",version:"7.7.0",exturl:!1,sidebar:{display:"post",padding:18,offset:12,onmobile:!0},copycode:{enable:!0,show_result:!0,style:null},back2top:{enable:!0,sidebar:!0,scrollpercent:!0},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!0,lazyload:!1,pangu:!1,comments:{style:"tabs",active:null,storage:!0,lazyload:!1,nav:null},algolia:{appID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1},path:"search.xml",motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}}}</script><meta name="description" content="微软操作系统占据绝对的市场，也是大部分人使用最多的PC操作系统，本文列述了各类Windows系统使用中的说明，能够让你对Windows了解更多，使用起来更加得心应手。"><meta property="og:type" content="article"><meta property="og:title" content="微软系统使用手册"><meta property="og:url" content="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html"><meta property="og:site_name" content="林深时见璐"><meta property="og:description" content="微软操作系统占据绝对的市场，也是大部分人使用最多的PC操作系统，本文列述了各类Windows系统使用中的说明，能够让你对Windows了解更多，使用起来更加得心应手。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-1.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-2.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-3.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-4.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-5.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-6.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-7.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-8.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-9.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-10.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-11.png"><meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-5109-2159693-5342695777bde48d.png"><meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-6203-2159693-10d9bae7a6e59b06.png"><meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-3794-2159693-30d1a50103f28cea.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-12.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-13.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-14.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-15.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-16.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-17.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-18-1.png"><meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-18-2.png"><meta property="article:published_time" content="2020-01-27T16:00:00.000Z"><meta property="article:modified_time" content="2020-02-29T15:16:07.789Z"><meta property="article:author" content="L1n"><meta property="article:tag" content="操作系统"><meta property="article:tag" content="Git"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://linwhitehat.github.io/Blog/images/windows-1.png"><link rel="canonical" href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0}</script><link rel="manifest" href="/Blog/manifest.json"><link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,400,500,600,700&display=swap&subset=chinese-simplified" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap&subset=devanagari,latin-ext" rel="stylesheet"><meta name="viewport" content="width=device-width"><title>微软系统使用手册 | 林深时见璐</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage"><div class="container use-motion"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-meta"><div><a href="/Blog/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">林深时见璐</span><span class="logo-line-after"><i></i></span></a></div></div><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span><span class="toggle-line toggle-line-middle"></span><span class="toggle-line toggle-line-last"></span></div></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/Blog/" rel="section"><i class="fa fa-fw fa-home"></i> 首页</a></li><li class="menu-item menu-item-about"><a href="/Blog/about/" rel="section"><i class="fa fa-fw fa-user"></i> 关于</a></li><li class="menu-item menu-item-tags"><a href="/Blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i> 标签</a></li><li class="menu-item menu-item-categories"><a href="/Blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i> 分类</a></li><li class="menu-item menu-item-archives"><a href="/Blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i> 归档</a></li><li class="menu-item menu-item-love"><a href="/Blog/LoveHeart/" rel="section"><i class="fa fa-fw fa-heart"></i> love</a></li><li class="menu-item menu-item-留言"><a href="/Blog/guest/" rel="section"><i class="fa fa-fw fa-commenting"></i> 留言</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i> 搜索</a></li></ul></nav><div class="site-search"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="搜索..." spellcheck="false" type="text" id="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"></div></div><div class="search-pop-overlay"></div></div></div></header><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content"><div class="posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/Blog/uploads/dream_round.jpg"><meta itemprop="name" content="L1n"><meta itemprop="description" content=""></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="林深时见璐"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">微软系统使用手册</h2><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建时间：2020-01-28 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-28T00:00:00+08:00">2020-01-28</time></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i></span> <span class="post-meta-item-text">更新于</span> <time title="修改时间：2020-02-29 23:16:07" itemprop="dateModified" datetime="2020-02-29T23:16:07+08:00">2020-02-29</time></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Handbook/" itemprop="url" rel="index"><span itemprop="name">Handbook</span></a></span> ， <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Handbook/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span> ， <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Handbook/Windows/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a></span></span><span id="/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html" class="post-meta-item leancloud_visitors" data-flag-title="微软系统使用手册" title="阅读次数"><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数：</span><span class="leancloud-visitors-count"></span></span><br><span class="post-meta-item" title="本文字数"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">本文字数：</span> <span>4.8k</span></span><span class="post-meta-item" title="阅读时长"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span>4 分钟</span></span></div></header><div class="post-body" itemprop="articleBody"><link rel="stylesheet" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>微软操作系统占据绝对的市场，也是大部分人使用最多的PC操作系统，本文列述了各类Windows系统使用中的说明，能够让你对Windows了解更多，使用起来更加得心应手。</p><a id="more"></a><h2 id="录屏"><a href="#录屏" class="headerlink" title="录屏"></a>录屏</h2><p>Windows10系统中预装了Xbox系列软件，这本身是微软的一共游戏娱乐平台，但是其带有的录屏功能却能够满足我们录制教程或远程会议视频，不需要安装第三方的应用软件，而且使用十分简单方便。</p><h3 id="开启Windows录屏设置"><a href="#开启Windows录屏设置" class="headerlink" title="开启Windows录屏设置"></a>开启Windows录屏设置</h3><p>Windows10点击菜单栏<code>Windows</code>键，进入<code>系统设置</code>；<br><img src="/Blog/images/windows-1.png" alt="系统设置"><i class="img-caption">☆ 系统设置</i><br>选择<code>游戏</code>，点击左侧<code>游戏栏</code>，将<code>使用游戏录制游戏剪辑 、屏蔽截图和广播</code>选择为<code>开</code>，下方打开游戏栏快捷键按照系统默认为<code>Win+G</code>；<br><img src="/Blog/images/windows-2.png" alt="游戏设置"><i class="img-caption">☆ 游戏设置</i><br><img src="/Blog/images/windows-3.png" alt="游戏栏设置"><i class="img-caption">☆ 游戏栏设置</i><br>点击左侧的<code>游戏模式</code>,选择为<code>开</code>，这样才能够开启Xbox的录屏功能；<br><img src="/Blog/images/windows-4.png" alt="游戏模式设置"><i class="img-caption">☆ 游戏模式设置</i><br>然后选择左侧的<code>屏幕截图</code>,将<code>当我玩游戏时在后台录制</code>和<code>在我录制游戏时录制音频</code>选择为<code>开</code>，其他选项可以根据自身情况设置。<br><img src="/Blog/images/windows-5.png" alt="录制设置"><i class="img-caption">☆ 录制设置</i></p><h3 id="录制屏幕"><a href="#录制屏幕" class="headerlink" title="录制屏幕"></a>录制屏幕</h3><p>在需要录制的时候，按下之前设置的快捷键<code>Win + G</code>，此时会弹出Xbox录制窗口，<code>游戏捕获</code>窗口是操作按钮，<code>音频</code>窗口是设置需要录制音频的应用，点击<code>游戏捕获</code>下的<code>⚫</code>按钮即开始录制；<br><img src="/Blog/images/windows-6.png" alt="录制屏幕"><i class="img-caption">☆ 录制屏幕</i></p><h3 id="查看录制结果及修改录制设置"><a href="#查看录制结果及修改录制设置" class="headerlink" title="查看录制结果及修改录制设置"></a>查看录制结果及修改录制设置</h3><p>在需要结束录制的时候，按下录制窗口上的<code>⬛</code>按钮或屏幕右上角的<code>⬛</code>按钮，同时可以看到录制的时长，结束录制时系统会通知你录制内容存储位置，到存储位置查看已录制的视频。点击录制窗口的<code>⚙</code>状按钮可以修改录制设置，旁边的<code>📂</code>可以查看存储位置。<br><img src="/Blog/images/windows-7.png" alt="结束录制"><i class="img-caption">☆ 结束录制</i></p><h2 id="已存储Wi-Fi密码查看"><a href="#已存储Wi-Fi密码查看" class="headerlink" title="已存储Wi-Fi密码查看"></a>已存储Wi-Fi密码查看</h2><h3 id="打开网络适配器设置"><a href="#打开网络适配器设置" class="headerlink" title="打开网络适配器设置"></a>打开网络适配器设置</h3><h4 id="命令行开启"><a href="#命令行开启" class="headerlink" title="命令行开启"></a>命令行开启</h4><p>按快捷组合键<code>Windwos+r</code>，输入<code>ncpa.cpl</code>。</p><h4 id="界面鼠标开启"><a href="#界面鼠标开启" class="headerlink" title="界面鼠标开启"></a>界面鼠标开启</h4><p>鼠标右键点击Windows菜单栏的网络图标，点击<code>打开“网络和Internet”设置</code>，选择<code>更改适配器选项</code>。</p><p><img src="/Blog/images/windows-8.png" alt="网络适配器"><i class="img-caption">☆ 网络适配器</i></p><h3 id="查看无线网配置信息"><a href="#查看无线网配置信息" class="headerlink" title="查看无线网配置信息"></a>查看无线网配置信息</h3><h4 id="无线网状态"><a href="#无线网状态" class="headerlink" title="无线网状态"></a>无线网状态</h4><p>注意要查看无线网状态需要正常连接无线网才能查看当前连接的无线网配置，右键点击<code>WLAN</code>标记的网络，点击<code>状态</code>。</p><p><img src="/Blog/images/windows-9.png" alt="无线状态查看"><i class="img-caption">☆ 无线状态查看</i></p><h4 id="查看无线属性"><a href="#查看无线属性" class="headerlink" title="查看无线属性"></a>查看无线属性</h4><p>进入无线网状态界面，点击<code>无线属性</code>,选择<code>安全</code>选项卡，勾选<code>显示字符</code>即可查看当前无线网的认证信息。</p><p><img src="/Blog/images/windows-10.png" alt="无线属性查看"><i class="img-caption">☆ 无线属性查看</i></p><p><img src="/Blog/images/windows-11.png" alt="Wi-Fi密钥查看"><i class="img-caption">☆ Wi-Fi密钥查看</i></p><h2 id="端口占用查看"><a href="#端口占用查看" class="headerlink" title="端口占用查看"></a>端口占用查看</h2><p>在windows下需要查看端口占用情况，同时排查哪些应用正在使用当前端口<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Windows下如何查看某个端口被谁占用](https://www.runoob.com/w3cnote/windows-finds-port-usage.html)
-">[1]</span></a></sup>。</p><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="打开命令行（管理员身份）"><a href="#打开命令行（管理员身份）" class="headerlink" title="打开命令行（管理员身份）"></a>打开命令行（管理员身份）</h4><p>1） 在开始菜单搜索<code>cmd</code>，右键点击<code>命令行提示窗口</code>以管理员身份运行；</p><p>2） 按快捷组合键<code>Windows+r</code>，输入<code>cmd</code>。</p><h4 id="查看所有端口"><a href="#查看所有端口" class="headerlink" title="查看所有端口"></a>查看所有端口</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure><p>每个地址后面显示的即端口号，最后一列表示对应的进程号PID。</p><p><img src="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-5109-2159693-5342695777bde48d.png" alt="系统所有端口信息查看"><i class="img-caption">☆ 系统所有端口信息查看</i></p><h4 id="查看具体端口使用的进程"><a href="#查看具体端口使用的进程" class="headerlink" title="查看具体端口使用的进程"></a>查看具体端口使用的进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">"8081"</span></span><br></pre></td></tr></table></figure><p>显示使用当前端口的进程情况。</p><p><img src="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-6203-2159693-10d9bae7a6e59b06.png" alt="端口对应使用进程查看"><i class="img-caption">☆ 端口对应使用进程查看</i></p><h4 id="查看指定进程"><a href="#查看指定进程" class="headerlink" title="查看指定进程"></a>查看指定进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist|findstr <span class="string">"9088"</span></span><br></pre></td></tr></table></figure><p>查看是哪个进程或者程序占用了 8081 端口，结果是：node.exe。</p><p><img src="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-3794-2159693-30d1a50103f28cea.png" alt="查看具体进程"><i class="img-caption">☆ 查看具体进程</i></p><h2 id="内存型号查看"><a href="#内存型号查看" class="headerlink" title="内存型号查看"></a>内存型号查看</h2><p>使用Windows系统的电脑一般都能支持扩展，而扩展的硬件一般都有内存，要给电脑增加内存条需要知道电脑对内存的支持情况以及内存条的配置，有多种方式能够得知，这里仍然推荐不适用第三方软件的方式，即Windows自身便能完成需求。</p><h3 id="查看支持的最大内存容量"><a href="#查看支持的最大内存容量" class="headerlink" title="查看支持的最大内存容量"></a>查看支持的最大内存容量</h3><p>打开命令行，按下<code>Win + R</code>，输入<code>cmd</code>，输入<code>wmic memphysical get maxcapacity</code>，显示的数字即电脑主板支持的最大内存，这串数字的单位是<code>KB</code>，因此需要换算为<code>GB</code>，以我的笔记本为例子16777216KB即16GB。<br><img src="/Blog/images/windows-12.png" alt="支持内存上限"><i class="img-caption">☆ 支持内存上限</i></p><h3 id="查看内存配置"><a href="#查看内存配置" class="headerlink" title="查看内存配置"></a>查看内存配置</h3><p>一般购买内存需要知道内存的型号、频率、电压、大小，其中内存条的型号、频率和电压是必须和电脑主板支持的相兼容才能保证使用正常，详细的内存配置可以参照此处<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[读懂内存](https://zhuanlan.zhihu.com/p/26255460)
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+<meta name="google-site-verification" content="J2PiOsBBrzxvzRLGLk8sWK9FBqz9raU5Vh4BF4GoWzY" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/rabbit_favicon32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/rabbit_favicon16.ico">
+  <link rel="mask-icon" href="/Blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Blog/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/Blog/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://linwhitehat.github.io/Blog').hostname,
+    root: '/Blog/',
+    scheme: 'Mist',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"display":"post","padding":18,"offset":12,"onmobile":true},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: true,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Windows系统占据当前桌面操作系统的绝对市场，微软操作系统作为市场占有率最高的桌面操作系统，也是大多数人接触最多和使用最多的PC操作系统，其软件生态环境已经十分丰富。很多软件都会有 windows 版本，且大家日常使用的软件也都基本支持在微软系统中使用，本文列述了Windows系统使用中不同应用的说明，能够让你对Windows了解更多，同时也补充了在Windows上体验较好的软件及使用中遇到问">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微软系统使用手册">
+<meta property="og:url" content="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">
+<meta property="og:site_name" content="林深时见璐">
+<meta property="og:description" content="Windows系统占据当前桌面操作系统的绝对市场，微软操作系统作为市场占有率最高的桌面操作系统，也是大多数人接触最多和使用最多的PC操作系统，其软件生态环境已经十分丰富。很多软件都会有 windows 版本，且大家日常使用的软件也都基本支持在微软系统中使用，本文列述了Windows系统使用中不同应用的说明，能够让你对Windows了解更多，同时也补充了在Windows上体验较好的软件及使用中遇到问">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-1.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-2.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-3.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-4.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-5.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-6.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-7.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-8.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-9.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-10.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-11.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-5109-2159693-5342695777bde48d.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-6203-2159693-10d9bae7a6e59b06.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-3794-2159693-30d1a50103f28cea.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-12.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-13.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-14.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-15.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-16.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-17.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-18-1.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-18-2.png">
+<meta property="og:image" content="https://linwhitehat.github.io/Blog/images/windows-19.png">
+<meta property="article:published_time" content="2020-01-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-30T04:28:58.493Z">
+<meta property="article:author" content="L1n">
+<meta property="article:tag" content="操作系统">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linwhitehat.github.io/Blog/images/windows-1.png">
+
+<link rel="canonical" href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+<link rel="manifest" href="/Blog/manifest.json">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,400,500,600,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap&subset=devanagari,latin-ext" rel="stylesheet">
+
+
+<meta name="viewport" content="width=device-width"> 
+  <title>微软系统使用手册 | 林深时见璐</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/Blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">林深时见璐</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/Blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/Blog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/Blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/Blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/Blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-love">
+
+    <a href="/Blog/LoveHeart/" rel="section"><i class="fa fa-fw fa-heart"></i>love</a>
+
+  </li>
+        <li class="menu-item menu-item-留言">
+
+    <a href="/Blog/guest/" rel="section"><i class="fa fa-fw fa-commenting"></i>留言</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Blog/uploads/dream_round.jpg">
+      <meta itemprop="name" content="L1n">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林深时见璐">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          微软系统使用手册
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-28 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-28T00:00:00+08:00">2020-01-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-30 12:28:58" itemprop="dateModified" datetime="2020-03-30T12:28:58+08:00">2020-03-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Blog/categories/Handbook/" itemprop="url" rel="index">
+                    <span itemprop="name">Handbook</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Blog/categories/Handbook/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Blog/categories/Handbook/OS/Windows/" itemprop="url" rel="index">
+                    <span itemprop="name">Windows</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html" class="post-meta-item leancloud_visitors" data-flag-title="微软系统使用手册" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Windows系统占据当前桌面操作系统的绝对市场，微软操作系统作为市场占有率最高的桌面操作系统，也是大多数人接触最多和使用最多的PC操作系统，其软件生态环境已经十分丰富。很多软件都会有 windows 版本，且大家日常使用的软件也都基本支持在微软系统中使用，本文列述了Windows系统使用中不同应用的说明，能够让你对Windows了解更多，同时也补充了在Windows上体验较好的软件及使用中遇到问题的说明，但不会具体去介绍某一类应用的使用教程。</p>
+<a id="more"></a>
+<h2 id="录屏"><a href="#录屏" class="headerlink" title="录屏"></a>录屏</h2><p>Windows10系统中预装了Xbox系列软件，这本身是微软的一共游戏娱乐平台，但是其带有的录屏功能却能够满足我们录制教程或远程会议视频，不需要安装第三方的应用软件，而且使用十分简单方便。</p>
+<h3 id="开启Windows录屏设置"><a href="#开启Windows录屏设置" class="headerlink" title="开启Windows录屏设置"></a>开启Windows录屏设置</h3><p>Windows10点击菜单栏<code>Windows</code>键，进入<code>系统设置</code>；<br><img src="/Blog/images/windows-1.png" alt="系统设置"><i class="img-caption">☆ 系统设置</i><br>选择<code>游戏</code>，点击左侧<code>游戏栏</code>，将<code>使用游戏录制游戏剪辑 、屏蔽截图和广播</code>选择为<code>开</code>，下方打开游戏栏快捷键按照系统默认为<code>Win+G</code>；<br><img src="/Blog/images/windows-2.png" alt="游戏设置"><i class="img-caption">☆ 游戏设置</i><br><img src="/Blog/images/windows-3.png" alt="游戏栏设置"><i class="img-caption">☆ 游戏栏设置</i><br>点击左侧的<code>游戏模式</code>,选择为<code>开</code>，这样才能够开启Xbox的录屏功能；<br><img src="/Blog/images/windows-4.png" alt="游戏模式设置"><i class="img-caption">☆ 游戏模式设置</i><br>然后选择左侧的<code>屏幕截图</code>,将<code>当我玩游戏时在后台录制</code>和<code>在我录制游戏时录制音频</code>选择为<code>开</code>，其他选项可以根据自身情况设置。<br><img src="/Blog/images/windows-5.png" alt="录制设置"><i class="img-caption">☆ 录制设置</i></p>
+<h3 id="录制屏幕"><a href="#录制屏幕" class="headerlink" title="录制屏幕"></a>录制屏幕</h3><p>在需要录制的时候，按下之前设置的快捷键<code>Win + G</code>，此时会弹出Xbox录制窗口，<code>游戏捕获</code>窗口是操作按钮，<code>音频</code>窗口是设置需要录制音频的应用，点击<code>游戏捕获</code>下的<code>⚫</code>按钮即开始录制；<br><img src="/Blog/images/windows-6.png" alt="录制屏幕"><i class="img-caption">☆ 录制屏幕</i></p>
+<h3 id="查看录制结果及修改录制设置"><a href="#查看录制结果及修改录制设置" class="headerlink" title="查看录制结果及修改录制设置"></a>查看录制结果及修改录制设置</h3><p>在需要结束录制的时候，按下录制窗口上的<code>⬛</code>按钮或屏幕右上角的<code>⬛</code>按钮，同时可以看到录制的时长，结束录制时系统会通知你录制内容存储位置，到存储位置查看已录制的视频。点击录制窗口的<code>⚙</code>状按钮可以修改录制设置，旁边的<code>📂</code>可以查看存储位置。<br><img src="/Blog/images/windows-7.png" alt="结束录制"><i class="img-caption">☆ 结束录制</i></p>
+<h2 id="已存储Wi-Fi密码查看"><a href="#已存储Wi-Fi密码查看" class="headerlink" title="已存储Wi-Fi密码查看"></a>已存储Wi-Fi密码查看</h2><h3 id="打开网络适配器设置"><a href="#打开网络适配器设置" class="headerlink" title="打开网络适配器设置"></a>打开网络适配器设置</h3><h4 id="命令行开启"><a href="#命令行开启" class="headerlink" title="命令行开启"></a>命令行开启</h4><p>按快捷组合键<code>Windwos+r</code>，输入<code>ncpa.cpl</code>。</p>
+<h4 id="界面鼠标开启"><a href="#界面鼠标开启" class="headerlink" title="界面鼠标开启"></a>界面鼠标开启</h4><p>鼠标右键点击Windows菜单栏的网络图标，点击<code>打开“网络和Internet”设置</code>，选择<code>更改适配器选项</code>。</p>
+<p><img src="/Blog/images/windows-8.png" alt="网络适配器"><i class="img-caption">☆ 网络适配器</i></p>
+<h3 id="查看无线网配置信息"><a href="#查看无线网配置信息" class="headerlink" title="查看无线网配置信息"></a>查看无线网配置信息</h3><h4 id="无线网状态"><a href="#无线网状态" class="headerlink" title="无线网状态"></a>无线网状态</h4><p>注意要查看无线网状态需要正常连接无线网才能查看当前连接的无线网配置，右键点击<code>WLAN</code>标记的网络，点击<code>状态</code>。</p>
+<p><img src="/Blog/images/windows-9.png" alt="无线状态查看"><i class="img-caption">☆ 无线状态查看</i></p>
+<h4 id="查看无线属性"><a href="#查看无线属性" class="headerlink" title="查看无线属性"></a>查看无线属性</h4><p>进入无线网状态界面，点击<code>无线属性</code>,选择<code>安全</code>选项卡，勾选<code>显示字符</code>即可查看当前无线网的认证信息。</p>
+<p><img src="/Blog/images/windows-10.png" alt="无线属性查看"><i class="img-caption">☆ 无线属性查看</i></p>
+<p><img src="/Blog/images/windows-11.png" alt="Wi-Fi密钥查看"><i class="img-caption">☆ Wi-Fi密钥查看</i></p>
+<h2 id="端口占用查看"><a href="#端口占用查看" class="headerlink" title="端口占用查看"></a>端口占用查看</h2><p>在windows下需要查看端口占用情况，同时排查哪些应用正在使用当前端口<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Windows下如何查看某个端口被谁占用](https://www.runoob.com/w3cnote/windows-finds-port-usage.html)
+">[1]</span></a></sup>。</p>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="打开命令行（管理员身份）"><a href="#打开命令行（管理员身份）" class="headerlink" title="打开命令行（管理员身份）"></a>打开命令行（管理员身份）</h4><p>1） 在开始菜单搜索<code>cmd</code>，右键点击<code>命令行提示窗口</code>以管理员身份运行；</p>
+<p>2） 按快捷组合键<code>Windows+r</code>，输入<code>cmd</code>。</p>
+<h4 id="查看所有端口"><a href="#查看所有端口" class="headerlink" title="查看所有端口"></a>查看所有端口</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
+<p>每个地址后面显示的即端口号，最后一列表示对应的进程号PID。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-5109-2159693-5342695777bde48d.png" alt="系统所有端口信息查看"><i class="img-caption">☆ 系统所有端口信息查看</i></p>
+<h4 id="查看具体端口使用的进程"><a href="#查看具体端口使用的进程" class="headerlink" title="查看具体端口使用的进程"></a>查看具体端口使用的进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">"8081"</span></span><br></pre></td></tr></table></figure>
+<p>显示使用当前端口的进程情况。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-6203-2159693-10d9bae7a6e59b06.png" alt="端口对应使用进程查看"><i class="img-caption">☆ 端口对应使用进程查看</i></p>
+<h4 id="查看指定进程"><a href="#查看指定进程" class="headerlink" title="查看指定进程"></a>查看指定进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist|findstr <span class="string">"9088"</span></span><br></pre></td></tr></table></figure>
+<p>查看是哪个进程或者程序占用了 8081 端口，结果是：node.exe。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2018/07/1530674518-3794-2159693-30d1a50103f28cea.png" alt="查看具体进程"><i class="img-caption">☆ 查看具体进程</i></p>
+<h2 id="内存型号查看"><a href="#内存型号查看" class="headerlink" title="内存型号查看"></a>内存型号查看</h2><p>使用Windows系统的电脑一般都能支持扩展，而扩展的硬件一般都有内存，要给电脑增加内存条需要知道电脑对内存的支持情况以及内存条的配置，有多种方式能够得知，这里仍然推荐不适用第三方软件的方式，即Windows自身便能完成需求。</p>
+<h3 id="查看支持的最大内存容量"><a href="#查看支持的最大内存容量" class="headerlink" title="查看支持的最大内存容量"></a>查看支持的最大内存容量</h3><p>打开命令行，按下<code>Win + R</code>，输入<code>cmd</code>，输入<code>wmic memphysical get maxcapacity</code>，显示的数字即电脑主板支持的最大内存，这串数字的单位是<code>KB</code>，因此需要换算为<code>GB</code>，以我的笔记本为例子16777216KB即16GB。<br><img src="/Blog/images/windows-12.png" alt="支持内存上限"><i class="img-caption">☆ 支持内存上限</i></p>
+<h3 id="查看内存配置"><a href="#查看内存配置" class="headerlink" title="查看内存配置"></a>查看内存配置</h3><p>一般购买内存需要知道内存的型号、频率、电压、大小，其中内存条的型号、频率和电压是必须和电脑主板支持的相兼容才能保证使用正常，详细的内存配置可以参照此处<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[读懂内存](https://zhuanlan.zhihu.com/p/26255460)
 ">[2]</span></a></sup><sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[英睿达](https://www.crucial.cn/memory)
-">[3]</span></a></sup>，具体查看步骤如下：</p><ol><li>打开命令行，输入<code>wmic</code>，在wmic提示符下输入<code>memorychip</code>，可看到当前电脑内存信息。<br><img src="/Blog/images/windows-13.png" alt="内存信息"><i class="img-caption">☆ 内存信息</i></li><li>解读显示的内存信息，<code>Capacity</code>表示内存大小，<code>ConfiguredClockSpeed</code>表示内存频率，<code>DataWidth</code>表示位宽，其中要判断型号是<code>DDR</code>的哪个版本，从频率可以判断，一般频率在2400以上的即<code>DDR4</code>，这也是当前最常见的内存型号，如果要直观查看，可以使用第三方软件<code>cpu-z</code>查看。</li></ol><h2 id="CPU型号查看"><a href="#CPU型号查看" class="headerlink" title="CPU型号查看"></a>CPU型号查看</h2><p>要了解自身电脑的CPU情况，除了上网搜索官网配置信息外，可以在本地便捷的进行查看，一般要了解的是CPU的版本、厂商、线程数、核数等，使用Windows内置功能来完成查询。</p><h3 id="物理CPU个数"><a href="#物理CPU个数" class="headerlink" title="物理CPU个数"></a>物理CPU个数</h3><p>打开命令行，输入<code>systeminfo</code>，查看<code>处理器</code>一项即可看到电脑使用处理器个数。</p><h3 id="查看CPU配置信息"><a href="#查看CPU配置信息" class="headerlink" title="查看CPU配置信息"></a>查看CPU配置信息</h3><p>打开命令行，输入<code>wmic</code>，之后输入<code>cpu get *</code>或<code>cpu get</code>，里面包含电脑中所搭载的CPU配置信息，如<code>NumberOfCores</code>表示CPU核数，<code>NumberOfLogicalProcessors</code>表示CPU线程数，<code>Caption</code>表示厂商信息，其他详细内容可自行查看。</p><h2 id="查看网口信息"><a href="#查看网口信息" class="headerlink" title="查看网口信息"></a>查看网口信息</h2><h3 id="命令行方式"><a href="#命令行方式" class="headerlink" title="命令行方式"></a>命令行方式</h3><p>打开命令行，输入<code>systeminfo</code>，查看<code>网卡</code>一项即可。</p><h3 id="可视化方式"><a href="#可视化方式" class="headerlink" title="可视化方式"></a>可视化方式</h3><p>在开始菜单搜索<code>计算机管理</code>，打开<code>计算机管理</code>，点击左侧<code>设备管理器</code>，选择<code>网络适配器</code>查看。</p><h2 id="无线投屏"><a href="#无线投屏" class="headerlink" title="无线投屏"></a>无线投屏</h2><p>使用 Windows10 自带的 Miracast 功能，实现将电脑投屏到支持无线投屏的仪器上，既节省了使用连接线也避免依赖第三方软件，让投屏能够随时随地使用。此处不对无线投屏技术进行过多原理及技术说明，想了解可查阅网上教程<sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Win10PC电脑无线投屏Miracast的神操作](https://zhuanlan.zhihu.com/p/68697030)
-">[15]</span></a></sup><sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[win10下Miracast无线投屏使用教程及异常解决方案](https://blog.csdn.net/xqhrs232/article/details/104250602)">[16]</span></a></sup>。<br>以笔记本电脑无线投屏到小米电视为例子，基本使用方式如下：</p><ol><li>确保电脑与需要投屏的显示器（此处为小米电视）在同一局域网下，电脑有无线网卡；</li><li>打开小米电视，在首页界面找到<code>我的应用</code>并打开；</li><li>在<code>我的应用</code>中找到<code>无线投影</code>后打开，选择<code>Miracast</code>功能选项，小米电视会出现无线显示界面及<code>小米电视</code>并等待连接；</li><li>在笔记本电脑 Win10 桌面右下角点击，选择<code>连接</code>，电脑会自动搜索出<code>小米电视</code>，点击连接；</li><li>等待自动连接，点击电脑桌面右下角的<code>投影</code>，选择相应的投影方式。</li></ol><p><strong>注意</strong></p><ol><li>使用无线投屏后，桌面上方会自动显示工具条，可以选择不保持在前端，则会隐藏，将鼠标移动到桌面上方的中部即会重新出现工具条，此外工具条出现无法隐藏的问题可能会在旧版本的系统版本存在，详情可查阅微软社区相关问题<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Win10使用无线投屏后，屏幕上方工具条无法移除](https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E4%BD%BF%E7%94%A8%E6%97%A0%E7%BA%BF%E6%8A%95/803e190a-135a-4b90-9e8d-032f2d9fc89b)
-">[14]</span></a></sup>。</li><li>本例中使用小米电视的<code>无线投影</code>应用，如果是华为/荣耀系列则是<code>无线投屏</code>应用，不同品牌名称可能存在差异，可以在<code>我的应用</code>中搜索关键字<code>无线</code>进行查找。</li></ol><h2 id="常见问题-amp-解决方法"><a href="#常见问题-amp-解决方法" class="headerlink" title="常见问题&amp;解决方法"></a>常见问题&amp;解决方法</h2><h3 id="浏览器如chrome无法正常播放声音"><a href="#浏览器如chrome无法正常播放声音" class="headerlink" title="浏览器如chrome无法正常播放声音"></a>浏览器如chrome无法正常播放声音</h3><p>问题：<br>&emsp;&emsp;当使用网易云音乐、QQ、影视播放软件等软件可以正常播放声音，而常用浏览器却不能播放声音，重启仍然无效时，问题一般是浏览器的声音播放被禁止了，即针对性的对某个应用做了声音禁止。<br>解决：<br>&emsp;&emsp;解决办法即查看系统<code>声音设置</code>以及<code>声音合成器</code>，在桌面右下角菜单栏找到<code>🔈</code>形状的<code>扬声器</code>，右键点击可以看到选项，查看浏览器是否被禁音，将其解除即可。<br><img src="/Blog/images/windows-14.png" alt="扬声器"><i class="img-caption">☆ 扬声器</i><br><img src="/Blog/images/windows-15.png" alt="扬声器设置"><i class="img-caption">☆ 扬声器设置</i></p><h3 id="进程连接设备平台用户服务-338f0c6占用CPU"><a href="#进程连接设备平台用户服务-338f0c6占用CPU" class="headerlink" title="进程连接设备平台用户服务_338f0c6占用CPU"></a>进程<code>连接设备平台用户服务_338f0c6</code>占用CPU</h3><p>这个进程根据介绍是对外接设备的正常运行进行提供服务的，但是我并没有连接U盘、移动硬盘、触摸板等设备，结果后台自动启动这个进程，导致CPU资源被占用，查询微软社区后，参照<sup id="fnref:12"><a href="#fn:12" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[连接设备平台用户服务长时间高CPU占用](https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3/6f6494fe-0610-4dac-8bfd-8da6d70d1670)
+">[3]</span></a></sup>，具体查看步骤如下：</p>
+<ol>
+<li>打开命令行，输入<code>wmic</code>，在wmic提示符下输入<code>memorychip</code>，可看到当前电脑内存信息。<br><img src="/Blog/images/windows-13.png" alt="内存信息"><i class="img-caption">☆ 内存信息</i></li>
+<li>解读显示的内存信息，<code>Capacity</code>表示内存大小，<code>ConfiguredClockSpeed</code>表示内存频率，<code>DataWidth</code>表示位宽，其中要判断型号是<code>DDR</code>的哪个版本，从频率可以判断，一般频率在2400以上的即<code>DDR4</code>，这也是当前最常见的内存型号，如果要直观查看，可以使用第三方软件<code>cpu-z</code>查看。</li>
+</ol>
+<h2 id="CPU型号查看"><a href="#CPU型号查看" class="headerlink" title="CPU型号查看"></a>CPU型号查看</h2><p>要了解自身电脑的CPU情况，除了上网搜索官网配置信息外，可以在本地便捷的进行查看，一般要了解的是CPU的版本、厂商、线程数、核数等，使用Windows内置功能来完成查询。</p>
+<h3 id="物理CPU个数"><a href="#物理CPU个数" class="headerlink" title="物理CPU个数"></a>物理CPU个数</h3><p>打开命令行，输入<code>systeminfo</code>，查看<code>处理器</code>一项即可看到电脑使用处理器个数。</p>
+<h3 id="查看CPU配置信息"><a href="#查看CPU配置信息" class="headerlink" title="查看CPU配置信息"></a>查看CPU配置信息</h3><p>打开命令行，输入<code>wmic</code>，之后输入<code>cpu get *</code>或<code>cpu get</code>，里面包含电脑中所搭载的CPU配置信息，如<code>NumberOfCores</code>表示CPU核数，<code>NumberOfLogicalProcessors</code>表示CPU线程数，<code>Caption</code>表示厂商信息，其他详细内容可自行查看。</p>
+<h2 id="查看网口信息"><a href="#查看网口信息" class="headerlink" title="查看网口信息"></a>查看网口信息</h2><h3 id="命令行方式"><a href="#命令行方式" class="headerlink" title="命令行方式"></a>命令行方式</h3><p>打开命令行，输入<code>systeminfo</code>，查看<code>网卡</code>一项即可。</p>
+<h3 id="可视化方式"><a href="#可视化方式" class="headerlink" title="可视化方式"></a>可视化方式</h3><p>在开始菜单搜索<code>计算机管理</code>，打开<code>计算机管理</code>，点击左侧<code>设备管理器</code>，选择<code>网络适配器</code>查看。</p>
+<h2 id="无线投屏"><a href="#无线投屏" class="headerlink" title="无线投屏"></a>无线投屏</h2><p>使用 Windows10 自带的 Miracast 功能，实现将电脑投屏到支持无线投屏的仪器上，既节省了使用连接线也避免依赖第三方软件，让投屏能够随时随地使用。此处不对无线投屏技术进行过多原理及技术说明，想了解可查阅网上教程<sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Win10PC电脑无线投屏Miracast的神操作](https://zhuanlan.zhihu.com/p/68697030)
+">[15]</span></a></sup><sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[win10下Miracast无线投屏使用教程及异常解决方案](https://blog.csdn.net/xqhrs232/article/details/104250602)
+">[16]</span></a></sup>。<br>以笔记本电脑无线投屏到小米电视为例子，基本使用方式如下：</p>
+<ol>
+<li>确保电脑与需要投屏的显示器（此处为小米电视）在同一局域网下，电脑有无线网卡；</li>
+<li>打开小米电视，在首页界面找到<code>我的应用</code>并打开；</li>
+<li>在<code>我的应用</code>中找到<code>无线投影</code>后打开，选择<code>Miracast</code>功能选项，小米电视会出现无线显示界面及<code>小米电视</code>并等待连接；</li>
+<li>在笔记本电脑 Win10 桌面右下角点击，选择<code>连接</code>，电脑会自动搜索出<code>小米电视</code>，点击连接；</li>
+<li>等待自动连接，点击电脑桌面右下角的<code>投影</code>，选择相应的投影方式。</li>
+</ol>
+<p><strong>注意</strong></p>
+<ol>
+<li>使用无线投屏后，桌面上方会自动显示工具条，可以选择不保持在前端，则会隐藏，将鼠标移动到桌面上方的中部即会重新出现工具条，此外工具条出现无法隐藏的问题可能会在旧版本的系统版本存在，详情可查阅微软社区相关问题<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Win10使用无线投屏后，屏幕上方工具条无法移除](https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E4%BD%BF%E7%94%A8%E6%97%A0%E7%BA%BF%E6%8A%95/803e190a-135a-4b90-9e8d-032f2d9fc89b)
+">[14]</span></a></sup>。</li>
+<li>本例中使用小米电视的<code>无线投影</code>应用，如果是华为/荣耀系列则是<code>无线投屏</code>应用，不同品牌名称可能存在差异，可以在<code>我的应用</code>中搜索关键字<code>无线</code>进行查找。</li>
+</ol>
+<h2 id="常见问题-amp-解决方法"><a href="#常见问题-amp-解决方法" class="headerlink" title="常见问题&amp;解决方法"></a>常见问题&amp;解决方法</h2><h3 id="浏览器如chrome无法正常播放声音"><a href="#浏览器如chrome无法正常播放声音" class="headerlink" title="浏览器如chrome无法正常播放声音"></a>浏览器如chrome无法正常播放声音</h3><p>问题：<br>&emsp;&emsp;当使用网易云音乐、QQ、影视播放软件等软件可以正常播放声音，而常用浏览器却不能播放声音，重启仍然无效时，问题一般是浏览器的声音播放被禁止了，即针对性的对某个应用做了声音禁止。<br>解决：<br>&emsp;&emsp;解决办法即查看系统<code>声音设置</code>以及<code>声音合成器</code>，在桌面右下角菜单栏找到<code>🔈</code>形状的<code>扬声器</code>，右键点击可以看到选项，查看浏览器是否被禁音，将其解除即可。<br><img src="/Blog/images/windows-14.png" alt="扬声器"><i class="img-caption">☆ 扬声器</i><br><img src="/Blog/images/windows-15.png" alt="扬声器设置"><i class="img-caption">☆ 扬声器设置</i></p>
+<h3 id="进程连接设备平台用户服务-338f0c6占用CPU"><a href="#进程连接设备平台用户服务-338f0c6占用CPU" class="headerlink" title="进程连接设备平台用户服务_338f0c6占用CPU"></a>进程<code>连接设备平台用户服务_338f0c6</code>占用CPU</h3><p>这个进程根据介绍是对外接设备的正常运行进行提供服务的，但是我并没有连接U盘、移动硬盘、触摸板等设备，结果后台自动启动这个进程，导致CPU资源被占用，查询微软社区后，参照<sup id="fnref:12"><a href="#fn:12" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[连接设备平台用户服务长时间高CPU占用](https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3/6f6494fe-0610-4dac-8bfd-8da6d70d1670)
 ">[12]</span></a></sup><sup id="fnref:13"><a href="#fn:13" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[什么是连接设备平台服务？ 我应该禁用吗？](http://windowsbulletin.com/zh-CN/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1%E6%88%91%E5%BA%94%E8%AF%A5%E7%A6%81%E7%94%A8%E5%AE%83/)
-">[13]</span></a></sup>，得到解决方法如下：</p><ol><li>若是有连接的外接设备确保已经移除且断开连接；</li><li>将<code>连接设备平台用户服务_338f0c6</code>进程停止并禁用，同时在<code>服务</code>中找到<code>Superfetch</code>、<code>Homegroup Listener</code>、<code>Homegroup Provider</code>和<code>DiagTrack Diagnostics Tracking Service</code>，若是Windows系统版本较新（我的是Windows10-1903），则在服务中找到<code>Diagnostic Policy Service</code>、<code>Diagnostic Service Host</code>和<code>Diagnostic System Host</code>，将对应进程停止并禁用，重启电脑；</li><li>查看系统<code>虚拟内存</code>设置是否是默认情况，虚拟内存查看请打开<code>我的电脑</code>属性，位于<code>系统-&gt;高级系统设置-&gt;高级-&gt;性能-&gt;设置-&gt;高级-&gt;虚拟内存设置</code>。</li></ol><h2 id="推荐工具"><a href="#推荐工具" class="headerlink" title="推荐工具"></a>推荐工具</h2><h3 id="CMD-下载百度云资源"><a href="#CMD-下载百度云资源" class="headerlink" title="CMD-下载百度云资源"></a>CMD-下载百度云资源</h3><p>PanDownload 的作者于2018年宣布不再维护和开放服务，因此网页版PanDownload不可用，客户端目前不受影响，而同时作者提出另一种绕过百度云客户端限速的方法即通过<code>CMD</code>进行下载，转载来到本博客，详情参照作者博客<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[BaiduPCS-Go 使用CMD命令行全速下载百度云](https://laod.cn/black-technology/baidupcs-go-baiduyun.html)
-">[5]</span></a></sup>。</p><h3 id="Html-JS压缩及还原"><a href="#Html-JS压缩及还原" class="headerlink" title="Html/JS压缩及还原"></a>Html/JS压缩及还原</h3><p>经过压缩的源码想再编辑时需要还原为原来的形式，使用<a href="https://tool.lu/html/" target="_blank" rel="noopener external nofollow noreferrer">TOOL</a>可以快速还原前端代码，方便二次编辑。</p><h2 id="推荐软件"><a href="#推荐软件" class="headerlink" title="推荐软件"></a>推荐软件</h2><h3 id="PanDownload"><a href="#PanDownload" class="headerlink" title="PanDownload"></a>PanDownload</h3><p>解决百度云带来的限速问题，这是免费的一款第三方下载软件，请不要有偿售卖，同时请谨慎使用，存在被封的风险。详情见官网<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[PanDownload](https://pandownload.com/index.html)
-">[4]</span></a></sup>。</p><h3 id="PotPlayer"><a href="#PotPlayer" class="headerlink" title="PotPlayer"></a>PotPlayer</h3><p>一款值得推荐的播放器，<a href="https://potplayer.daum.net/" target="_blank" rel="noopener external nofollow noreferrer">官方地址</a>，2019年2月国内无法正常访问（某不可抗力隐私），下载需要科学上网，这款播放器的优点是支持的视频文件格式多，有多媒体文件解码器和硬件加速，使用很流畅，界面简洁。</p><h4 id="安装注意"><a href="#安装注意" class="headerlink" title="安装注意"></a>安装注意</h4><ol><li>不知何时起，PotPlayer 安装包捆绑了<a href="https://www.avast.com/zh-cn/index" target="_blank" rel="noopener external nofollow noreferrer">avast! (Avast Antivirus)</a>，建议手动更新安装，安装时注意在<code>Avast Antivirus</code>勾选处将✔去掉，否则捆绑安装会默认进行，且安装过程还挺长。没怎么接触过这款杀毒软件，但是被捆绑安装不太开心，这款杀毒软件与百度云网盘有冲突，同时杀毒软件不能关闭，强制后台运行<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Potplayer自动更新会下载安装Avast杀毒](https://www.52pojie.cn/thread-1086427-1-1.html)
+">[13]</span></a></sup>，得到解决方法如下：</p>
+<ol>
+<li>若是有连接的外接设备确保已经移除且断开连接；</li>
+<li>将<code>连接设备平台用户服务_338f0c6</code>进程停止并禁用，同时在<code>服务</code>中找到<code>Superfetch</code>、<code>Homegroup Listener</code>、<code>Homegroup Provider</code>和<code>DiagTrack Diagnostics Tracking Service</code>，若是Windows系统版本较新（我的是Windows10-1903），则在服务中找到<code>Diagnostic Policy Service</code>、<code>Diagnostic Service Host</code>和<code>Diagnostic System Host</code>，将对应进程停止并禁用，重启电脑；</li>
+<li>查看系统<code>虚拟内存</code>设置是否是默认情况，虚拟内存查看请打开<code>我的电脑</code>属性，位于<code>系统-&gt;高级系统设置-&gt;高级-&gt;性能-&gt;设置-&gt;高级-&gt;虚拟内存设置</code>。</li>
+</ol>
+<h2 id="推荐工具"><a href="#推荐工具" class="headerlink" title="推荐工具"></a>推荐工具</h2><h3 id="CMD-下载百度云资源"><a href="#CMD-下载百度云资源" class="headerlink" title="CMD-下载百度云资源"></a>CMD-下载百度云资源</h3><p>PanDownload 的作者于2018年宣布不再维护和开放服务，因此网页版PanDownload不可用，客户端目前不受影响，而同时作者提出另一种绕过百度云客户端限速的方法即通过<code>CMD</code>进行下载，转载来到本博客，详情参照作者博客<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[BaiduPCS-Go 使用CMD命令行全速下载百度云](https://laod.cn/black-technology/baidupcs-go-baiduyun.html)
+">[5]</span></a></sup>。</p>
+<h2 id="推荐软件"><a href="#推荐软件" class="headerlink" title="推荐软件"></a>推荐软件</h2><h3 id="PanDownload"><a href="#PanDownload" class="headerlink" title="PanDownload"></a>PanDownload</h3><p>解决百度云带来的限速问题，这是免费的一款第三方下载软件，请不要有偿售卖，同时请谨慎使用，存在被封的风险。详情见官网<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[PanDownload](https://pandownload.com/index.html)
+">[4]</span></a></sup>。</p>
+<h3 id="PotPlayer"><a href="#PotPlayer" class="headerlink" title="PotPlayer"></a>PotPlayer</h3><p>一款值得推荐的播放器，<a href="https://potplayer.daum.net/" target="_blank" rel="noopener external nofollow noreferrer">官方地址</a>，2019年2月国内无法正常访问（某不可抗力隐私），下载需要科学上网，这款播放器的优点是支持的视频文件格式多，有多媒体文件解码器和硬件加速，使用很流畅，界面简洁。</p>
+<h4 id="安装注意"><a href="#安装注意" class="headerlink" title="安装注意"></a>安装注意</h4><ol>
+<li>不知何时起，PotPlayer 安装包捆绑了<a href="https://www.avast.com/zh-cn/index" target="_blank" rel="noopener external nofollow noreferrer">avast! (Avast Antivirus)</a>，建议手动更新安装，安装时注意在<code>Avast Antivirus</code>勾选处将✔去掉，否则捆绑安装会默认进行，且安装过程还挺长。没怎么接触过这款杀毒软件，但是被捆绑安装不太开心，这款杀毒软件与百度云网盘有冲突，同时杀毒软件不能关闭，强制后台运行<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Potplayer自动更新会下载安装Avast杀毒](https://www.52pojie.cn/thread-1086427-1-1.html)
 ">[6]</span></a></sup><sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Malware or False positive in Potplayer?](https://malwaretips.com/threads/malware-or-false-positive-in-potplayer.94097/)
-">[7]</span></a></sup>。</li><li>如果不注意捆绑安装了<code>Avast Antivirus Free</code>，官方也提供了卸载工具<a href="https://files.avast.com/iavs9x/avastclear.exe" target="_blank" rel="noopener external nofollow noreferrer">avastclear</a>及卸载方法<sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[使用 avastclear 卸载 Avast Antivirus](https://www.avast.com/zh-cn/uninstall-utility)
-">[8]</span></a></sup>，具体见下图。<br><img src="/Blog/images/windows-16.png" alt="卸载Avast"><i class="img-caption">☆ 卸载Avast</i></li></ol><p>将官网及最新版 PotPlayer 在<a href="https://www.virustotal.com/" target="_blank" rel="noopener external nofollow noreferrer">VirusTotal</a>进行恶意性检测，结果如下：<br><img src="/Blog/images/windows-17.png" alt="PotPlayer官网检测结果"><i class="img-caption">☆ PotPlayer官网检测结果</i><br><img src="/Blog/images/windows-18-1.png" alt="PotPlayer-200204检测结果"><i class="img-caption">☆ PotPlayer-200204检测结果</i><br><img src="/Blog/images/windows-18-2.png" alt="PotPlayer-200204 Hash-256 校验"><i class="img-caption">☆ PotPlayer-200204 Hash-256 校验</i></p><h3 id="GitHub-和-Git"><a href="#GitHub-和-Git" class="headerlink" title="GitHub 和 Git"></a>GitHub 和 Git</h3><p><a href="https://github.com/" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>是全球最大的代码托管平台即软件源代码托管服务平台，而<a href="https://git-scm.com/" target="_blank" rel="noopener external nofollow noreferrer">Git</a>是分布式版本控制软件，Github 可通过 Git 进行版本控制，Git 是终端模式使用的工具，也有可视化使用的版本控制工具，本着开源开放交流的精神，要写出更优更美的代码，托管到开源平台，各路大神自有评说🤭，鉴于我也在学习和使用中，同时最近开始接触 Gitlab，因此建立了 Git学习专栏，可查看<a href="https://linwhitehat.github.io/2020/02/17/Git%E4%B8%93%E6%A0%8F.html">Git专栏</a>。</p><h4 id="GitHub-issue"><a href="#GitHub-issue" class="headerlink" title="GitHub issue"></a>GitHub issue</h4><p>当创建 GitHub 仓库项目之后，可以在项目的<code>Issues</code>里进行交流，可以提问和回答，参照<a href="https://blog.csdn.net/github_30605157/article/details/52837864" target="_blank" rel="noopener external nofollow noreferrer">熟练使用Issues</a>。</p><h4 id="Github-README"><a href="#Github-README" class="headerlink" title="Github README"></a>Github README</h4><p>每个项目的说明即 README 部分要写清楚，同时又要美观，有一个专业方式即加上项目徽章，效果可看我的<a href="https://github.com/linwhitehat/linwhitehat.github.io" target="_blank" rel="noopener external nofollow noreferrer">博客项目页面</a>，可参照<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[GitHub 项目徽章的添加和设置](https://lpd-ios.github.io/2017/05/03/GitHub-Badge-Introduction/)
+">[7]</span></a></sup>。</li>
+<li>如果不注意捆绑安装了<code>Avast Antivirus Free</code>，官方也提供了卸载工具<a href="https://files.avast.com/iavs9x/avastclear.exe" target="_blank" rel="noopener external nofollow noreferrer">avastclear</a>及卸载方法<sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[使用 avastclear 卸载 Avast Antivirus](https://www.avast.com/zh-cn/uninstall-utility)
+">[8]</span></a></sup>，具体见下图。<br><img src="/Blog/images/windows-16.png" alt="卸载Avast"><i class="img-caption">☆ 卸载Avast</i></li>
+</ol>
+<p>将官网及最新版 PotPlayer 在<a href="https://www.virustotal.com/" target="_blank" rel="noopener external nofollow noreferrer">VirusTotal</a>进行恶意性检测，结果如下：<br><img src="/Blog/images/windows-17.png" alt="PotPlayer官网检测结果"><i class="img-caption">☆ PotPlayer官网检测结果</i><br><img src="/Blog/images/windows-18-1.png" alt="PotPlayer-200204检测结果"><i class="img-caption">☆ PotPlayer-200204检测结果</i><br><img src="/Blog/images/windows-18-2.png" alt="PotPlayer-200204 Hash-256 校验"><i class="img-caption">☆ PotPlayer-200204 Hash-256 校验</i></p>
+<h3 id="GitHub-和-Git"><a href="#GitHub-和-Git" class="headerlink" title="GitHub 和 Git"></a>GitHub 和 Git</h3><p><a href="https://github.com/" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>是全球最大的代码托管平台即软件源代码托管服务平台，而<a href="https://git-scm.com/" target="_blank" rel="noopener external nofollow noreferrer">Git</a>是分布式版本控制软件，Github 可通过 Git 进行版本控制，Git 是终端模式使用的工具，也有可视化使用的版本控制工具，本着开源开放交流的精神，要写出更优更美的代码，托管到开源平台，各路大神自有评说🤭，鉴于我也在学习和使用中，同时最近开始接触 Gitlab，因此建立了 Git学习专栏，可查看<a href="https://linwhitehat.github.io/2020/02/17/Git%E4%B8%93%E6%A0%8F.html">Git专栏</a>。</p>
+<h4 id="GitHub-issue"><a href="#GitHub-issue" class="headerlink" title="GitHub issue"></a>GitHub issue</h4><p>当创建 GitHub 仓库项目之后，可以在项目的<code>Issues</code>里进行交流，可以提问和回答，参照<a href="https://blog.csdn.net/github_30605157/article/details/52837864" target="_blank" rel="noopener external nofollow noreferrer">熟练使用Issues</a>。</p>
+<h4 id="Github-README"><a href="#Github-README" class="headerlink" title="Github README"></a>Github README</h4><p>每个项目的说明即 README 部分要写清楚，同时又要美观，有一个专业方式即加上项目徽章，效果可看我的<a href="https://github.com/linwhitehat/linwhitehat.github.io" target="_blank" rel="noopener external nofollow noreferrer">博客项目页面</a>，可参照<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[GitHub 项目徽章的添加和设置](https://lpd-ios.github.io/2017/05/03/GitHub-Badge-Introduction/)
 ">[9]</span></a></sup><sup id="fnref:10"><a href="#fn:10" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[如何在 README 里面添加徽章](https://github.com/yangwenmai/how-to-add-badge-in-github-readme)
 ">[10]</span></a></sup><sup id="fnref:11"><a href="#fn:11" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[GitHub上 README 增加图片标签](https://blog.csdn.net/yangbodong22011/article/details/51791085)
-">[11]</span></a></sup>。</p><h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>本着手册即查即用的原则，这篇博文写的十分简要，很少说明部分，直接贴出操作。</p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none;padding-left:0;margin-left:40px"><li id="fn:1"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">1.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html" target="_blank" rel="noopener external nofollow noreferrer">Windows下如何查看某个端口被谁占用</a> <a href="#fnref:1" rev="footnote">↩</a></span></li><li id="fn:2"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">2.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://zhuanlan.zhihu.com/p/26255460" target="_blank" rel="noopener external nofollow noreferrer">读懂内存</a> <a href="#fnref:2" rev="footnote">↩</a></span></li><li id="fn:3"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">3.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://www.crucial.cn/memory" target="_blank" rel="noopener external nofollow noreferrer">英睿达</a> <a href="#fnref:3" rev="footnote">↩</a></span></li><li id="fn:4"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">4.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://pandownload.com/index.html" target="_blank" rel="noopener external nofollow noreferrer">PanDownload</a> <a href="#fnref:4" rev="footnote">↩</a></span></li><li id="fn:5"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">5.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://laod.cn/black-technology/baidupcs-go-baiduyun.html" target="_blank" rel="noopener external nofollow noreferrer">BaiduPCS-Go 使用CMD命令行全速下载百度云</a> <a href="#fnref:5" rev="footnote">↩</a></span></li><li id="fn:6"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">6.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://www.52pojie.cn/thread-1086427-1-1.html" target="_blank" rel="noopener external nofollow noreferrer">Potplayer自动更新会下载安装Avast杀毒</a> <a href="#fnref:6" rev="footnote">↩</a></span></li><li id="fn:7"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">7.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://malwaretips.com/threads/malware-or-false-positive-in-potplayer.94097/" target="_blank" rel="noopener external nofollow noreferrer">Malware or False positive in Potplayer?</a> <a href="#fnref:7" rev="footnote">↩</a></span></li><li id="fn:8"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">8.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://www.avast.com/zh-cn/uninstall-utility" target="_blank" rel="noopener external nofollow noreferrer">使用 avastclear 卸载 Avast Antivirus</a> <a href="#fnref:8" rev="footnote">↩</a></span></li><li id="fn:9"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">9.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://lpd-ios.github.io/2017/05/03/GitHub-Badge-Introduction/" target="_blank" rel="noopener external nofollow noreferrer">GitHub 项目徽章的添加和设置</a> <a href="#fnref:9" rev="footnote">↩</a></span></li><li id="fn:10"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">10.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://github.com/yangwenmai/how-to-add-badge-in-github-readme" target="_blank" rel="noopener external nofollow noreferrer">如何在 README 里面添加徽章</a> <a href="#fnref:10" rev="footnote">↩</a></span></li><li id="fn:11"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">11.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://blog.csdn.net/yangbodong22011/article/details/51791085" target="_blank" rel="noopener external nofollow noreferrer">GitHub上 README 增加图片标签</a> <a href="#fnref:11" rev="footnote">↩</a></span></li><li id="fn:12"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">12.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3/6f6494fe-0610-4dac-8bfd-8da6d70d1670" target="_blank" rel="noopener external nofollow noreferrer">连接设备平台用户服务长时间高CPU占用</a> <a href="#fnref:12" rev="footnote">↩</a></span></li><li id="fn:13"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">13.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="http://windowsbulletin.com/zh-CN/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1%E6%88%91%E5%BA%94%E8%AF%A5%E7%A6%81%E7%94%A8%E5%AE%83/" target="_blank" rel="noopener external nofollow noreferrer">什么是连接设备平台服务？ 我应该禁用吗？</a> <a href="#fnref:13" rev="footnote">↩</a></span></li><li id="fn:14"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">14.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E4%BD%BF%E7%94%A8%E6%97%A0%E7%BA%BF%E6%8A%95/803e190a-135a-4b90-9e8d-032f2d9fc89b" target="_blank" rel="noopener external nofollow noreferrer">Win10使用无线投屏后，屏幕上方工具条无法移除</a> <a href="#fnref:14" rev="footnote">↩</a></span></li><li id="fn:15"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">15.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://zhuanlan.zhihu.com/p/68697030" target="_blank" rel="noopener external nofollow noreferrer">Win10PC电脑无线投屏Miracast的神操作</a> <a href="#fnref:15" rev="footnote">↩</a></span></li><li id="fn:16"><span style="display:inline-block;vertical-align:top;padding-right:10px;margin-left:-40px">16.</span><span style="display:inline-block;vertical-align:top;margin-left:10px"><a href="https://blog.csdn.net/xqhrs232/article/details/104250602" target="_blank" rel="noopener external nofollow noreferrer">win10下Miracast无线投屏使用教程及异常解决方案</a> <a href="#fnref:16" rev="footnote">↩</a></span></li></ol></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong> L1n</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html" title="微软系统使用手册">https://linwhitehat.github.io/Blog/2020/01/28/微软系统使用手册.html</a></li><li class="post-copyright-license"><strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/Blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a><a href="/Blog/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a></div><div class="post-nav"><div class="post-nav-item"><a href="/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html" rel="prev" title="LaTeX-安装教程"><i class="fa fa-chevron-left"></i> LaTeX-安装教程</a></div><div class="post-nav-item"><a href="/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html" rel="next" title="博客优化(Hexo博客Next主题设计)">博客优化(Hexo博客Next主题设计)<i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div class="post-spread"><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e44d16d1f30e5fa" async></script></div></div><div class="comments"><script src="https://utteranc.es/client.js" repo="linwhitehat/linwhitehat.github.io" issue-term="title" theme="github-light" crossorigin="anonymous" async></script></div><script>window.addEventListener('tabs:register', () => {
+">[11]</span></a></sup>。</p>
+<h3 id="ssh-远程连接"><a href="#ssh-远程连接" class="headerlink" title="ssh 远程连接"></a>ssh 远程连接</h3><h4 id="XShell系列"><a href="#XShell系列" class="headerlink" title="XShell系列"></a>XShell系列</h4><p>习惯使用<code>ssh</code>进行远程连接可以使用<code>XShell</code>系列软件即 XShell 和 XFtp，这两者的配套使用基本满足远程连接以及远程文件传输，主要适用于内网多主机的控制以及远程服务器的控制，学生注册是可以免费使用的。<a href="https://www.netsarang.com/zh/xshell/" target="_blank" rel="noopener external nofollow noreferrer">下载地址</a></p>
+<h5 id="xftp出现无法实现文件传输"><a href="#xftp出现无法实现文件传输" class="headerlink" title="xftp出现无法实现文件传输"></a>xftp出现无法实现文件传输</h5><p>在网络正常连接情况下，排除防火墙拦截等网络因素，查看远程连接设备上传输文件的目标文件目录权限，使用<code>ll</code>或<code>ls -l</code>可以查看是否具备可写权限，一般是不具备才导致的，修改目标文件目录权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 file_Directory/</span><br><span class="line">ls -l</span><br></pre></td></tr></table></figure>
+<p><img src="/Blog/images/windows-19.png" alt="文件目录权限修改"><i class="img-caption">☆ 文件目录权限修改</i><br>查看文件目录权限完整后再尝试xftp传输文件即可。<sup id="fnref:17"><a href="#fn:17" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[关于xftp上传文件状态错误的解决](https://blog.csdn.net/qq_35038153/article/details/78408882)">[17]</span></a></sup></p>
+<h4 id="putty"><a href="#putty" class="headerlink" title="putty"></a>putty</h4><p>简洁风格使用 <code>putty</code> 进行<code>ssh</code>远程连接，不需要安装，只需要下载<code>zip</code>压缩包解压即可使用，十分方便而且免费。<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener external nofollow noreferrer">下载地址</a></p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>本着手册即查即用的原则，这篇博文写的十分简要，很少说明部分，直接贴出操作。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html" target="_blank" rel="noopener external nofollow noreferrer">Windows下如何查看某个端口被谁占用</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://zhuanlan.zhihu.com/p/26255460" target="_blank" rel="noopener external nofollow noreferrer">读懂内存</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.crucial.cn/memory" target="_blank" rel="noopener external nofollow noreferrer">英睿达</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://pandownload.com/index.html" target="_blank" rel="noopener external nofollow noreferrer">PanDownload</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://laod.cn/black-technology/baidupcs-go-baiduyun.html" target="_blank" rel="noopener external nofollow noreferrer">BaiduPCS-Go 使用CMD命令行全速下载百度云</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.52pojie.cn/thread-1086427-1-1.html" target="_blank" rel="noopener external nofollow noreferrer">Potplayer自动更新会下载安装Avast杀毒</a><a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://malwaretips.com/threads/malware-or-false-positive-in-potplayer.94097/" target="_blank" rel="noopener external nofollow noreferrer">Malware or False positive in Potplayer?</a><a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.avast.com/zh-cn/uninstall-utility" target="_blank" rel="noopener external nofollow noreferrer">使用 avastclear 卸载 Avast Antivirus</a><a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://lpd-ios.github.io/2017/05/03/GitHub-Badge-Introduction/" target="_blank" rel="noopener external nofollow noreferrer">GitHub 项目徽章的添加和设置</a><a href="#fnref:9" rev="footnote"> ↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://github.com/yangwenmai/how-to-add-badge-in-github-readme" target="_blank" rel="noopener external nofollow noreferrer">如何在 README 里面添加徽章</a><a href="#fnref:10" rev="footnote"> ↩</a></span></li><li id="fn:11"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">11.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/yangbodong22011/article/details/51791085" target="_blank" rel="noopener external nofollow noreferrer">GitHub上 README 增加图片标签</a><a href="#fnref:11" rev="footnote"> ↩</a></span></li><li id="fn:12"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">12.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3/6f6494fe-0610-4dac-8bfd-8da6d70d1670" target="_blank" rel="noopener external nofollow noreferrer">连接设备平台用户服务长时间高CPU占用</a><a href="#fnref:12" rev="footnote"> ↩</a></span></li><li id="fn:13"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">13.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://windowsbulletin.com/zh-CN/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1%E6%88%91%E5%BA%94%E8%AF%A5%E7%A6%81%E7%94%A8%E5%AE%83/" target="_blank" rel="noopener external nofollow noreferrer">什么是连接设备平台服务？ 我应该禁用吗？</a><a href="#fnref:13" rev="footnote"> ↩</a></span></li><li id="fn:14"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">14.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E4%BD%BF%E7%94%A8%E6%97%A0%E7%BA%BF%E6%8A%95/803e190a-135a-4b90-9e8d-032f2d9fc89b" target="_blank" rel="noopener external nofollow noreferrer">Win10使用无线投屏后，屏幕上方工具条无法移除</a><a href="#fnref:14" rev="footnote"> ↩</a></span></li><li id="fn:15"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">15.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://zhuanlan.zhihu.com/p/68697030" target="_blank" rel="noopener external nofollow noreferrer">Win10PC电脑无线投屏Miracast的神操作</a><a href="#fnref:15" rev="footnote"> ↩</a></span></li><li id="fn:16"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">16.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/xqhrs232/article/details/104250602" target="_blank" rel="noopener external nofollow noreferrer">win10下Miracast无线投屏使用教程及异常解决方案</a><a href="#fnref:16" rev="footnote"> ↩</a></span></li><li id="fn:17"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">17.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/qq_35038153/article/details/78408882" target="_blank" rel="noopener external nofollow noreferrer">关于xftp上传文件状态错误的解决</a><a href="#fnref:17" rev="footnote"> ↩</a></span></li></ol></div></div>
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\Blog\2020\02\17\Git专栏.html" rel="bookmark">Git专栏系列</a></div>
+    </li>
+  </ul>
+
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>L1n
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html" title="微软系统使用手册">https://linwhitehat.github.io/Blog/2020/01/28/微软系统使用手册.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/Blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
+              <a href="/Blog/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html" rel="prev" title="LaTeX-安装教程">
+      <i class="fa fa-chevron-left"></i> LaTeX-安装教程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html" rel="next" title="博客优化(Hexo博客Next主题设计)">
+      博客优化(Hexo博客Next主题设计) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+  
+  <div class="post-spread">
+    
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e44d16d1f30e5fa" async = "async" ></script>
+    
+  </div>
+
+
+          </div>
+          
+    
+  
+  <div class="comments">
+  <script src="https://utteranc.es/client.js" repo="linwhitehat/linwhitehat.github.io" issue-term="title" theme="github-light" crossorigin="anonymous" async></script>
+  </div>
+  
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
     let activeClass = CONFIG.comments.activeClass;
     if (CONFIG.comments.storage) {
       activeClass = localStorage.getItem('comments_active') || activeClass;
@@ -31,7 +526,191 @@
       let commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
-  }</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span><span class="toggle-line toggle-line-middle"></span><span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#录屏"><span class="nav-number">1.</span> <span class="nav-text">录屏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启Windows录屏设置"><span class="nav-number">1.1.</span> <span class="nav-text">开启Windows录屏设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#录制屏幕"><span class="nav-number">1.2.</span> <span class="nav-text">录制屏幕</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看录制结果及修改录制设置"><span class="nav-number">1.3.</span> <span class="nav-text">查看录制结果及修改录制设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已存储Wi-Fi密码查看"><span class="nav-number">2.</span> <span class="nav-text">已存储Wi-Fi密码查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打开网络适配器设置"><span class="nav-number">2.1.</span> <span class="nav-text">打开网络适配器设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令行开启"><span class="nav-number">2.1.1.</span> <span class="nav-text">命令行开启</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#界面鼠标开启"><span class="nav-number">2.1.2.</span> <span class="nav-text">界面鼠标开启</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看无线网配置信息"><span class="nav-number">2.2.</span> <span class="nav-text">查看无线网配置信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无线网状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">无线网状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看无线属性"><span class="nav-number">2.2.2.</span> <span class="nav-text">查看无线属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#端口占用查看"><span class="nav-number">3.</span> <span class="nav-text">端口占用查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作步骤"><span class="nav-number">3.1.</span> <span class="nav-text">操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打开命令行（管理员身份）"><span class="nav-number">3.1.1.</span> <span class="nav-text">打开命令行（管理员身份）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看所有端口"><span class="nav-number">3.1.2.</span> <span class="nav-text">查看所有端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看具体端口使用的进程"><span class="nav-number">3.1.3.</span> <span class="nav-text">查看具体端口使用的进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看指定进程"><span class="nav-number">3.1.4.</span> <span class="nav-text">查看指定进程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存型号查看"><span class="nav-number">4.</span> <span class="nav-text">内存型号查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看支持的最大内存容量"><span class="nav-number">4.1.</span> <span class="nav-text">查看支持的最大内存容量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看内存配置"><span class="nav-number">4.2.</span> <span class="nav-text">查看内存配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU型号查看"><span class="nav-number">5.</span> <span class="nav-text">CPU型号查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#物理CPU个数"><span class="nav-number">5.1.</span> <span class="nav-text">物理CPU个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看CPU配置信息"><span class="nav-number">5.2.</span> <span class="nav-text">查看CPU配置信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看网口信息"><span class="nav-number">6.</span> <span class="nav-text">查看网口信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行方式"><span class="nav-number">6.1.</span> <span class="nav-text">命令行方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可视化方式"><span class="nav-number">6.2.</span> <span class="nav-text">可视化方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无线投屏"><span class="nav-number">7.</span> <span class="nav-text">无线投屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题-amp-解决方法"><span class="nav-number">8.</span> <span class="nav-text">常见问题&amp;解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器如chrome无法正常播放声音"><span class="nav-number">8.1.</span> <span class="nav-text">浏览器如chrome无法正常播放声音</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程连接设备平台用户服务-338f0c6占用CPU"><span class="nav-number">8.2.</span> <span class="nav-text">进程连接设备平台用户服务_338f0c6占用CPU</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐工具"><span class="nav-number">9.</span> <span class="nav-text">推荐工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD-下载百度云资源"><span class="nav-number">9.1.</span> <span class="nav-text">CMD-下载百度云资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Html-JS压缩及还原"><span class="nav-number">9.2.</span> <span class="nav-text">Html&#x2F;JS压缩及还原</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐软件"><span class="nav-number">10.</span> <span class="nav-text">推荐软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PanDownload"><span class="nav-number">10.1.</span> <span class="nav-text">PanDownload</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PotPlayer"><span class="nav-number">10.2.</span> <span class="nav-text">PotPlayer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装注意"><span class="nav-number">10.2.1.</span> <span class="nav-text">安装注意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-和-Git"><span class="nav-number">10.3.</span> <span class="nav-text">GitHub 和 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub-issue"><span class="nav-number">10.3.1.</span> <span class="nav-text">GitHub issue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github-README"><span class="nav-number">10.3.2.</span> <span class="nav-text">Github README</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束"><span class="nav-number">11.</span> <span class="nav-text">结束</span></a></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="/"><img class="site-author-image" itemprop="image" alt="L1n" src="/Blog/uploads/dream_round.jpg"></a><p class="site-author-name" itemprop="name">L1n</p><div class="site-description" itemprop="description"></div></div><div class="site-state-wrap motion-element"><nav class="site-state"><div class="site-state-item site-state-posts"><a href="/Blog/archives/"><span class="site-state-item-count">11</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/Blog/categories/"><span class="site-state-item-count">12</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/Blog/tags/"><span class="site-state-item-count">23</span> <span class="site-state-item-name">标签</span></a></div></nav></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/linwhitehat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;linwhitehat" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="mailto:eric_lin_cn@outlook.com" title="E-Mail → mailto:eric_lin_cn@outlook.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i> E-Mail</a></span></div><div class="links-of-blogroll motion-element"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 学习 / 交友</div><span class="links-of-blogroll-item"><a href="https://guanqr.com/" title="https:&#x2F;&#x2F;guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a></span> <span class="links-of-blogroll-item"><a href="https://blog.csdn.net/jmh1996" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;jmh1996" rel="noopener external nofollow noreferrer" target="_blank">Icoding_F2014</a></span> <span class="links-of-blogroll-item"><a href="https://hasaik.com/" title="https:&#x2F;&#x2F;hasaik.com&#x2F;" rel="noopener" target="_blank">Xu's Blog</a></span> <span class="links-of-blogroll-item"><a href="https://bestzuo.cn/" title="https:&#x2F;&#x2F;bestzuo.cn" rel="noopener" target="_blank">Sanarous</a></span> <span class="links-of-blogroll-item"><a href="https://dingzhi.ga/" title="https:&#x2F;&#x2F;dingzhi.ga&#x2F;" rel="noopener" target="_blank">DingZhi's Blog</a></span> <span class="links-of-blogroll-item"><a href="https://www.libinx.com/" title="https:&#x2F;&#x2F;www.libinx.com&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">Thinking Realm</a></span> <span class="links-of-blogroll-item"><a href="https://hntr.xyz/" title="https:&#x2F;&#x2F;hntr.xyz&#x2F;" rel="noopener" target="_blank">Hunter's Blog</a></span> <span class="links-of-blogroll-item"><a href="https://chenlangping.cn/" title="https:&#x2F;&#x2F;chenlangping.cn&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">陈浪平的博客(IIE)</a></span> <span class="links-of-blogroll-item"><a href="https://matnoble.me/" title="https:&#x2F;&#x2F;matnoble.me&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">数学小兵儿</a></span> <span class="links-of-blogroll-item"><a href="https://cuijiahua.com/" title="https:&#x2F;&#x2F;cuijiahua.com&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">Jack Cui</a></span> <span class="links-of-blogroll-item"><a href="https://mogeko.me/" title="https:&#x2F;&#x2F;mogeko.me&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">Mogeko`s Blog</a></span> <span class="links-of-blogroll-item"><a href="https://linwhitehat.github.io/Blog/blogLog/" title="https:&#x2F;&#x2F;linwhitehat.github.io&#x2F;Blog&#x2F;blogLog&#x2F;">建站日志</a></span></div></div><div class="back-to-top motion-element"><i class="fa fa-arrow-up"></i> <span>0%</span></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span><span class="with-love"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">L1n</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span class="post-meta-item-text">站点总字数：</span> <span title="站点总字数">76k</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-coffee"></i></span> <span class="post-meta-item-text">站点阅读时长 &asymp;</span> <span title="站点阅读时长">1:09</span></div><div class="powered-by">Power by <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> v4.2.0</div><span class="post-meta-divider">|</span><div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Mist</a> v7.7.0</div><div class="addthis_inline_share_toolbox"><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e44d16d1f30e5fa" async></script></div><script>function leancloudSelector(url) {
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#录屏"><span class="nav-number">1.</span> <span class="nav-text">录屏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启Windows录屏设置"><span class="nav-number">1.1.</span> <span class="nav-text">开启Windows录屏设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#录制屏幕"><span class="nav-number">1.2.</span> <span class="nav-text">录制屏幕</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看录制结果及修改录制设置"><span class="nav-number">1.3.</span> <span class="nav-text">查看录制结果及修改录制设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已存储Wi-Fi密码查看"><span class="nav-number">2.</span> <span class="nav-text">已存储Wi-Fi密码查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打开网络适配器设置"><span class="nav-number">2.1.</span> <span class="nav-text">打开网络适配器设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令行开启"><span class="nav-number">2.1.1.</span> <span class="nav-text">命令行开启</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#界面鼠标开启"><span class="nav-number">2.1.2.</span> <span class="nav-text">界面鼠标开启</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看无线网配置信息"><span class="nav-number">2.2.</span> <span class="nav-text">查看无线网配置信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无线网状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">无线网状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看无线属性"><span class="nav-number">2.2.2.</span> <span class="nav-text">查看无线属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#端口占用查看"><span class="nav-number">3.</span> <span class="nav-text">端口占用查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作步骤"><span class="nav-number">3.1.</span> <span class="nav-text">操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打开命令行（管理员身份）"><span class="nav-number">3.1.1.</span> <span class="nav-text">打开命令行（管理员身份）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看所有端口"><span class="nav-number">3.1.2.</span> <span class="nav-text">查看所有端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看具体端口使用的进程"><span class="nav-number">3.1.3.</span> <span class="nav-text">查看具体端口使用的进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看指定进程"><span class="nav-number">3.1.4.</span> <span class="nav-text">查看指定进程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存型号查看"><span class="nav-number">4.</span> <span class="nav-text">内存型号查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看支持的最大内存容量"><span class="nav-number">4.1.</span> <span class="nav-text">查看支持的最大内存容量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看内存配置"><span class="nav-number">4.2.</span> <span class="nav-text">查看内存配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU型号查看"><span class="nav-number">5.</span> <span class="nav-text">CPU型号查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#物理CPU个数"><span class="nav-number">5.1.</span> <span class="nav-text">物理CPU个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看CPU配置信息"><span class="nav-number">5.2.</span> <span class="nav-text">查看CPU配置信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看网口信息"><span class="nav-number">6.</span> <span class="nav-text">查看网口信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行方式"><span class="nav-number">6.1.</span> <span class="nav-text">命令行方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可视化方式"><span class="nav-number">6.2.</span> <span class="nav-text">可视化方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无线投屏"><span class="nav-number">7.</span> <span class="nav-text">无线投屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题-amp-解决方法"><span class="nav-number">8.</span> <span class="nav-text">常见问题&amp;解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器如chrome无法正常播放声音"><span class="nav-number">8.1.</span> <span class="nav-text">浏览器如chrome无法正常播放声音</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程连接设备平台用户服务-338f0c6占用CPU"><span class="nav-number">8.2.</span> <span class="nav-text">进程连接设备平台用户服务_338f0c6占用CPU</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐工具"><span class="nav-number">9.</span> <span class="nav-text">推荐工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD-下载百度云资源"><span class="nav-number">9.1.</span> <span class="nav-text">CMD-下载百度云资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐软件"><span class="nav-number">10.</span> <span class="nav-text">推荐软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PanDownload"><span class="nav-number">10.1.</span> <span class="nav-text">PanDownload</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PotPlayer"><span class="nav-number">10.2.</span> <span class="nav-text">PotPlayer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装注意"><span class="nav-number">10.2.1.</span> <span class="nav-text">安装注意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-和-Git"><span class="nav-number">10.3.</span> <span class="nav-text">GitHub 和 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub-issue"><span class="nav-number">10.3.1.</span> <span class="nav-text">GitHub issue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github-README"><span class="nav-number">10.3.2.</span> <span class="nav-text">Github README</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-远程连接"><span class="nav-number">10.4.</span> <span class="nav-text">ssh 远程连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XShell系列"><span class="nav-number">10.4.1.</span> <span class="nav-text">XShell系列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#xftp出现无法实现文件传输"><span class="nav-number">10.4.1.1.</span> <span class="nav-text">xftp出现无法实现文件传输</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#putty"><span class="nav-number">10.4.2.</span> <span class="nav-text">putty</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束"><span class="nav-number">11.</span> <span class="nav-text">结束</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="/">
+      <img class="site-author-image" itemprop="image" alt="L1n"
+        src="/Blog/uploads/dream_round.jpg">
+    </a>
+  <p class="site-author-name" itemprop="name">L1n</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/Blog/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/Blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/Blog/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/linwhitehat" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;linwhitehat" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:eric_lin_cn@outlook.com" title="E-Mail → mailto:eric_lin_cn@outlook.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      学习 / 交友
+    </div>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://guanqr.com/" title="https:&#x2F;&#x2F;guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://blog.csdn.net/jmh1996" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;jmh1996" rel="noopener external nofollow noreferrer" target="_blank">Icoding_F2014</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://hasaik.com/" title="https:&#x2F;&#x2F;hasaik.com&#x2F;" rel="noopener" target="_blank">Xu's Blog</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://bestzuo.cn/" title="https:&#x2F;&#x2F;bestzuo.cn" rel="noopener" target="_blank">Sanarous</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://dingzhi.ga/" title="https:&#x2F;&#x2F;dingzhi.ga&#x2F;" rel="noopener" target="_blank">DingZhi's Blog</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://www.libinx.com/" title="https:&#x2F;&#x2F;www.libinx.com&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">Thinking Realm</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://hntr.xyz/" title="https:&#x2F;&#x2F;hntr.xyz&#x2F;" rel="noopener" target="_blank">Hunter's Blog</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://chenlangping.cn/" title="https:&#x2F;&#x2F;chenlangping.cn&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">陈浪平的博客(IIE)</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://matnoble.me/" title="https:&#x2F;&#x2F;matnoble.me&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">数学小兵儿</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://cuijiahua.com/" title="https:&#x2F;&#x2F;cuijiahua.com&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">Jack Cui</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://mogeko.me/" title="https:&#x2F;&#x2F;mogeko.me&#x2F;" rel="noopener external nofollow noreferrer" target="_blank">Mogeko`s Blog</a>
+      </span>
+    
+      <span class="links-of-blogroll-item">
+        <a href="https://linwhitehat.github.io/Blog/blogLog/" title="https:&#x2F;&#x2F;linwhitehat.github.io&#x2F;Blog&#x2F;blogLog&#x2F;">建站日志</a>
+      </span>
+    
+
+  </div>
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">L1n</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">77k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:10</span>
+</div>
+  <div class="powered-by">Power by <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Mist</a> v7.7.0
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e44d16d1f30e5fa" async="async"></script>
+  </div>
+
+        
+
+
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
     url = encodeURI(url);
     return document.getElementById(url).querySelector('.leancloud-visitors-count');
   }
@@ -115,7 +794,71 @@
       } else if (document.querySelectorAll('.post-title-link').length >= 1) {
         showTime(Counter);
       }
-    });</script></div></footer></div><script src="/Blog/lib/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script><script src="/Blog/lib/velocity/velocity.min.js"></script><script src="/Blog/lib/velocity/velocity.ui.min.js"></script><script src="/Blog/js/utils.js"></script><script src="/Blog/js/motion.js"></script><script src="/Blog/js/schemes/muse.js"></script><script src="/Blog/js/next-boot.js"></script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="/Blog/js/local-search.js"></script><script>function leancloudSelector(url) {
+    });
+  </script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/Blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="/Blog/lib/velocity/velocity.min.js"></script>
+  <script src="/Blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/Blog/js/utils.js"></script>
+
+<script src="/Blog/js/motion.js"></script>
+
+
+<script src="/Blog/js/schemes/muse.js"></script>
+
+
+<script src="/Blog/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/Blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+  
+  <script>
+  function leancloudSelector(url) {
     url = encodeURI(url);
     return document.getElementById(url).querySelector('.leancloud-visitors-count');
   }
@@ -199,4 +942,44 @@
       } else if (document.querySelectorAll('.post-title-link').length >= 1) {
         showTime(Counter);
       }
-    });</script><canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:1;pointer-events:none"></canvas><script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script><script src="/Blog/js/cursor/explosion.min.js"></script><div class="app-refresh" id="app-refresh"><div class="app-refresh-wrap" onclick="location.reload()"><label>已更新最新版本</label> <span>点击刷新</span></div></div><script>function showNotification(){document.querySelector("meta[name=theme-color]").content="#000",document.getElementById("app-refresh").className+=" app-refresh-show"}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/Blog/sw.js")}))</script></body></html>
+    });
+  </script>
+
+  
+  
+  <!-- 鼠标点击效果 -->
+  
+    
+      <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+      <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+      <script type="text/javascript" src="/Blog/js/cursor/explosion.min.js"></script>
+    
+  
+  
+  <div class="app-refresh" id="app-refresh">
+    <div class="app-refresh-wrap" onclick="location.reload()">
+        <label>已更新最新版本</label>
+        <span>点击刷新</span>
+    </div>
+  </div>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.addEventListener('controllerchange', function() {
+                showNotification();
+            });
+        }
+
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/Blog/sw.js');
+        });
+    }
+
+    function showNotification() {
+        document.querySelector('meta[name=theme-color]').content = '#000';
+        document.getElementById('app-refresh').className += ' app-refresh-show';
+    }
+</script>
+</body>
+</html>
