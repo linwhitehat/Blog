@@ -1,6 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux使用手册</title>
+    <url>/Blog/2020/06/16/Linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><a href="https://ubuntu.com/" target="_blank" rel="noopener external nofollow noreferrer">Ubuntu</a>作为Linux系统分支中十分流行的操作系统，2020年以前已经发布最新19.10版本，同时全球市场占有率也排名第3（<a href="https://zh.hostadvice.com/marketshare/os/" target="_blank" rel="noopener external nofollow noreferrer">统计来源</a>），作为经典的Linux桌面系统，目前的生态是向好的，而且即将发布的Ubuntu 20.04 LTS也许将带来更多的惊喜，对于想尝试Linux系统的新手而言，这是挺好的一个选择。现在Ubuntu的中文支持也很好，推出了中文版Ubuntu即优麒麟（<a href="https://cn.ubuntu.com/desktop" target="_blank" rel="noopener external nofollow noreferrer">Ubuntu Kylin</a>）。本文的很多用法不局限于个人使用较多的Ubuntu或商业使用较多的Centos，对于多数常用的Linux发行版本都可适用。<br><img src="/Blog/images/Linux-2.jpg" alt="Ubuntu 20.04"><i class="img-caption">☆ Ubuntu 20.04</i></p>
+<a id="more"></a>
+<p>根据2020年5月Statcounter的调查，桌面操作系统市场中Linux占比为<code>1.68%</code>，而根据W3Techs的调查，服务器操作系统Linux占比达到<code>43.1%</code>，根据Top500的统计，2019始超级电脑操作系统占比中Linux则占据<code>100%</code>。相比于Windows占据桌面操作系统市场，Linux在服务器端以及超级电脑方面则处于绝对地位，对Linux及其衍生系统的学习也是必要的。<br><img src="/Blog/images/Linux-1-1.png" alt="Linux全球桌面操作系统占比"><i class="img-caption">☆ Linux全球桌面操作系统占比</i><br><img src="/Blog/images/Linux-1-2.png" alt="Linux全球服务器操作系统占比"><i class="img-caption">☆ Linux全球服务器操作系统占比</i></p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>Ubuntu的文件系统目录结构可以参照Linux的目录结构，相比使用Windows系统，在使用Linux系统中对文件目录的了解是至关重要的。此处我罗列了Linux的文件系统目录标准（FHS）以及特殊的目录及用途<sup id="fnref:11"><a href="#fn:11" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Linux思维导图整理](https://www.jianshu.com/p/59f759207862)
+">[11]</span></a></sup>。</p>
+<ol>
+<li>FHS<br><img src="/Blog/images/Linux-15.jpg" alt="文件系统目录标准"><i class="img-caption">☆ 文件系统目录标准</i></li>
+<li>特殊目录<br><img src="/Blog/images/Linux-16.png" alt="特殊目录"><i class="img-caption">☆ 特殊目录</i></li>
+</ol>
+<h3 id="Linux终端命令"><a href="#Linux终端命令" class="headerlink" title="Linux终端命令"></a>Linux终端命令</h3><p>使用Linux系统则意味着可以随时摆脱桌面的存在，将更多资源赋予更需要的程序进程使用，而脱离桌面后所有的系统操作都将使用终端下的命令来完成，这也使得操作更加快捷高效。之前看到来自<a href="https://linuxtoy.org/" target="_blank" rel="noopener external nofollow noreferrer">LinuxTOY</a>的一份<code>Unix/Linux 命令参考</code><sup id="fnref:10"><a href="#fn:10" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Unix/Linux 命令参考](https://i.linuxtoy.org/files/pdf/fwunixref.pdf)
+">[10]</span></a></sup>，便转载自此，基本都是常用且基础的终端命令。</p>
+<ol>
+<li>文件命令<br><img src="/Blog/images/Linux-5.png" alt="文件命令"><i class="img-caption">☆ 文件命令</i></li>
+<li>系统信息<br><img src="/Blog/images/Linux-6.png" alt="系统信息"><i class="img-caption">☆ 系统信息</i></li>
+<li>压缩<br><img src="/Blog/images/Linux-7.png" alt="压缩"><i class="img-caption">☆ 压缩</i></li>
+<li>进程管理<br><img src="/Blog/images/Linux-8.png" alt="进程管理"><i class="img-caption">☆ 进程管理</i></li>
+<li>网络<br><img src="/Blog/images/Linux-9.png" alt="网络"><i class="img-caption">☆ 网络</i></li>
+<li>文件权限<br><img src="/Blog/images/Linux-10.png" alt="文件权限"><i class="img-caption">☆ 文件权限</i></li>
+<li>安装<br><img src="/Blog/images/Linux-11.png" alt="安装"><i class="img-caption">☆ 安装</i></li>
+<li>SSH<br><img src="/Blog/images/Linux-12.png" alt="SSH"><i class="img-caption">☆ SSH</i></li>
+<li>快捷键<br><img src="/Blog/images/Linux-13.png" alt="快捷键"><i class="img-caption">☆ 快捷键</i></li>
+<li>搜索<br><img src="/Blog/images/Linux-14.png" alt="搜索"><i class="img-caption">☆ 搜索</i></li>
+</ol>
+<h3 id="修改软件源"><a href="#修改软件源" class="headerlink" title="修改软件源"></a>修改软件源</h3><p>在Linux的软件管理体系中，软件源是关键所在，由于流行Linux系统多数服务器不在国内，不少国内用户安装完Linux系统之后首要做的就是修改软件源，这样更新或安装下载时速度会相对快。针对不同的Linux发行版，软件源是存在差异的，从我认知的主流Linux分支操作系统而言，可以有以下两种：<br>①Ubuntu（Debian），使用apt-get源，使用包管理工具 Advanced Packaging Tool；<br>②CentOS，使用yum源，使用软件包管理器 Yellow dog Updater, Modified。<br>这两种的源修改方式原理是一致的，所以我按以下步骤来叙述：</p>
+<ol>
+<li>国内源<br>国内不少企业或高校都有做源镜像，选择也有很多，我这里主要介绍阿里源、中科大源、清华源和网易源（均以Ubuntu为例）：<br>①阿里源，即<a href="https://developer.aliyun.com/mirror/" target="_blank" rel="noopener external nofollow noreferrer">阿里云开源镜像站</a>，选择<code>Ubuntu</code>，会给出不同版本所需的源信息，使用对应版本的即可。<br>②中科大源，即<a href="http://mirrors.ustc.edu.cn/help/index.html" target="_blank" rel="noopener external nofollow noreferrer">USTC Mirror</a>，选择<code>Ubuntu源使用帮助</code>，会给出详细的源修改过程与选择。<br>③清华源，即<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener external nofollow noreferrer">清华大学开源软件镜像站</a>，选择<code>Ubuntu</code>旁边的<code>❓</code>即可看到源信息。<br>④网易源，即<a href="https://mirrors.163.com/" target="_blank" rel="noopener external nofollow noreferrer">网易开源镜像站</a>，选择最右侧一栏的<code>Ubuntu使用帮助</code>即可看到不同版本的源信息。</li>
+<li>更改源路径<br>在修改源之前，对旧源文件做个备份，之后即可添加上述任意一个国内源信息到Ubuntu源文件<code>sources.list</code>或下载源文件到centos生成缓存，完成源文件修改如下：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Ubuntu</span></span><br><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup</span><br><span class="line">sudo vim /etc/apt/sources.list #之后添加国内源信息到文件并保存</span><br><span class="line">sudo apt-get update &amp;&amp; sudo apt-get upgrade</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> CentOS</span></span><br><span class="line">mv /etc/yum.repos.d/Centos.repo /etc/yum.repos.d/Centos.repo.backup</span><br><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">wget http://mirrors.163.com/.help/CentOS6-Base-163.repo</span><br><span class="line">yum clean all; yum makecache</span><br><span class="line">yum -y update</span><br></pre></td></tr></table></figure></li>
+<li>源描述<sup id="fnref:12"><a href="#fn:12" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[关于Linux软件源](https://www.jianshu.com/p/234b196791fb)
+">[12]</span></a></sup><br>其实源本身是有一定结构的，以Ubuntu16.04版本的中科大源为例子：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span></span><br></pre></td></tr></table></figure>
+①第一个单词代表包的类型，deb表示二进制包，deb-src表示源码包。<br>②第二个网址表示源的地址。<br>③第三个单词表示系统的版本，既可以是[ wheezy | jessie | stretch | sid ]中的一种，也可以是[ oldstable | stable | testing | unstable ]中的一种。前一个系列表示系统的release code name，后一个系列表示系统的release class，前者按阶段发布，后者持续演进。例如在Ubuntu系统中，<code>xenial</code>代表的是Ubuntu16.04版本，如果是其他版本可将其替换为其他版本代号即可: <code>20.04</code>:<code>focal</code>；<code>18.04</code>：<code>bionic</code>；<code>17.10</code>：<code>artful</code>；<code>16.04</code>：<code>xenial</code>；<code>14.04</code>：<code>trusty</code>。<br>④第四部分表示接受哪种开源类型的软件，可以包含[ main | contrib | non-free ]中的一个或多个。main表示纯正的遵循Debian开源规范的软件，contrib表示遵循Debian开源规范但依赖于其它不遵循Debian开源规范的软件的软件，non-free表示不遵循Debian开源规范的软件。Debian开源规范指DFSG（Debian 自由软件指导方针）。</li>
+</ol>
+<h3 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h3><p>Linux系统本身输入法并没有带中文输入，对于习惯使用中文环境的国人会比较不适应，尽管常态下英文也足够使用，但是增加中文输入法并不困难，在熟悉的输入法下也会舒服一点。默认情况下，Ubuntu系统自带中文输入法，且切换快捷键为<code>win+space</code>，但是体验并不流畅，故我更愿意花几分钟安装更舒服的中文输入法。中文输入法（Ubuntu）设置步骤如下：</p>
+<ol>
+<li>设置语言<br>Ubuntu18.04环境下，点击系统设置<code>Settings -&gt; Region&amp;Language -&gt; Manage Installed Languages -&gt;language support</code>，首次会要求安装默认语言和输入法并输入密码，可以看到默认的输入法是IBus。</li>
+<li>安装中文输入法<br>此处选择安装的中文输入法是fcitx（Fcitx[ˈfaɪtɪks]是 （Free Chinese Input Toy for X） 的英文缩写，中文名为小企鹅输入法），执行<code>sudo apt-get install fcitx-table-wbpy</code>安装fcitx，然后在输入法设置处选择<code>fcutx</code>然后重启。<br><img src="/Blog/images/Linux-pinyin-1.png" alt="选择输入法"><i class="img-caption">☆ 选择输入法</i></li>
+<li>配置输入法<br>重启后，在桌面菜单栏右上角可以看到多出一个类似键盘的图标即fcitx，点击选择<code>Configuration</code>或中文语言下的<code>配置</code>,添加输入法，默认存在英语输入法，再添加拼音即可，如果当前系统语言非中文环境，则不要勾选<code>Only Show Current Language</code>，添加完成拼音之后，按下快捷键<code>Ctrl+Space</code>即可切换中英文输入法。<br><img src="/Blog/images/Linux-fcitx.png" alt="fcitx输入法图标"><i class="img-caption">☆ fcitx输入法图标</i><br><img src="/Blog/images/Linux-fcitx-2.png" alt="fcitx输入法"><i class="img-caption">☆ fcitx输入法</i><br><img src="/Blog/images/Linux-pinyin-2.png" alt="配置输入法"><i class="img-caption">☆ 配置输入法</i><br><img src="/Blog/images/Linux-pinyin-3.png" alt="添加拼音输入法"><i class="img-caption">☆ 添加拼音输入法</i><br><img src="/Blog/images/Linux-pinyin-4.png" alt="使用中文输入法"><i class="img-caption">☆ 使用中文输入法</i></li>
+</ol>
+<h3 id="系统磁盘清理"><a href="#系统磁盘清理" class="headerlink" title="系统磁盘清理"></a>系统磁盘清理</h3><p>当系统磁盘存储空间被占满后，许多便捷的操作会受限而无法继续，同时写操作也将无法进行，此时找到占用存储空间最大的文件并删除是较快速清理磁盘空间的方法。执行<code>df -h</code>可以查看当前磁盘空间占用情况，之后便通过<code>df</code>和<code>du</code>进行大文件的快速定位：<br>定位的方法便是从根目录开始，找出每一级目录下存储占用最高的目录，逐级查找，直至找到最终文件，通过逐级对大文件目录的递减排序可以很快找到占用空间大的文件，查找命令如下。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -h / --max-depth=1 | sort -hr | head -n 10</span><br></pre></td></tr></table></figure>
+
+<h3 id="vim编辑器"><a href="#vim编辑器" class="headerlink" title="vim编辑器"></a>vim编辑器</h3><p>作为Linux系统下默认的编辑器，也是手撸代码的利器，不掌握基本的使用对使用Linux系统还是有些许不便，因此我参照菜鸟教程<sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Linux vi/vim](https://www.runoob.com/linux/linux-vim.html)
+">[16]</span></a></sup>简要叙述vim的基本使用。<br><img src="/Blog/images/vi-vim-cheat-sheet.gif" alt="vim键盘图"><i class="img-caption">☆ vim键盘图</i></p>
+<ol>
+<li>vim使用<br>vi/vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。 这三种模式的作用分别是：<br>①命令模式。用户在终端输入<code>vi</code>或<code>vim</code>，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。常用命令如下：</li>
+</ol>
+<ul>
+<li><code>i</code>：切换到输入模式，以输入字符</li>
+<li><code>x</code>：删除当前光标所在处的字符</li>
+<li><code>:</code>：切换到底线命令模式，以在最底一行输入命令<br>②输入模式。在命令模式下按下<code>i</code>就进入了输入模式。在输入模式中，可以使用以下按键：</li>
+<li>字符按键以及Shift组合，输入字符</li>
+<li>ENTER，回车键，换行</li>
+<li>BACK SPACE，退格键，删除光标前一个字符</li>
+<li>DEL，删除键，删除光标后一个字符</li>
+<li>方向键，在文本中移动光标</li>
+<li>HOME/END，移动光标到行首/行尾</li>
+<li>Page Up/Page Down，上/下翻页</li>
+<li>Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li>
+<li>ESC，退出输入模式，切换到命令模式<br>③底线命令模式。在命令模式下按下<code>:</code>（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，在底线命令模式中，基本的命令有：</li>
+<li><code>q</code>：退出程序</li>
+<li><code>w</code>：保存文件</li>
+<li>按ESC键可随时退出底线命令模式<br><img src="/Blog/images/Linux-17.png" alt="vim工作模式状态图"><i class="img-caption">☆ vim工作模式状态图</i></li>
+</ul>
+<ol start="2">
+<li>按键说明<br>在上述基本使用的按键之外，vim还有许多按键可用，对于三种模式下依然有不同的按键。此处简要列述常用的部分，其余可参照菜鸟教程<sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Linux vi/vim](https://www.runoob.com/linux/linux-vim.html)
+">[16]</span></a></sup>叙述。<br>①一般模式下可用的光标移动、复制粘贴、搜索等：<table>
+<tr>
+ <td colspan="2">移动光标的方法</td>
+</tr>
+<tr>
+ <td>h 或 向左箭头键(←)</td>
+ <td>光标向左移动一个字符</td>
+</tr>
+<tr>
+ <td>j 或 向下箭头键(↓)</td>
+ <td>光标向下移动一个字符</td>
+</tr>
+<tr>
+ <td>k 或 向上箭头键(↑)</td>
+ <td>光标向上移动一个字符</td>
+</tr>
+<tr>
+ <td>l 或 向右箭头键(→)</td>
+ <td>光标向右移动一个字符</td>
+</tr>
+<tr>
+ <td>0 或功能键[Home]</td>
+ <td>数字 0：移动到这一行的最前面字符处 (常用)</td>
+</tr>
+<tr>
+ <td>$ 或功能键[End]</td>
+ <td>移动到这一行的最后面字符处(常用)</td>
+</tr>
+<tr>
+ <td colspan="2">搜索替换</td>
+</tr>
+<tr>
+ <td>/word</td>
+ <td>向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</td>
+</tr>
+<tr>
+ <td>?word</td>
+ <td>向光标之上寻找一个字符串名称为 word 的字符串。</td>
+</tr>
+<tr>
+ <td>n</td>
+ <td>这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</td>
+</tr>
+<tr>
+ <td>N</td>
+ <td>这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</td>
+</tr>
+</table>
+②一般模式切换到编辑模式的可用的按键如下：
+<table>
+<tr>
+ <td colspan="2">进入输入或取代的编辑模式</td>
+</tr>
+<tr>
+ <td>i, I</td>
+ <td>进入输入模式(Insert mode)：</td>
+</tr>
+<tr>
+ <td>i 为『从目前光标所在处输入』， I 为『在目前所在行的第一个非空格符处开始输入』。 (常用)</td>
+</tr>
+<tr>
+ <td>a, A</td>
+ <td>进入输入模式(Insert mode)：</td>
+</tr>
+<tr>
+ <td>a 为『从目前光标所在的下一个字符处开始输入』， A 为『从光标所在行的最后一个字符处开始输入』。(常用)</td>
+</tr>
+<tr>
+ <td>o, O</td>
+ <td>进入输入模式(Insert mode)：</td>
+</tr>
+<tr>
+ <td>这是英文字母 o 的大小写。o 为『在目前光标所在的下一行处输入新的一行』； O 为在目前光标所在处的上一行输入新的一行！(常用)</td>
+</tr>
+<tr>
+ <td>r, R</td>
+ <td>进入取代模式(Replace mode)：</td>
+</tr>
+<tr>
+ <td>r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；(常用)</td>
+</tr>
+<tr>
+ <td colspan="2">上面这些按键中，在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样。 由名称就知道该动作了吧！！特别注意的是，我们上面也提过了，你想要在档案里面输入字符时， 一定要在左下角处看到 INSERT 或 REPLACE 才能输入喔！</td>
+</tr>
+<tr>
+ <td>[Esc]</td>
+ <td>退出编辑模式，回到一般模式中(常用)</td>
+</tr>
+</table>
+③一般模式切换到指令行模式的可用的按键如下：
+<table>
+<tr>
+ <td colspan="2">指令行的储存、离开等指令</td>
+</tr>
+<tr>
+ <td>:w</td>
+ <td>将编辑的数据写入硬盘档案中(常用)</td>
+</tr>
+<tr>
+ <td>:w!</td>
+ <td>若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</td>
+</tr>
+<tr>
+ <td>:q</td>
+ <td>离开 vi (常用)</td>
+</tr>
+<tr>
+ <td>:q!</td>
+ <td>若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</td>
+</tr>
+<tr>
+ <td colspan="2">注意一下啊，那个惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～</td>
+</tr>
+<tr>
+ <td>:wq</td>
+ <td>储存后离开，若为 :wq! 则为强制储存后离开 (常用)</td>
+</tr>
+<tr>
+ <td>ZZ</td>
+ <td>这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</td>
+</tr>
+<tr>
+ <td>:w [filename]</td>
+ <td>将编辑的数据储存成另一个档案（类似另存新档）</td>
+</tr>
+<tr>
+ <td>:r [filename]</td>
+ <td>在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</td>
+</tr>
+<tr>
+ <td>:n1,n2 w [filename]</td>
+ <td>将 n1 到 n2 的内容储存成 filename 这个档案。</td>
+</tr>
+<tr>
+ <td>:! command</td>
+ <td>暂时离开 vi 到指令行模式下执行 command 的显示结果！例如</td>
+</tr>
+<tr>
+ <td>『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</td>
+</tr>
+</table>
+
+</li>
+</ol>
+<h2 id="进阶使用"><a href="#进阶使用" class="headerlink" title="进阶使用"></a>进阶使用</h2><h3 id="修改root密码"><a href="#修改root密码" class="headerlink" title="修改root密码"></a>修改root密码</h3><p>默认Ubuntu下安装完系统只是设置了用户账号密码，root用户则处于默认情况，要更改root密码可在当前用户下执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+<p>输入两次需要设置的密码即可，密码是看不到的，如果输错则无法撤销，可以按下<code>ctrl + C</code>然后重新执行上述命令设置密码。</p>
+<h3 id="使用root登录ssh"><a href="#使用root登录ssh" class="headerlink" title="使用root登录ssh"></a>使用root登录ssh</h3><p>修改<code>ssh</code>登录的配置文件<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Ubuntu 18.04 使用root 帐号登录ssh并修改ssh端口号](https://www.timelate.com/archives/enable-ssh-root-login.html)
+">[1]</span></a></sup>：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到root用户</span></span><br><span class="line">su root</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改ssh端口，此处是修改为666</span></span><br><span class="line">sed -i 's/^.*Port.*/Port 666/g' /etc/ssh/sshd_config &amp;&amp; sed -i 's/^.*PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config &amp;&amp; sed -i 's/^.*PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config</span><br><span class="line"><span class="meta">#</span><span class="bash"> 防火墙放行666端口</span></span><br><span class="line">ufw allow 666/tcp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启ssh服务</span></span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="终端查看并关闭端口"><a href="#终端查看并关闭端口" class="headerlink" title="终端查看并关闭端口"></a>终端查看并关闭端口</h3><p>在终端下执行以下命令<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Ubuntu终端命令查看端口占用及关闭](https://blog.csdn.net/boonya/article/details/77949438)
+">[2]</span></a></sup>：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看已经连接的服务端口（ESTABLISHED）</span></span><br><span class="line">netstat -a</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的服务端口（LISTEN，ESTABLISHED）</span></span><br><span class="line">netstat -ap</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看指定端口8080</span></span><br><span class="line">netstat -ap | grep 8080</span><br><span class="line"><span class="meta">#</span><span class="bash"> 另一种查看指定端口方法</span></span><br><span class="line">lsof -i:8080</span><br><span class="line"><span class="meta">#</span><span class="bash"> 关闭端口对应进程pid</span></span><br><span class="line">kill -9 PID号</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试Ubuntu-VPS主机性能"><a href="#测试Ubuntu-VPS主机性能" class="headerlink" title="测试Ubuntu VPS主机性能"></a>测试Ubuntu VPS主机性能</h3><p>这部分是针对购买vps的一个建议，因为vps的价格往往与机子本身的硬件性能直接挂钩，购买vps都希望自己的机子是货真价实的，那么对机子的读写、网络及其他性能测试还是有必要的，参照这篇测试博文<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[VPS主机性能和速度测试](https://wzfou.com/vps-ceping-gongju/)
+">[3]</span></a></sup>做了简单的转述。</p>
+<ol>
+<li>测试海外vps到国内的速度<br>一键测试服务器到国内的速度脚本Superspeed.sh ：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh</span><br><span class="line">chmod +x superspeed.sh</span><br><span class="line">./superspeed.sh</span><br></pre></td></tr></table></figure></li>
+<li>全面测评<br>使用Zench，一键检测VPS的CPU、内存、负载、IO读写、机房带宽等，同时包含Virt 检测服务器类型参数，常见 openvz，kvm，独服都能检测出来，此外加入 Ping 以及 路由测试 功能，会生成测评报告：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh &amp;&amp; bash ZBench-CN.sh</span><br><span class="line"><span class="meta">#</span><span class="bash">项目：https://github.com/FunctionClub/ZBench</span></span><br></pre></td></tr></table></figure></li>
+<li>性能跑分<br>VPS性能综合跑分工具<code>unixbench</code>：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh</span><br><span class="line">chmod +x unixbench.sh</span><br><span class="line">./unixbench.sh</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="Linux远程"><a href="#Linux远程" class="headerlink" title="Linux远程"></a>Linux远程</h3><h4 id="后台运行程序"><a href="#后台运行程序" class="headerlink" title="后台运行程序"></a>后台运行程序</h4><p>对于多数服务器，基本都是通过 SSH 进行远程连接，而部署程序到服务器后不希望程序在退出远程控制界面后中断，便需要后台运行程序。<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[SSH 远程关闭导致程序中断](https://www.cnblogs.com/lomper/p/7053694.html)
+">[4]</span></a></sup></p>
+<h4 id="Linux系统相关概念"><a href="#Linux系统相关概念" class="headerlink" title="Linux系统相关概念"></a>Linux系统相关概念</h4><ul>
+<li>进程组(process group): 一个或多个进程的集合,每一个进程组有唯一一个进程组ID,即进程组长进程的ID.</li>
+<li>会话期(session): 一个或多个进程组的集合,有唯一一个会话期首进程(session leader). 会话期ID为首进程的ID.</li>
+<li>会话期可以有一个单独的控制终端(controlling terminal).</li>
+<li>与控制终端连接的会话期首进程叫做控制进程(controlling process).</li>
+<li>当前与终端交互的进程称为前台进程组.</li>
+<li>其余进程组称为后台进程组.</li>
+<li>根据POSIX.1定义: 挂断信号(SIGHUP)默认的动作是终止程序.</li>
+<li>守护进程本身的特殊性使得这类进程不受远程连接进程的影响，因为是相互独立的两个进程组，即使 SSH 关闭也不会导致守护进程终止.</li>
+</ul>
+<h4 id="后台运行方法"><a href="#后台运行方法" class="headerlink" title="后台运行方法"></a>后台运行方法</h4><ol>
+<li>在远程开启<code>tmux</code>，在<code>tmux</code>里运行程序</li>
+<li>使用<code>nohup</code>命令执行程序</li>
+</ol>
+<h4 id="终止后台运行程序"><a href="#终止后台运行程序" class="headerlink" title="终止后台运行程序"></a>终止后台运行程序</h4><p>由于程序后台运行，因此也就不能使用Linux的终止命令直接终止程序，此时如果不需要程序继续后台执行，需要通过以下方法终止程序：</p>
+<ol>
+<li>查看程序对应的进程，可以通过<code>ps -aux | grep python</code>来查看 python 脚本的所在进程，找到进程号。</li>
+<li>杀死进程进而终止程序，执行<code>kill -9 PID</code>，其中 PID 是程序对应的进程号。</li>
+</ol>
+<h3 id="Linux系统安装python3"><a href="#Linux系统安装python3" class="headerlink" title="Linux系统安装python3"></a>Linux系统安装python3</h3><p>之所以在这部分内容中加入python3安装是因为旧版或部分Linux系统中默认安装的是python2，而习惯使用python3或需要做代码迁移的时候还是想在python3环境下运行，加上python2与python3是可并存的，此时安装python3便顺理成章，只是需要解决一些冲突，因此在此作为Linux的一种进阶使用说明进行叙述，由于Ubuntu系统使用apt安装十分便捷，此处以centos为例子进行讲述<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[在新安装的Centos中安装python3.7 解决pip和yum问题](https://blog.csdn.net/u013214212/article/details/81540840)
+">[9]</span></a></sup>。</p>
+<h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h4><p>依赖包的安装是安装python3时顺利的基础，这是编译安装时需要的依赖环境，安装如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</span><br></pre></td></tr></table></figure>
+<h4 id="下载python3"><a href="#下载python3" class="headerlink" title="下载python3"></a>下载python3</h4><p>根据自身的需求，从python官网下载所需的版本压缩包，比如下载目前最新版即python3.8.3，则在本地选择安装的文件目录，然后下载：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz</span><br></pre></td></tr></table></figure>
+<p>在当前目录下解压便可获得名为<code>Pyhton-3.8.3</code>的文件夹，解压和安装可执行下述命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf Python-3.8.3.tgz</span><br><span class="line">cd Python-3.8.3</span><br><span class="line">./configure</span><br><span class="line">make&amp;&amp;make install</span><br></pre></td></tr></table></figure>
+<p>顺利的话则安装完成，若出现错误如<code>ModuleNotFound：No module named &#39;_ctypes&#39;</code>则执行下述命令后继续执行上述安装命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install libffi-devel -y</span><br></pre></td></tr></table></figure>
+<p>至此，基本完成python3的安装，默认安装位置是在<code>/usr/local/bin/</code>。</p>
+<h4 id="配置默认python"><a href="#配置默认python" class="headerlink" title="配置默认python"></a>配置默认python</h4><p>为了便于调用，可以将python3设置为默认python调用，步骤如下：<br>①备份旧python命令，<code>mv /usr/bin/python /usr/bin/python.bak</code><br>②添加python3的软链接，<code>ln -s /usr/local/bin/python3 /usr/bin/python</code><br>同时，将<code>pip3</code>一并修改为默认的pip调用，可以通过<code>find / -name &#39;pip3&#39;</code>找到pip3的位置，步骤如下：<br>①备份旧pip命令，<code>mv /usr/bin/pip /usr/bin/pip.bak</code><br>②添加pip3的软链接，<code>ln -s /usr/local/bin/pip3 /usr/bin/pip</code></p>
+<h4 id="解决yum与python3的冲突"><a href="#解决yum与python3的冲突" class="headerlink" title="解决yum与python3的冲突"></a>解决yum与python3的冲突</h4><p>由于设置了默认python为python3，会与不支持python3的yum产生冲突，需要将yum的默认指向的pytho修改为python2版本，修改步骤如下：<br>①修改配置1，<code>vi /usr/libexec/urlgrabber-ext-down</code>，将文件中<code>python</code>修改为对应的旧python2版本，然后保存；<br><img src="/Blog/images/Linux-3.png" alt="修改配置1"><i class="img-caption">☆ 修改配置1</i><br>②修改配置2，<code>vi /usr/bin/yum</code>，将文件中<code>python</code>修改为对应的旧python2版本，然后保存。<br><img src="/Blog/images/Linux-4.png" alt="修改配置2"><i class="img-caption">☆ 修改配置2</i><br>自此完成python3的安装与配置，可在centos上调用<code>python2</code>使用旧版本，调用<code>python</code>使用新版本。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>本着手册即查即用的原则，这篇博文写的十分简要，很少说明部分，直接贴出操作，本文将根据自身的经历持续补充。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.timelate.com/archives/enable-ssh-root-login.html" target="_blank" rel="noopener external nofollow noreferrer">Ubuntu 18.04 使用root 帐号登录ssh并修改ssh端口号</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/boonya/article/details/77949438" target="_blank" rel="noopener external nofollow noreferrer">Ubuntu终端命令查看端口占用及关闭</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://wzfou.com/vps-ceping-gongju/" target="_blank" rel="noopener external nofollow noreferrer">VPS主机性能和速度测试</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/lomper/p/7053694.html" target="_blank" rel="noopener external nofollow noreferrer">SSH 远程关闭导致程序中断</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://segmentfault.com/a/1190000011289092" target="_blank" rel="noopener external nofollow noreferrer">解决Linux关闭终端（关闭SSH等）后运行的程序或者服务自动停止【后台运行程序】</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/baby123/p/6477429.html" target="_blank" rel="noopener external nofollow noreferrer">nohup和&amp;后台运行，进程查看及终止</a><a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/plgy_Y/article/details/89380909" target="_blank" rel="noopener external nofollow noreferrer">【Linux】nohup后台运行脚本 终止脚本运行</a><a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/CL_YD/article/details/79458092" target="_blank" rel="noopener external nofollow noreferrer">Linux磁盘空间100% 查找并删除大文件</a><a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/u013214212/article/details/81540840" target="_blank" rel="noopener external nofollow noreferrer">在新安装的Centos中安装python3.7 解决pip和yum问题</a><a href="#fnref:9" rev="footnote"> ↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://i.linuxtoy.org/files/pdf/fwunixref.pdf" target="_blank" rel="noopener external nofollow noreferrer">Unix/Linux 命令参考</a><a href="#fnref:10" rev="footnote"> ↩</a></span></li><li id="fn:11"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">11.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jianshu.com/p/59f759207862" target="_blank" rel="noopener external nofollow noreferrer">Linux思维导图整理</a><a href="#fnref:11" rev="footnote"> ↩</a></span></li><li id="fn:12"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">12.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jianshu.com/p/234b196791fb" target="_blank" rel="noopener external nofollow noreferrer">关于Linux软件源</a><a href="#fnref:12" rev="footnote"> ↩</a></span></li><li id="fn:13"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">13.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.geek0ne.com/LinuxAce/139.html" target="_blank" rel="noopener external nofollow noreferrer">Linux系统添加更换国内软件源札记</a><a href="#fnref:13" rev="footnote"> ↩</a></span></li><li id="fn:14"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">14.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/Security-Darren/p/3947952.html" target="_blank" rel="noopener external nofollow noreferrer">（实用）Ubuntu 、CentOS更换国内源</a><a href="#fnref:14" rev="footnote"> ↩</a></span></li><li id="fn:15"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">15.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/xiaohukun/article/details/78264734" target="_blank" rel="noopener external nofollow noreferrer">LINUX中文输入法</a><a href="#fnref:15" rev="footnote"> ↩</a></span></li><li id="fn:16"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">16.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener external nofollow noreferrer">Linux vi/vim</a><a href="#fnref:16" rev="footnote"> ↩</a></span></li><li id="fn:17"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">17.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.viemu.com/" target="_blank" rel="noopener external nofollow noreferrer">Vi/vim emulation for Visual Studio, SQL Server,Word &amp; Outlook</a><a href="#fnref:17" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>Handbook</category>
+        <category>OS</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>玩转树莓派（二）配置V2ray客户端及透明网关</title>
     <url>/Blog/2020/03/24/%E7%8E%A9%E8%BD%AC%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%88%E4%BA%8C%EF%BC%89.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>树莓派4B即目前最新款树莓派，其功能基本和一台PC机无异，但是入手一台树莓派地初衷各有差异，而我是希望它代替现有市场中大量受限的路由器，因此树莓派到手第二天，我便开始让它上岗工作，成为家庭网络中的透明网关。</p>
@@ -72,9 +348,9 @@
         <category>树莓派</category>
       </categories>
       <tags>
+        <tag>透明网关</tag>
         <tag>树莓派</tag>
         <tag>raspberry</tag>
-        <tag>透明网关</tag>
         <tag>V2ray</tag>
       </tags>
   </entry>
@@ -1552,64 +1828,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LaTeX-安装教程</title>
-    <url>/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作为一名研究僧，写论文，写文档，写日志，写报告，写书……还是比较平常的一件事，而office系列对于排版要求严格又惜时如金的人而言还是次选，所以开始入坑LaTeX，经过慎重的调研之后，选择了texlive+texstudio的形式开始入坑，当然还有很多其他选择，如果写完这篇还记得会在参考链接下附上<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[TeX Live & TeXstudio 安装手记](https://www.cnblogs.com/joyeecheung/p/3596255.html)
-">[1]</span></a></sup><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[第一篇tex文档编写](http://www.ctex.org/OnlineDocuments)
-">[2]</span></a></sup>。</p>
-<a id="more"></a>
-
-<h2 id="调研选择"><a href="#调研选择" class="headerlink" title="调研选择"></a>调研选择</h2><p>其实这部分只是自己做一点记录，急需安装教程的请跳过，请看第2节。</p>
-<p>经过多番Google、csdn以及知乎的查阅，大概了解了latex的编译环境和编辑环境，主流的有ctex、texlive、texstudio+winedt等等，我的选择变化大致如下：</p>
-<ol>
-<li><p>在上过的一门算法课中老师推荐了跨平台下的latex集成工具，ctex被建议在windows下使用，所以最初我的选择是ctex，附上清华镜像，<a href="https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/" target="_blank" rel="noopener external nofollow noreferrer" title="ctex清华镜像">Ctex-mirror</a>，官方网站<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener external nofollow noreferrer">CTeX</a>，加上ctex对中文的支持很好，且集成工具完整，当下载3G的安装包时，我又调研了不少教程，但是在某csdn的教程中看的评论有人评价ctex已不维护很久，同时ctex安装后会对系统环境变量进行覆盖，想想这个风险还是挺大的，毕竟安装需要配置换件变量的应用还挺多的，这篇<a href="https://liam.page/texlive/" target="_blank" rel="noopener external nofollow noreferrer">博文</a>有说明，接着看到在不少教程中推荐texlive（可谓官方），这是由 TUG (TeX User Group) 维护和发布的tex系统，接着有了第2个选择；</p>
-</li>
-<li><p>开始调研texlive，看看官网<a href="https://tug.org/texlive/" target="_blank" rel="noopener external nofollow noreferrer" title="texlive">TexLive</a>，维护还是比较好的，有2019最新版本，有多国镜像，有完整教学文档，感觉比ctex完善很多，果断放弃ctex，尽管这个时候安装文件也下载得差不多了，同时看到texstudio是tex编辑的不错的集成环境，官方的介绍是这样的：</p>
-</li>
-</ol>
-<p><em>TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.</em></p>
-<p>安装提供zip压缩包直接解压使用，很适合我这种不喜欢安装包的人，因为便于迁移，抉择已定，开始下载和安装。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
-<p>先提供需要安装的文件（texlive和texstudio）的<a href="https://pan.baidu.com/s/1mRKV0VeNfjxhY6qGvSQdLw" target="_blank" rel="noopener external nofollow noreferrer" title="网盘链接">网盘链接</a>，提取码：uhbe </p>
-</blockquote>
-<p>官方提供了下载方式：</p>
-<ol>
-<li>texlive，<a href="https://mirror.bjtu.edu.cn/ctan/systems/texlive/Images/texlive2019.iso" target="_blank" rel="noopener external nofollow noreferrer">官方镜像</a>，如果访问不了，可以访问国内镜像，如<a href="http://mirrors.ustc.edu.cn/CTAN/systems/texlive/" target="_blank" rel="noopener external nofollow noreferrer">中科大镜像</a>；</li>
-<li>texstudio，我选择的是zip压缩文件形式，<a href="https://github.com/texstudio-org/texstudio/releases/download/2.12.16/texstudio-2.12.16-win-portable-qt5.zip" target="_blank" rel="noopener external nofollow noreferrer">下载</a>；</li>
-</ol>
-<p>当然也可以直接下载我网盘分享的镜像和安装包，可以使用官方提供的md5值进行比对验证文件没有被篡改。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="TexLive-安装"><a href="#TexLive-安装" class="headerlink" title="TexLive 安装"></a>TexLive 安装</h3><p>下载好iso文件之后，由于我是win10系统，可以直接加载iso镜像文件，因此双击打开即可，如果是win7及以前的版本需要先解压iso文件，双击打开install-tl-advanced.bat文件，会出现以下界面：</p>
-<p><img src="/Blog/images/post-texlive-install-1.jpg" alt="安装启动界面"><i class="img-caption">☆ 安装启动界面</i></p>
-<p>点击<em>修改</em>更换需要安装的文件路径，路径建议不要带有中文和特殊字符；<br>点击<em>Advanced</em>修改安装选项，但默认是所有都选上，所以可以不用修改（因为涉及调用的宏包以及scheme选择，如果不了解还是默认，避免后续麻烦）；<br>点击<em>安装</em>，然后就是漫长的安装过程，安装期间可以做自己的事情，安装完成后显示如下：</p>
-<p><img src="/Blog/images/post-texlive-install-2.jpg" alt="安装完成界面"><i class="img-caption">☆ 安装完成界面</i></p>
-<p>做一下安装是否成功的检查：</p>
-<ol>
-<li>在开始菜单中搜索<em>TeX Live command-line</em>，执行以下命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xelatex -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>如果正常会显示如下信息，即正常的texlive版本号：</p>
-<p><img src="/Blog/images/post-texlive-test-1.jpg" alt="测试正常界面"><i class="img-caption">☆ 测试正常界面</i></p>
-<p>如果显示错误如下，应该是系统环境变量的问题，进入系统环境变量（系统属性-&gt;高级系统设置-&gt;环境变量），将<em>Path</em>环境变量新增texlive进去，即将安装好的texlive文件目录下的bin文件夹所在的路径作为环境变量。</p>
-<p><img src="/Blog/images/post-texlive-test-2.jpg" alt="测试错误界面"><i class="img-caption">☆ 测试错误界面</i></p>
-<h3 id="TexStudio-安装"><a href="#TexStudio-安装" class="headerlink" title="TexStudio 安装"></a>TexStudio 安装</h3><p>下载好zip压缩文件之后，直接解压就可以使用，十分方便！</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>主要是texstudio需要进行配置，更适合国内人士使用。</p>
-<h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>打开texstudio之后，在主界面中显示的是英文，点击菜单栏的<em>Options</em>，点击<em>Configure TeXstudio</em>，在<em>General</em>选项下将<em>Language</em>选择为<em>zh_CN</em>，点击确定；</p>
-<h3 id="编译环境设置"><a href="#编译环境设置" class="headerlink" title="编译环境设置"></a>编译环境设置</h3><p>在语言设置一样的窗口，此时显示语言是中文，点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”XeLaTeX”，支持中文LaTeX文档；<br>将</em>构建</em>-&gt;<em>默认文献工具<em>设置为”Biber”；<br>在</em>命令</em>-&gt;<em>XeLaTeX</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；</p>
-<p>点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”Latexmk”实现一次性编译；<br>将</em>命令</em>-&gt;<em>Latexmk<em>的 -pdf 参数修改为 -xelatex 以支持中文；<br>在</em>命令</em>-&gt;<em>Latexmk</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；<br>点击确定</p>
-<p>点击菜单栏<em>帮助</em>-&gt;<em>检查Latex安装信息</em>，若正确输出系统报告，说明texlive正常工作。</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>第一篇tex文档参照这篇博客，<a href="https://blog.csdn.net/yeler082/article/details/80665186" target="_blank" rel="noopener external nofollow noreferrer">Texlive+TeXstudio 入门安装使用</a>，照着输入，然后点击两个绿色箭头重叠的按钮，可以看到实时生成的文档。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/joyeecheung/p/3596255.html" target="_blank" rel="noopener external nofollow noreferrer">TeX Live &amp; TeXstudio 安装手记</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.ctex.org/OnlineDocuments" target="_blank" rel="noopener external nofollow noreferrer">第一篇tex文档编写</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
-      <categories>
-        <category>Handbook</category>
-        <category>Latex</category>
-      </categories>
-      <tags>
-        <tag>Latex安装</tag>
-        <tag>Windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>搭建个人博客(Hexo+Next+Github）</title>
     <url>/Blog/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客<a href="https://linwhitehat.github.io/">林深时见璐</a>搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。</p>
@@ -1696,6 +1914,64 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX-安装教程</title>
+    <url>/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\Blog\assets\css\APlayer.min.css"><script src="\Blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\Blog\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>作为一名研究僧，写论文，写文档，写日志，写报告，写书……还是比较平常的一件事，而office系列对于排版要求严格又惜时如金的人而言还是次选，所以开始入坑LaTeX，经过慎重的调研之后，选择了texlive+texstudio的形式开始入坑，当然还有很多其他选择，如果写完这篇还记得会在参考链接下附上<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[TeX Live & TeXstudio 安装手记](https://www.cnblogs.com/joyeecheung/p/3596255.html)
+">[1]</span></a></sup><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[第一篇tex文档编写](http://www.ctex.org/OnlineDocuments)
+">[2]</span></a></sup>。</p>
+<a id="more"></a>
+
+<h2 id="调研选择"><a href="#调研选择" class="headerlink" title="调研选择"></a>调研选择</h2><p>其实这部分只是自己做一点记录，急需安装教程的请跳过，请看第2节。</p>
+<p>经过多番Google、csdn以及知乎的查阅，大概了解了latex的编译环境和编辑环境，主流的有ctex、texlive、texstudio+winedt等等，我的选择变化大致如下：</p>
+<ol>
+<li><p>在上过的一门算法课中老师推荐了跨平台下的latex集成工具，ctex被建议在windows下使用，所以最初我的选择是ctex，附上清华镜像，<a href="https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/" target="_blank" rel="noopener external nofollow noreferrer" title="ctex清华镜像">Ctex-mirror</a>，官方网站<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener external nofollow noreferrer">CTeX</a>，加上ctex对中文的支持很好，且集成工具完整，当下载3G的安装包时，我又调研了不少教程，但是在某csdn的教程中看的评论有人评价ctex已不维护很久，同时ctex安装后会对系统环境变量进行覆盖，想想这个风险还是挺大的，毕竟安装需要配置换件变量的应用还挺多的，这篇<a href="https://liam.page/texlive/" target="_blank" rel="noopener external nofollow noreferrer">博文</a>有说明，接着看到在不少教程中推荐texlive（可谓官方），这是由 TUG (TeX User Group) 维护和发布的tex系统，接着有了第2个选择；</p>
+</li>
+<li><p>开始调研texlive，看看官网<a href="https://tug.org/texlive/" target="_blank" rel="noopener external nofollow noreferrer" title="texlive">TexLive</a>，维护还是比较好的，有2019最新版本，有多国镜像，有完整教学文档，感觉比ctex完善很多，果断放弃ctex，尽管这个时候安装文件也下载得差不多了，同时看到texstudio是tex编辑的不错的集成环境，官方的介绍是这样的：</p>
+</li>
+</ol>
+<p><em>TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.</em></p>
+<p>安装提供zip压缩包直接解压使用，很适合我这种不喜欢安装包的人，因为便于迁移，抉择已定，开始下载和安装。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
+<p>先提供需要安装的文件（texlive和texstudio）的<a href="https://pan.baidu.com/s/1mRKV0VeNfjxhY6qGvSQdLw" target="_blank" rel="noopener external nofollow noreferrer" title="网盘链接">网盘链接</a>，提取码：uhbe </p>
+</blockquote>
+<p>官方提供了下载方式：</p>
+<ol>
+<li>texlive，<a href="https://mirror.bjtu.edu.cn/ctan/systems/texlive/Images/texlive2019.iso" target="_blank" rel="noopener external nofollow noreferrer">官方镜像</a>，如果访问不了，可以访问国内镜像，如<a href="http://mirrors.ustc.edu.cn/CTAN/systems/texlive/" target="_blank" rel="noopener external nofollow noreferrer">中科大镜像</a>；</li>
+<li>texstudio，我选择的是zip压缩文件形式，<a href="https://github.com/texstudio-org/texstudio/releases/download/2.12.16/texstudio-2.12.16-win-portable-qt5.zip" target="_blank" rel="noopener external nofollow noreferrer">下载</a>；</li>
+</ol>
+<p>当然也可以直接下载我网盘分享的镜像和安装包，可以使用官方提供的md5值进行比对验证文件没有被篡改。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="TexLive-安装"><a href="#TexLive-安装" class="headerlink" title="TexLive 安装"></a>TexLive 安装</h3><p>下载好iso文件之后，由于我是win10系统，可以直接加载iso镜像文件，因此双击打开即可，如果是win7及以前的版本需要先解压iso文件，双击打开install-tl-advanced.bat文件，会出现以下界面：</p>
+<p><img src="/Blog/images/post-texlive-install-1.jpg" alt="安装启动界面"><i class="img-caption">☆ 安装启动界面</i></p>
+<p>点击<em>修改</em>更换需要安装的文件路径，路径建议不要带有中文和特殊字符；<br>点击<em>Advanced</em>修改安装选项，但默认是所有都选上，所以可以不用修改（因为涉及调用的宏包以及scheme选择，如果不了解还是默认，避免后续麻烦）；<br>点击<em>安装</em>，然后就是漫长的安装过程，安装期间可以做自己的事情，安装完成后显示如下：</p>
+<p><img src="/Blog/images/post-texlive-install-2.jpg" alt="安装完成界面"><i class="img-caption">☆ 安装完成界面</i></p>
+<p>做一下安装是否成功的检查：</p>
+<ol>
+<li>在开始菜单中搜索<em>TeX Live command-line</em>，执行以下命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xelatex -v</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如果正常会显示如下信息，即正常的texlive版本号：</p>
+<p><img src="/Blog/images/post-texlive-test-1.jpg" alt="测试正常界面"><i class="img-caption">☆ 测试正常界面</i></p>
+<p>如果显示错误如下，应该是系统环境变量的问题，进入系统环境变量（系统属性-&gt;高级系统设置-&gt;环境变量），将<em>Path</em>环境变量新增texlive进去，即将安装好的texlive文件目录下的bin文件夹所在的路径作为环境变量。</p>
+<p><img src="/Blog/images/post-texlive-test-2.jpg" alt="测试错误界面"><i class="img-caption">☆ 测试错误界面</i></p>
+<h3 id="TexStudio-安装"><a href="#TexStudio-安装" class="headerlink" title="TexStudio 安装"></a>TexStudio 安装</h3><p>下载好zip压缩文件之后，直接解压就可以使用，十分方便！</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>主要是texstudio需要进行配置，更适合国内人士使用。</p>
+<h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>打开texstudio之后，在主界面中显示的是英文，点击菜单栏的<em>Options</em>，点击<em>Configure TeXstudio</em>，在<em>General</em>选项下将<em>Language</em>选择为<em>zh_CN</em>，点击确定；</p>
+<h3 id="编译环境设置"><a href="#编译环境设置" class="headerlink" title="编译环境设置"></a>编译环境设置</h3><p>在语言设置一样的窗口，此时显示语言是中文，点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”XeLaTeX”，支持中文LaTeX文档；<br>将</em>构建</em>-&gt;<em>默认文献工具<em>设置为”Biber”；<br>在</em>命令</em>-&gt;<em>XeLaTeX</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；</p>
+<p>点击<em>构建</em>-&gt;<em>默认编译器<em>设置为”Latexmk”实现一次性编译；<br>将</em>命令</em>-&gt;<em>Latexmk<em>的 -pdf 参数修改为 -xelatex 以支持中文；<br>在</em>命令</em>-&gt;<em>Latexmk</em>设置编译参数，使用 -shell-escape 参数以支持“minted”代码排版宏包；<br>点击确定</p>
+<p>点击菜单栏<em>帮助</em>-&gt;<em>检查Latex安装信息</em>，若正确输出系统报告，说明texlive正常工作。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>第一篇tex文档参照这篇博客，<a href="https://blog.csdn.net/yeler082/article/details/80665186" target="_blank" rel="noopener external nofollow noreferrer">Texlive+TeXstudio 入门安装使用</a>，照着输入，然后点击两个绿色箭头重叠的按钮，可以看到实时生成的文档。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/joyeecheung/p/3596255.html" target="_blank" rel="noopener external nofollow noreferrer">TeX Live &amp; TeXstudio 安装手记</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.ctex.org/OnlineDocuments" target="_blank" rel="noopener external nofollow noreferrer">第一篇tex文档编写</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>Handbook</category>
+        <category>Latex</category>
+      </categories>
+      <tags>
+        <tag>Latex安装</tag>
+        <tag>Windows10</tag>
       </tags>
   </entry>
 </search>
