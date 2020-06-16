@@ -115,7 +115,7 @@
  <td>这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</td>
 </tr>
 </table>
-②一般模式切换到编辑模式的可用的按键如下：
+②一般模式切换到编辑模式的可用的按键如下（下述这些按键中，在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样。 由名称就知道该动作了。特别注意的是，上面也提过了，你想要在文档里面输入字符时， 一定要在左下角处看到 INSERT 或 REPLACE 才能输入。）：
 <table>
 <tr>
  <td colspan="2">进入输入或取代的编辑模式</td>
@@ -141,57 +141,55 @@
  <td>退出编辑模式，回到一般模式中(常用)</td>
 </tr>
 </table>
-上面这些按键中，在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样。 由名称就知道该动作了。特别注意的是，上面也提过了，你想要在文档里面输入字符时， 一定要在左下角处看到 INSERT 或 REPLACE 才能输入。
+③一般模式切换到指令行模式的可用的按键如下（注意一下啊，惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～）：
+<table>
+<tr>
+ <td colspan="2">指令行的储存、离开等指令</td>
+</tr>
+<tr>
+ <td>:w</td>
+ <td>将编辑的数据写入硬盘档案中(常用)</td>
+</tr>
+<tr>
+ <td>:w!</td>
+ <td>若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</td>
+</tr>
+<tr>
+ <td>:q</td>
+ <td>离开 vi (常用)</td>
+</tr>
+<tr>
+ <td>:q!</td>
+ <td>若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</td>
+</tr>
+<tr>
+ <td>:wq</td>
+ <td>储存后离开，若为 :wq! 则为强制储存后离开 (常用)</td>
+</tr>
+<tr>
+ <td>ZZ</td>
+ <td>这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</td>
+</tr>
+<tr>
+ <td>:w [filename]</td>
+ <td>将编辑的数据储存成另一个档案（类似另存新档）</td>
+</tr>
+<tr>
+ <td>:r [filename]</td>
+ <td>在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</td>
+</tr>
+<tr>
+ <td>:n1,n2 w [filename]</td>
+ <td>将 n1 到 n2 的内容储存成 filename 这个档案。</td>
+</tr>
+<tr>
+ <td>:! command</td>
+ <td>暂时离开 vi 到指令行模式下执行 command 的显示结果！例如『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</td>
+</tr>
+</table>
 
 </li>
 </ol>
-<p>③一般模式切换到指令行模式的可用的按键如下（注意一下啊，惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～）：</p>
-<table>
-  <tr>
-    <td colspan="2">指令行的储存、离开等指令</td>
-  </tr>
-  <tr>
-    <td>:w</td>
-    <td>将编辑的数据写入硬盘档案中(常用)</td>
-  </tr>
-  <tr>
-    <td>:w!</td>
-    <td>若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</td>
-  </tr>
-  <tr>
-    <td>:q</td>
-    <td>离开 vi (常用)</td>
-  </tr>
-  <tr>
-    <td>:q!</td>
-    <td>若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</td>
-  </tr>
-  <tr>
-    <td>:wq</td>
-    <td>储存后离开，若为 :wq! 则为强制储存后离开 (常用)</td>
-  </tr>
-  <tr>
-    <td>ZZ</td>
-    <td>这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</td>
-  </tr>
-  <tr>
-    <td>:w [filename]</td>
-    <td>将编辑的数据储存成另一个档案（类似另存新档）</td>
-  </tr>
-  <tr>
-    <td>:r [filename]</td>
-    <td>在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</td>
-  </tr>
-  <tr>
-    <td>:n1,n2 w [filename]</td>
-    <td>将 n1 到 n2 的内容储存成 filename 这个档案。</td>
-  </tr>
-  <tr>
-    <td>:! command</td>
-    <td>暂时离开 vi 到指令行模式下执行 command 的显示结果！例如『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</td>
-  </tr>
-</table>
-
 <h2 id="进阶使用"><a href="#进阶使用" class="headerlink" title="进阶使用"></a>进阶使用</h2><h3 id="修改root密码"><a href="#修改root密码" class="headerlink" title="修改root密码"></a>修改root密码</h3><p>默认Ubuntu下安装完系统只是设置了用户账号密码，root用户则处于默认情况，要更改root密码可在当前用户下执行：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
 <p>输入两次需要设置的密码即可，密码是看不到的，如果输错则无法撤销，可以按下<code>ctrl + C</code>然后重新执行上述命令设置密码。</p>
