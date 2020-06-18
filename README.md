@@ -2,7 +2,7 @@
 
 ## Homepage & Blog
 
-[![](https://img.shields.io/badge/Home-L1n-brightgreen.svg?logo=home-assistant)](https://linwhitehat.github.io/) ![](https://img.shields.io/badge/license-MIT-000000.svg) ![](https://img.shields.io/badge/language-html/css-blue.svg) [![codebeat badge](https://codebeat.co/badges/8b24e9bb-380c-41bb-85c9-c150cecabba9)](https://codebeat.co/projects/github-com-linwhitehat-blog-master)
+[![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/Home-L1n-green.svg)](https://linwhitehat.github.io/) [![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/License-MIT-green.svg)]([![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/Home-L1n-green.svg)](https://linwhitehat.github.io/) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/License-MIT-green.svg) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/HTML-5-orange.svg) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/CSS-3-blue.svg) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/Language-JS-yellow.svg)) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/HTML-5-orange.svg) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/CSS-3-blue.svg) ![](https://github.com/linwhitehat/linwhitehat.github.io/blob/master/svg/Language-JS-yellow.svg) [![codebeat badge](https://codebeat.co/badges/8b24e9bb-380c-41bb-85c9-c150cecabba9)](https://codebeat.co/projects/github-com-linwhitehat-blog-master)
 
 - My Homepage. => https://linwhitehat.github.io
 - My Blog. => https://linwhitehat.github.io/Blog
@@ -12,4 +12,5 @@
 
 ## 版权
 [知识共享许可协议]()
+
 本博客所有文章除特别声明外，均采用[by-nc-sa 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
