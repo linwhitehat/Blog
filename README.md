@@ -2,7 +2,7 @@
 
 ## Homepage & Blog
 
-[![](https://img.shields.io/badge/Home-L1n-brightgreen.svg)](https://linwhitehat.github.io/) ![](https://img.shields.io/badge/license-MIT-000000.svg) ![](https://img.shields.io/badge/language-html/css-blue.svg) [![codebeat badge](https://codebeat.co/badges/8b24e9bb-380c-41bb-85c9-c150cecabba9)](https://codebeat.co/projects/github-com-linwhitehat-blog-master)
+[![](https://img.shields.io/badge/Home-L1n-brightgreen.svg?logo=home-assistant)](https://linwhitehat.github.io/) ![](https://img.shields.io/badge/license-MIT-000000.svg) ![](https://img.shields.io/badge/language-html/css-blue.svg) [![codebeat badge](https://codebeat.co/badges/8b24e9bb-380c-41bb-85c9-c150cecabba9)](https://codebeat.co/projects/github-com-linwhitehat-blog-master)
 
 - My Homepage. => https://linwhitehat.github.io
 - My Blog. => https://linwhitehat.github.io/Blog
