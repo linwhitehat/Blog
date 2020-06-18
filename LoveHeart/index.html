@@ -1,1 +1,126 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>love line with Lulin</title><style>@font-face{font-family:digit;src:url(digital-7_mono.ttf) format("truetype")}</style><link href="css/default.css" rel="stylesheet"><script src="js/jquery.js"></script><script src="js/garden.js"></script><script src="js/functions.js"></script></head><body><audio autoplay loop preload="auto"><source src="https://linwhitehat.github.io/Blog/LoveHeart/U%20are%20so%20beautiful.mp3" type="audio/mpeg"></audio><div id="mainDiv"><div id="content"><div id="code">长相思兮长相忆<br>短相思兮无穷极<br>三五七言<br>太白难诉绵延<br><br><span class="keyword">相遇时珍惜</span><br><br>我努力着<br>成为一个<br><span class="keyword">优秀的男朋友</span><br><br>你也努力着<br>成为一个<br><span class="keyword">优秀的女朋友</span><br><br><span class="keyword">相知时共稀</span><br><br>两人间的磨合<br>让我和你<br><span class="keyword">更珍惜彼此</span><br><br>相爱的每天<br><span class="keyword">就好似七夕</span><br><br>我的好姑娘<br><span class="keyword">你,不可辜负</span><br><br>I want to say:<br><span class="keyword">小璐璐, I love you!</span><br><hr>From 林先森<br></div><div id="loveHeart"><canvas id="garden"></canvas><div id="words"><div id="messages">相遇，相知，相恋...<div id="elapseClock"></div></div></div></div></div></div><script>var offsetX=$("#loveHeart").width()/2,offsetY=$("#loveHeart").height()/2-55,together=new Date;if(together.setFullYear(2018,8,18),together.setHours(0),together.setMinutes(0),together.setSeconds(0),together.setMilliseconds(0),document.createElement("canvas").getContext)setTimeout(function(){startHeartAnimation()},5e3),timeElapse(together),setInterval(function(){timeElapse(together)},500),adjustCodePosition(),$("#code").typewriter();else{var msg=document.createElement("div");msg.id="errorMsg",msg.innerHTML="Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+",document.body.appendChild(msg),$("#code").css("display","none"),$("#copyright").css("position","absolute"),$("#copyright").css("bottom","10px"),document.execCommand("stop")}</script><div style="text-align:center;clear:both"><p>Made for Lulin Wang, made by <a href="https://github.com/linwhitehat" target="_blank">L1n<a></a></p><p>Copyright © 2019 - 2020 L1n. All Rights Reserved. Designed by <a href="https://github.com/hackerzhou" target="_blank">hackerzhou<a></a></p></div></body></html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>love line with Lulin</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- BGM区域 加上controls="controls"可对音乐进行开关控制 -->
+<audio autoplay="autoplay" loop="loop" preload="auto">
+<source src="https://linwhitehat.github.io/Blog/LoveHeart/U%20are%20so%20beautiful.mp3" type="audio/mpeg">
+</audio>
+<!-- <embed src="https://img-blog.nos-eastchina1.126.net/backimg/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
+
+<!-- 文字区域 -->
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+            长相思兮长相忆<br />
+            短相思兮无穷极<br />
+            三五七言<br />
+            太白难诉绵延<br /><br />
+            
+            <span class="keyword">相遇时珍惜</span><br /><br />
+        	
+            我努力着<br />
+            成为一个<br />
+            <span class="keyword">优秀的男朋友</span><br /><br />
+
+            你也努力着<br />
+            成为一个<br />
+            <span class="keyword">优秀的女朋友</span><br /><br />
+            
+            <span class="keyword">相知时共稀</span><br /><br />
+
+            两人间的磨合<br />
+            让我和你<br />
+            <span class="keyword">更珍惜彼此</span><br /><br />
+             
+            相爱的每天<br />
+            <span class="keyword">就好似七夕</span><br /><br />
+
+            我的好姑娘<br />
+            <span class="keyword">你,不可辜负</span><br /><br />
+
+   			I want to say:<br />
+            <span class="keyword">小璐璐, I love you! </span><br />
+            <hr />
+            From 林先森<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					相遇，相知，相恋...
+					<div id="elapseClock"></div>
+				</div>
+<!--			<div id="loveu">
+					<br/>
+					<div class="signature">- 林先森</div>
+				</div>
+-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+//起始时间 
+together.setFullYear(2018, 08, 18);//1-12年,0-11月,1-31日,2018-8-18->2018/07/18
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+<!-- 附加信息-->
+<div style="text-align:center;clear:both">
+<p>Made for Lulin Wang, made by <a href="https://github.com/linwhitehat" target="_blank">L1n<a /></p>
+<p>Copyright © 2019 - 2020 L1n. All Rights Reserved. Designed by <a href="https://github.com/hackerzhou" target="_blank">hackerzhou<a /> </p>
+</div>
+</body>
+</html>
