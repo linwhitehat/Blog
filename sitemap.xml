@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://linwhitehat.github.io/Blog/blogLog/index.html</loc>
+    
+    <lastmod>2020-06-30T10:38:00.414Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://linwhitehat.github.io/Blog/2020/06/30/B%E7%AB%99%E6%8A%95%E7%A8%BF.html</loc>
     
-    <lastmod>2020-06-30T10:02:00.619Z</lastmod>
+    <lastmod>2020-06-30T10:24:36.138Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>https://linwhitehat.github.io/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html</loc>
     
     <lastmod>2020-03-30T03:47:17.944Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://linwhitehat.github.io/Blog/blogLog/index.html</loc>
-    
-    <lastmod>2020-03-25T03:49:14.443Z</lastmod>
     
   </url>
   
