@@ -133,9 +133,9 @@
       </categories>
       <tags>
         <tag>Python3</tag>
+        <tag>动态IP</tag>
         <tag>树莓派</tag>
         <tag>raspberry</tag>
-        <tag>动态IP</tag>
         <tag>dynamic IP</tag>
         <tag>SMTP</tag>
         <tag>WAN</tag>
@@ -910,9 +910,9 @@
         <category>Code</category>
       </categories>
       <tags>
-        <tag>Git</tag>
         <tag>Github</tag>
         <tag>Gitlab</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
